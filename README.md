@@ -1,5 +1,9 @@
 # top-metal-solder-balls
 
+[![Documentation Status](https://readthedocs.org/projects/top-metal-solder-balls/badge/?version=latest)](https://top-metal-solder-balls.readthedocs.io/en/latest/)
+
+Read the documentation at <https://top-metal-solder-balls.readthedocs.io/>.
+
 Research into "packaging methods" that apply materials (solder balls, bumps,
 under-bump metal, adhesives) directly to the aluminium top metal of
 [wafer.space](https://wafer.space) GF180MCU chips.
