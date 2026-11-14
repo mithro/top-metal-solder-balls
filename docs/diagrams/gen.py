@@ -617,6 +617,30 @@ def fig_caravel_bumps():
     s.save("caravel-bump-layout.svg")
 
 
+def fig_sky130_probe_pads():
+    sc = 1.6  # px per um
+    s = Svg(900, 520, "Probe pad grid of the open sky130 test tile")
+    s.text(450, 30, "Open sky130 test tile: probe pad grid", size=16, anchor="middle", weight="bold")
+    x0, y0 = 60, 90
+    for i in range(6):
+        for j in range(3):
+            x, y = x0 + i * 60 * sc, y0 + j * 80 * sc
+            s.rect(x, y, 40 * sc, 40 * sc, AL)
+            s.text(x + 20 * sc, y + 20 * sc + 4, f"{i + 1},{3 - j}", size=11, anchor="middle")
+    s.dim(x0, x0 + 40 * sc, y0 - 12, "40 um")
+    s.dim(x0, x0 + 60 * sc, y0 + 200 * sc + 30, "60 um pitch")
+    bx = x0 + 4 * 60 * sc
+    s.rect(bx + 4, y0 + 40 * sc + 6, 40 * sc - 8, 40 * sc - 12, "none", stroke=WARN, sw=1.2,
+           extra='stroke-dasharray="5 3"')
+    s.label(680, 150, "device under test\nsits between rows", bx + 40 * sc - 8, y0 + 60 * sc)
+    px = x0 + 5 * 60 * sc + 40 * sc + 14
+    s.line(px, y0 + 80 * sc, px, y0 + 160 * sc, extra='marker-start="url(#arr)" marker-end="url(#arr)"')
+    s.text(px + 10, y0 + 120 * sc + 4, "80 um pitch between rows", size=12)
+    s.text(450, 490, "A 250 um solder ball would cover a block of about 4 x 3 of these pads.",
+           size=11, anchor="middle", fill="#555555")
+    s.save("sky130-probe-pads.svg")
+
+
 if __name__ == "__main__":
     fig_bare()
     fig_enig()
@@ -634,3 +658,4 @@ if __name__ == "__main__":
     fig_array()
     fig_fc01()
     fig_caravel_bumps()
+    fig_sky130_probe_pads()

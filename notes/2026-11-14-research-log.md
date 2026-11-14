@@ -155,3 +155,9 @@ quantities, hobby ultrasonic irons, whether GF180MCU top metal is AlCu.
   judged DIY feasible; suggestion to ask reballing machine makers).
 - Left out of the repo on purpose: names, prices, quotes and a vendor design
   rule PDF marked confidential.
+
+Correction to section 9: the open test tile docs in the raw data repo
+(docs/sky130-testtile-open/testinterface.png) do give pad geometry, in an
+image I had not opened: 40 x 40 um probe pads, 60 um pitch along a row, 80 um
+between rows, 6 x 3 per group, over 1400 pads on the tile. Tim pointed this
+out.
