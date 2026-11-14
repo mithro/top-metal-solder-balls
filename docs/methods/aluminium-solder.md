@@ -196,3 +196,11 @@ by far the simplest route: three steps and no wet chemistry beyond a rinse.
 [gfmpw0]: https://wafer.space/google-gf180mcu-mpw0/
 [cs-run1]: https://www.crowdsupply.com/wafer-space/gf180mcu-run-1
 [cs-cob-update]: https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/chip-on-board
+[sky130-raw]: https://github.com/google/skywater-pdk-sky130-raw-data
+[sky130-rules]: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
+[bump-gen]: https://github.com/RTimothyEdwards/open_pdks/tree/main/sky130/custom/scripts/bump_bond_generator
+[caravel-bump-sky130]: https://github.com/efabless/caravel/blob/main/scripts/make_bump_bonds.tcl
+[caravel-bump-gf180]: https://github.com/efabless/caravel-gf180mcu/blob/main/scripts/make_bump_bonds.tcl
+[gatearray]: https://wafer.space/gatearray-v1
+[reball-video-1]: https://www.youtube.com/watch?v=MG_TanKc0E0
+[reball-video-2]: https://www.youtube.com/watch?v=7kQ6FeKp754
