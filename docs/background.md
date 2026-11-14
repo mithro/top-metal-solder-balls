@@ -235,3 +235,4 @@ about lifetime and can largely be ignored for a 0 to 50 C part.
 [reball-video-1]: https://www.youtube.com/watch?v=MG_TanKc0E0
 [reball-video-2]: https://www.youtube.com/watch?v=7kQ6FeKp754
 [sky130-open-tile]: https://github.com/google/skywater-pdk-sky130-raw-data/tree/main/docs/sky130-testtile-open
+[dataifeng]: https://www.dataifeng.com/?products/dfg-944922.html
