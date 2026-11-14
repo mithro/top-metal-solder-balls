@@ -569,6 +569,54 @@ def fig_fc01():
     s.save("fc01-layout.svg")
 
 
+def fig_caravel_bumps():
+    sc = 90  # px per mm
+    dw, dh = 3.88, 5.07
+    s = Svg(1060, 600, "Caravel bump layout from the open_pdks Micross generator")
+    s.text(500, 30, "Caravel on GF180MCU: 6 x 10 bumps at 0.5 mm pitch", size=16, anchor="middle", weight="bold")
+    x0, y0 = 60, 60
+    s.rect(x0, y0, dw * sc, dh * sc, "#dfe5ec")
+
+    def pt(x, y):  # die coordinates in um, origin bottom left
+        return x0 + x * sc / 1000, y0 + (dh * 1000 - y) * sc / 1000
+
+    pad = 60 * sc / 1000
+    for i in range(21):
+        cx, cy = pt(100, 462.5 + 205 * i)
+        s.rect(cx - pad / 2, cy - pad / 2, pad, pad, AL, sw=0.5)
+    for i in range(20):
+        cx, cy = pt(3780, 482.5 + 215 * i)
+        s.rect(cx - pad / 2, cy - pad / 2, pad, pad, AL, sw=0.5)
+    for i in range(11):
+        cx, cy = pt(562.5 + 275 * i, 100)
+        s.rect(cx - pad / 2, cy - pad / 2, pad, pad, AL, sw=0.5)
+        cx, cy = pt(557.5 + 275 * i, 4970)
+        s.rect(cx - pad / 2, cy - pad / 2, pad, pad, AL, sw=0.5)
+    for i in range(6):
+        for j in range(10):
+            cx, cy = pt(1940 + (i - 2.5) * 500, 2535 + (j - 4.5) * 500)
+            s.circle(cx, cy, 0.135 * sc, CU, sw=0.5)
+            s.circle(cx, cy, 0.125 * sc, SOLDER, sw=0.5)
+    s.text(x0 + dw * sc / 2, y0 + dh * sc + 20, "die 3.88 x 5.07 mm, 63 wire bond pads, 60 bumps",
+           size=12, anchor="middle")
+    px, py = pt(3780, 482.5 + 215 * 19)
+    s.label(470, 100, "wire bond pads, 60 x 60 um openings,\n205 to 275 um pitch (inset from\nthe edge is not to scale)", px, py)
+    px, py = pt(1940 + 2.5 * 500, 2535 + 2.5 * 500)
+    s.label(470, 185, "bump sites on a 0.5 mm grid, joined to the\npads by 15 um wide copper traces (not drawn)", px, py)
+
+    # One bump site, enlarged: 1 px = 1 um.
+    cx, cy = 720, 400
+    s.text(cx, 262, "One bump site, enlarged", size=13, anchor="middle", weight="bold")
+    s.circle(cx, cy, 135, CU)
+    s.circle(cx, cy, 125, NI)
+    s.circle(cx, cy, 110, POLY)
+    s.label(880, 300, "copper pad,\n270 um", cx + 92, cy - 96)
+    s.label(880, 370, "under-bump metal,\n250 um", cx + 118, cy - 30)
+    s.label(880, 440, "opening in top\npolymer, 220 um", cx + 60, cy + 40)
+    s.text(cx, 560, "A 250 um ball sits on the under-bump metal.", size=11, anchor="middle", fill="#555555")
+    s.save("caravel-bump-layout.svg")
+
+
 if __name__ == "__main__":
     fig_bare()
     fig_enig()
@@ -585,3 +633,4 @@ if __name__ == "__main__":
     fig_routes()
     fig_array()
     fig_fc01()
+    fig_caravel_bumps()

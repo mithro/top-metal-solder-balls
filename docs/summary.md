@@ -55,7 +55,9 @@ that could make this much simpler.
 ## A test die already exists
 
 Run 2 includes FC01, a "flip chip pad test" die with six pads of roughly
-220 um at 0.4 mm pitch. See [What past runs did](past-runs.md).
+220 um at 0.4 mm pitch. See [What past runs did](past-runs.md). The Caravel chip has a published
+6 x 10 ball layout at 0.5 mm pitch for this same die size, built on added
+copper and under-bump metal. See [the sky130 comparison](sky130.md).
 
 ## The one design decision that matters most
 
@@ -174,3 +176,11 @@ method far more forgiving. See [Starting point](background.md).
 [gfmpw0]: https://wafer.space/google-gf180mcu-mpw0/
 [cs-run1]: https://www.crowdsupply.com/wafer-space/gf180mcu-run-1
 [cs-cob-update]: https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/chip-on-board
+[sky130-raw]: https://github.com/google/skywater-pdk-sky130-raw-data
+[sky130-rules]: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
+[bump-gen]: https://github.com/RTimothyEdwards/open_pdks/tree/main/sky130/custom/scripts/bump_bond_generator
+[caravel-bump-sky130]: https://github.com/efabless/caravel/blob/main/scripts/make_bump_bonds.tcl
+[caravel-bump-gf180]: https://github.com/efabless/caravel-gf180mcu/blob/main/scripts/make_bump_bonds.tcl
+[gatearray]: https://wafer.space/gatearray-v1
+[reball-video-1]: https://www.youtube.com/watch?v=MG_TanKc0E0
+[reball-video-2]: https://www.youtube.com/watch?v=7kQ6FeKp754

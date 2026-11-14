@@ -132,3 +132,26 @@ quantities, hobby ultrasonic irons, whether GF180MCU top metal is AlCu.
   0.4 mm pitch (2 x 3) plus six ~120 x 60 um pads, joined by traces.
 - Not published: wire type, bonder, die thickness, pad metal, passivation.
 - Crowd Supply pages return 403 to automated fetches.
+
+## 9. sky130 comparison and Tim's Drive (same day)
+
+- google/skywater-pdk-sky130-raw-data: device measurements (MDM files) and a
+  probe pad function spreadsheet for the SkyWater test tile, 12 pads per
+  module. No pad size, pitch, metal or opening anywhere in it.
+- skywater-pdk rules: met5 min width/space 1.6 um, 1.2 or 2 um thick; rdl
+  (copper) width/space 10 um, pad enclosure 10.75 um, 15 um to seal ring;
+  polyimide/PBO assumptions reference an outside bumping house.
+- open_pdks sky130/custom/scripts/bump_bond_generator (micross.tech,
+  bump_bond.tcl): layers PI1, RDL, PI2, UBM. UBM radius 125 um, PI2 opening
+  radius 110 um, RDL pad radius 135 um, route width 15 um, PI1 via 10 um
+  inside pad cut.
+- caravel and caravel-gf180mcu scripts/make_bump_bonds.tcl: 6 x 10 bumps at
+  500 um. sky130 die 3588 x 5188 um, GF180 die 3880 x 5070 um. GF180 pads:
+  60 um glass cuts; 21 left at 205 um, 20 right at 215 um, 11 top and 11
+  bottom at 275 um.
+- Drive: COB packaging doc (60 um pad opening, Caravel pitches), metal layer
+  rules doc (GF recommends 1.1 um top metal), gate array doc (post-fab extra
+  metal layer at ~2 um features), bumping notes of 2026-11-10 (zincate + EN
+  judged DIY feasible; suggestion to ask reballing machine makers).
+- Left out of the repo on purpose: names, prices, quotes and a vendor design
+  rule PDF marked confidential.

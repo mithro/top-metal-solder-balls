@@ -114,3 +114,11 @@ material, and the Quik-Pak release dates from 2011.
 - <https://wafer.space/google-gf180mcu-mpw0/>
 - <https://www.crowdsupply.com/wafer-space/gf180mcu-run-1>
 - <https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/chip-on-board>
+- <https://github.com/google/skywater-pdk-sky130-raw-data>
+- <https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html>
+- <https://github.com/RTimothyEdwards/open_pdks/tree/main/sky130/custom/scripts/bump_bond_generator>
+- <https://github.com/efabless/caravel/blob/main/scripts/make_bump_bonds.tcl>
+- <https://github.com/efabless/caravel-gf180mcu/blob/main/scripts/make_bump_bonds.tcl>
+- <https://wafer.space/gatearray-v1>
+- <https://www.youtube.com/watch?v=MG_TanKc0E0>
+- <https://www.youtube.com/watch?v=7kQ6FeKp754>
