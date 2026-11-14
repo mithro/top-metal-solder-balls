@@ -9,7 +9,7 @@ marked confidential are left out.
 | --- | --- |
 | GF180MCU Chip-on-Board (COB) Packaging | Bond pad opening is 60 x 60 um. Die is 3.88 x 5.07 mm. Records the Caravel pad pitches and points at the Caravel bump script ([sky130 comparison](sky130.md)). |
 | SKY130 WCSP Packaging Options and Pin Planning | The spacing sheet already used in [background](background.md). Its title shows it started as a sky130 ball grid plan. |
-| GF180MCU Metal Layer Rules | Top metal width 0.36 or 0.44 um, space 0.38 or 0.46 um, and a note that GlobalFoundries recommends the 1.1 um top metal over the 0.9 um one. |
+| GF180MCU Metal Layer Rules | Top metal width 0.44 um and space 0.46 um for the 1.1 um top metal, and a note that GlobalFoundries recommends it over the 0.9 um one. The 0.9 um option is not in use. |
 | GF180MCU Gate Array ([gatearray]) | A plan to add one extra metal layer after manufacturing, with features of about 2 um, using small maskless or stepper tools. |
 | Notes on BGA bumping on aluminium pads (10 November 2026) | A second opinion on the same problem, summarised below. |
 

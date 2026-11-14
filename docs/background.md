@@ -12,7 +12,7 @@
 | --- | --- | --- |
 | Process | GF180MCU, 5 metal layers, MIM caps | [wafer.space] |
 | PDK variant | project template uses a fork of gf180mcuD | [template] |
-| Top metal | Al; gf180mcuD top metal is 11 kA (1.1 um), gf180mcuC is 9 kA (0.9 um) | [open_pdks], [vlsida] |
+| Top metal | Al, 11 kA (1.1 um), the gf180mcuD stack. The 9 kA (0.9 um) gf180mcuC stack is not in use on wafer.space | [open_pdks], [vlsida] |
 | Slot sizes | 3.93 x 5.12 mm, 1.94 x 5.12 mm, 3.93 x 2.53 mm, 1.94 x 2.53 mm | [wafer.space] |
 | Seal ring | about 26 um per side | [wafer.space] |
 | Quantity | 1000 dies per slot | [wafer.space] |
@@ -26,7 +26,8 @@ wafer option is really available (the page text for it looked stale).
 
 OpenLane's PDK notes say GlobalFoundries reported pad delamination problems
 with the thinner 9 kA top metal, which is why the 11 kA variant exists
-([openlane-pdks]). That matters here: every wet UBM process eats some pad metal.
+([openlane-pdks]). The 9 kA stack is not in use on wafer.space, so every die
+here has the thicker metal. That still matters: every wet UBM process eats some pad metal.
 
 
 ```{figure} /_static/diagrams/pad-bare.svg
