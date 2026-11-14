@@ -139,3 +139,14 @@ power pins. The result is a glued-down die, not a part that can be reflowed.
 [acf-machine]: https://www.alibaba.fr/product-detail/Silman-ST-100SW-PLC-Core-Hot_1601428207164.html
 [klayout-pex]: https://github.com/iic-jku/klayout-pex/pull/229
 [alcu-barrier]: https://patents.google.com/patent/US20040253807
+[ws-run1]: https://wafer.space/ws-run1/
+[ws-run2]: https://wafer.space/ws-run2/
+[ws-run1-cob]: https://wafer.space/ws-run1-cob/
+[fc01]: https://wafer.space/ws-run2/projects/FC01.html
+[fc01-render]: https://wafer.space/ws-run2/renders/FC01_full.webp
+[cob-pcbs]: https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs
+[cob-wirebonding]: https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs/blob/main/run-1/wirebonding/README.md
+[cob-results-repo]: https://github.com/wafer-space/ws-run1-cob
+[gfmpw0]: https://wafer.space/google-gf180mcu-mpw0/
+[cs-run1]: https://www.crowdsupply.com/wafer-space/gf180mcu-run-1
+[cs-cob-update]: https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/chip-on-board

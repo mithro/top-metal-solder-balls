@@ -2,6 +2,9 @@
 
 ## Suggested experiments, cheapest first
 
+0. **Find the FC01 die.** Run 2 carries a flip chip pad test die with roughly
+   220 um pads at 0.4 mm pitch ([past runs](past-runs.md)). If those die are
+   available, they are the test vehicle for everything below.
 1. **Screen chemistry on aluminised mirror or film.** Zincate, aluminium
    solder paste, displacement silver. An afternoon and no chips spent.
 2. **Aluminium solder paste on scrap die.** Stencil, hot plate, rinse. If the
@@ -30,7 +33,7 @@
   changes, so this is worth asking wafer.space directly.
 - Does the open DRC deck allow 200 um passivation openings, and pads over
   the core?
-- Are scrap or reject die available for trials?
+- Are FC01 die from Run 2, or scrap die from any run, available for trials?
 - Which of the cheap aluminium fluxes actually works, and what is in them?
 - What particle size and density do the screen-repair anisotropic films
   have? Sellers do not say.
@@ -134,3 +137,14 @@
 [acf-machine]: https://www.alibaba.fr/product-detail/Silman-ST-100SW-PLC-Core-Hot_1601428207164.html
 [klayout-pex]: https://github.com/iic-jku/klayout-pex/pull/229
 [alcu-barrier]: https://patents.google.com/patent/US20040253807
+[ws-run1]: https://wafer.space/ws-run1/
+[ws-run2]: https://wafer.space/ws-run2/
+[ws-run1-cob]: https://wafer.space/ws-run1-cob/
+[fc01]: https://wafer.space/ws-run2/projects/FC01.html
+[fc01-render]: https://wafer.space/ws-run2/renders/FC01_full.webp
+[cob-pcbs]: https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs
+[cob-wirebonding]: https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs/blob/main/run-1/wirebonding/README.md
+[cob-results-repo]: https://github.com/wafer-space/ws-run1-cob
+[gfmpw0]: https://wafer.space/google-gf180mcu-mpw0/
+[cs-run1]: https://www.crowdsupply.com/wafer-space/gf180mcu-run-1
+[cs-cob-update]: https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/chip-on-board

@@ -52,6 +52,11 @@ part: stencils, 0.25 mm balls and hot plates are all cheap hobby items.
 The [open research page](research.md) lists ideas nobody seems to have tried
 that could make this much simpler.
 
+## A test die already exists
+
+Run 2 includes FC01, a "flip chip pad test" die with six pads of roughly
+220 um at 0.4 mm pitch. See [What past runs did](past-runs.md).
+
 ## The one design decision that matters most
 
 wafer.space allows any pad ring, so the pads can be designed for this. Big
@@ -158,3 +163,14 @@ method far more forgiving. See [Starting point](background.md).
 [acf-machine]: https://www.alibaba.fr/product-detail/Silman-ST-100SW-PLC-Core-Hot_1601428207164.html
 [klayout-pex]: https://github.com/iic-jku/klayout-pex/pull/229
 [alcu-barrier]: https://patents.google.com/patent/US20040253807
+[ws-run1]: https://wafer.space/ws-run1/
+[ws-run2]: https://wafer.space/ws-run2/
+[ws-run1-cob]: https://wafer.space/ws-run1-cob/
+[fc01]: https://wafer.space/ws-run2/projects/FC01.html
+[fc01-render]: https://wafer.space/ws-run2/renders/FC01_full.webp
+[cob-pcbs]: https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs
+[cob-wirebonding]: https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs/blob/main/run-1/wirebonding/README.md
+[cob-results-repo]: https://github.com/wafer-space/ws-run1-cob
+[gfmpw0]: https://wafer.space/google-gf180mcu-mpw0/
+[cs-run1]: https://www.crowdsupply.com/wafer-space/gf180mcu-run-1
+[cs-cob-update]: https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/chip-on-board

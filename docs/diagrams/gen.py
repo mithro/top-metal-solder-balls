@@ -549,6 +549,26 @@ def fig_array():
     s.save("ball-arrays.svg")
 
 
+def fig_fc01():
+    sc = 0.2  # px per um
+    s = Svg(820, 620, "Sketch of the FC01 flip chip pad test die")
+    s.text(410, 30, "FC01 on Run 2: pad layout as estimated from the public render", size=16, anchor="middle", weight="bold")
+    x0, y0 = 60, 60
+    s.rect(x0, y0, 1940 * sc, 2530 * sc, "#dfe5ec")
+    big = [(675 + i * 400, 1155 + j * 400) for j in range(3) for i in range(2)]
+    small = [(225, 335 + k * 150) for k in range(3)] + [(225, 790 + k * 110) for k in range(3)]
+    for bx, by in big:
+        s.rect(x0 + bx * sc, y0 + by * sc, 220 * sc, 220 * sc, AL)
+    for sx, sy in small:
+        s.rect(x0 + sx * sc, y0 + sy * sc, 120 * sc, 60 * sc, AL)
+    s.label(500, 150, "6 small pads, roughly 120 x 60 um,\nfor probing or wire bonding", x0 + 345 * sc, y0 + 365 * sc)
+    s.label(500, 330, "6 large pads, roughly 220 um square\non a 0.4 mm grid (2 x 3)", x0 + 1295 * sc, y0 + 1265 * sc)
+    s.text(500, 430, "traces join large pads to small pads\n(not drawn: pairing not verified)", fill="#8a6fb0")
+    s.label(500, 520, "die 1.94 x 2.53 mm, no transistors", x0 + 1940 * sc, y0 + 2300 * sc)
+    s.text(410, 600, "Dimensions are measured off an image at about 2.5 um per pixel, so treat them as plus or minus 10%.", size=11, anchor="middle", fill="#555555")
+    s.save("fc01-layout.svg")
+
+
 if __name__ == "__main__":
     fig_bare()
     fig_enig()
@@ -564,3 +584,4 @@ if __name__ == "__main__":
     fig_flows()
     fig_routes()
     fig_array()
+    fig_fc01()

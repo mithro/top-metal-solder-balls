@@ -120,3 +120,15 @@ quantities, hobby ultrasonic irons, whether GF180MCU top metal is AlCu.
   11 kA stack, about 4.4 uohm cm, which hints at alloy or barrier layers.
   Whether a TiN cap remains on pads is unknown and matters a lot. Ask
   wafer.space.
+
+## 8. Past wafer.space runs (same day)
+
+- All packaging so far is chip-on-board wire bonding. Run 1 results: TQVA
+  80/80, JKU1 20/20, GD02 19/20 boards pass. 11 designs have results.
+- Run 2: 24 of 40 designs chose chip-on-board; first bare dies shipped
+  2026-10-30; no bonding results yet.
+- Run 2 design FC01 "Flip Chip pad test version 1": quarter slot, 12 pads, no
+  transistors, no public repo. From the render: six ~220 um square pads at
+  0.4 mm pitch (2 x 3) plus six ~120 x 60 um pads, joined by traces.
+- Not published: wire type, bonder, die thickness, pad metal, passivation.
+- Crowd Supply pages return 403 to automated fetches.
