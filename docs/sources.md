@@ -122,3 +122,4 @@ material, and the Quik-Pak release dates from 2011.
 - <https://wafer.space/gatearray-v1>
 - <https://www.youtube.com/watch?v=MG_TanKc0E0>
 - <https://www.youtube.com/watch?v=7kQ6FeKp754>
+- <https://github.com/google/skywater-pdk-sky130-raw-data/tree/main/docs/sky130-testtile-open>
