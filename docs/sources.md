@@ -94,3 +94,12 @@ material, and the Quik-Pak release dates from 2011.
 - <https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8987911>
 - <https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6583635>
 - <https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/7940070>
+- <https://sra-shops.com/flux-aluminum-solder-1260-5oz>
+- <https://www.kappalloy.com/liquid-paste-flux/flux-for-aluminum/kapp-liquid-golden-flux/>
+- <https://www.walmart.com/ip/Sinyiin-10ml-bottle-Liquid-Flux-for-Pure-Aluminum-Sheet-Soldering-Liquid-Flux-No-Clean/17396371621>
+- <https://reach.dog/shop/cheersonic/products/ultrasonic-soldering-iron>
+- <https://www.aliexpress.us/item/2255800552723491.html>
+- <https://www.amazon.com/AC-7206U-18-Screen-Original-Anisotropic-Conductive/dp/B09BBJ6967>
+- <https://www.alibaba.fr/product-detail/Silman-ST-100SW-PLC-Core-Hot_1601428207164.html>
+- <https://github.com/iic-jku/klayout-pex/pull/229>
+- <https://patents.google.com/patent/US20040253807>

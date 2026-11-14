@@ -107,3 +107,16 @@ reorganised: home methods first, industry routes moved to `docs/industry/`.
 
 Not yet researched: consumer aluminium fluxes, where to buy ACF in small
 quantities, hobby ultrasonic irons, whether GF180MCU top metal is AlCu.
+
+## 7. Gap filling (same day)
+
+- Aluminium flux in small bottles: Superior No. 1260 5 oz at SRA ($38.99, old
+  listing), Kapp Golden Flux 2 oz ($39), generic 10 ml bottles about $10.
+- ACF reels for screen repair: about $30 for 25 to 50 m, widths 1.2 to 2.0 mm,
+  short shelf life. Particle size not stated by sellers. Pulse-heat bonding
+  machines from about $700.
+- Ultrasonic soldering irons: listings start around $2,000. Not a hobby tool.
+- Top metal alloy: not found. klayout-pex PR gives Metal5 = 40 mohm/sq on the
+  11 kA stack, about 4.4 uohm cm, which hints at alloy or barrier layers.
+  Whether a TiN cap remains on pads is unknown and matters a lot. Ask
+  wafer.space.

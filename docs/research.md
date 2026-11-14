@@ -63,7 +63,9 @@ a clamp on a hot plate? See [Flex PCB and Z-axis tape](methods/flex-ztape.md).
 Solar cell makers tin evaporated aluminium with ultrasonic irons ([ise-us],
 [isfh]). **Question:** can a blob of solder dragged across a whole die with an
 ultrasonic iron tin every pad at once, the passivation acting as the solder
-mask? It would be seconds of work per die if the pads survive.
+mask? It would be seconds of work per die if the pads survive. The irons are
+listed at $2,000 and up ([us-iron-price]), so this only makes sense with
+borrowed or home-built equipment.
 
 ## 9. Nickel without zincate
 
@@ -178,3 +180,12 @@ chemistry can be screened without spending chips.
 [nanosilver-al]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8987911
 [die-carrier]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6583635
 [bare-die-test]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/7940070
+[sra-1260]: https://sra-shops.com/flux-aluminum-solder-1260-5oz
+[kapp-flux]: https://www.kappalloy.com/liquid-paste-flux/flux-for-aluminum/kapp-liquid-golden-flux/
+[generic-al-flux]: https://www.walmart.com/ip/Sinyiin-10ml-bottle-Liquid-Flux-for-Pure-Aluminum-Sheet-Soldering-Liquid-Flux-No-Clean/17396371621
+[us-iron-price]: https://reach.dog/shop/cheersonic/products/ultrasonic-soldering-iron
+[acf-reel]: https://www.aliexpress.us/item/2255800552723491.html
+[acf-amazon]: https://www.amazon.com/AC-7206U-18-Screen-Original-Anisotropic-Conductive/dp/B09BBJ6967
+[acf-machine]: https://www.alibaba.fr/product-detail/Silman-ST-100SW-PLC-Core-Hot_1601428207164.html
+[klayout-pex]: https://github.com/iic-jku/klayout-pex/pull/229
+[alcu-barrier]: https://patents.google.com/patent/US20040253807

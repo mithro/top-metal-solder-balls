@@ -61,17 +61,25 @@ Process flow. The stencil is the same kind used for reballing.
   [reball](reballing.md) with normal balls and normal flux.
 - **Ultrasonic soldering iron.** Cavitation in the molten solder breaks the
   oxide without flux ([us-solder], [ohsu]). Solar cell makers tin evaporated
-  aluminium this way ([ise-us]). Hobby ultrasonic irons exist. Aiming one at
-  a 200 um pad is the problem.
+  aluminium this way ([ise-us]). The listings I found start around $2,000
+  ([us-iron-price]), so this is not a hobby tool unless one turns up used.
+  Aiming one at a 200 um pad is a second problem.
 - **Active solders** such as S-Bond and Cerasolzer bond to oxides directly
   with mechanical agitation ([sbond], [cerasolzer]). Same aiming problem.
 
 ## What to buy
 
-Superior's aluminium solder paste or flux (industrial supplier, small
-quantities need asking), or a consumer aluminium flux plus tin-silver solder
-paste (my suggestion; consumer products not researched yet). A stencil and a
-hot plate from the [reballing](reballing.md) page.
+| Item | Notes | Price seen |
+| --- | --- | --- |
+| Superior No. 1260 flux, 5 oz | the vendor's liquid aluminium flux, sold in small bottles by SRA ([sra-1260]) | $38.99 (old listing) |
+| Kapp Golden Flux, 2 oz | another liquid aluminium flux ([kapp-flux]) | $39 |
+| Generic aluminium flux, 10 ml | marketplace bottles; one listing says not for electronic components ([generic-al-flux]) | about $10 |
+| Superior direct aluminium solder paste | industrial supplier, small quantities need asking | not found |
+| Tin-silver or tin-zinc solder paste or wire | to pair with a liquid flux | a few dollars |
+
+A liquid flux brushed on the pads followed by ordinary tin-silver paste is the
+do-it-yourself version of the ready-made paste (my reasoning; untested). A
+stencil and a hot plate come from the [reballing](reballing.md) page.
 
 ## Fit
 
@@ -168,3 +176,12 @@ by far the simplest route: three steps and no wet chemistry beyond a rinse.
 [nanosilver-al]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8987911
 [die-carrier]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6583635
 [bare-die-test]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/7940070
+[sra-1260]: https://sra-shops.com/flux-aluminum-solder-1260-5oz
+[kapp-flux]: https://www.kappalloy.com/liquid-paste-flux/flux-for-aluminum/kapp-liquid-golden-flux/
+[generic-al-flux]: https://www.walmart.com/ip/Sinyiin-10ml-bottle-Liquid-Flux-for-Pure-Aluminum-Sheet-Soldering-Liquid-Flux-No-Clean/17396371621
+[us-iron-price]: https://reach.dog/shop/cheersonic/products/ultrasonic-soldering-iron
+[acf-reel]: https://www.aliexpress.us/item/2255800552723491.html
+[acf-amazon]: https://www.amazon.com/AC-7206U-18-Screen-Original-Anisotropic-Conductive/dp/B09BBJ6967
+[acf-machine]: https://www.alibaba.fr/product-detail/Silman-ST-100SW-PLC-Core-Hot_1601428207164.html
+[klayout-pex]: https://github.com/iic-jku/klayout-pex/pull/229
+[alcu-barrier]: https://patents.google.com/patent/US20040253807
