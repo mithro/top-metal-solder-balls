@@ -641,6 +641,27 @@ def fig_sky130_probe_pads():
     s.save("sky130-probe-pads.svg")
 
 
+def fig_notes_flows():
+    flow("plated-rdl-flow.svg", "Plated redistribution and under-bump metal: process flow", [
+        ("Finished wafer, Al pads\nunder nitride", DRY),
+        ("Spin, pattern and cure\npolyimide or PBO", HOT),
+        ("Sputter seed: 100 nm Ti,\n200 to 500 nm Cu", DRY),
+        ("Thick resist mould,\n5 to 50 um", DRY),
+        ("Electroplate Cu,\n5 to 10 um traces", WET),
+        ("Strip resist, etch\nseed Cu and Ti", WET),
+        ("Repeat for UBM: Cu,\n2 to 3 um Ni, Au flash", WET),
+        ("Drop balls through a\nstencil and reflow", HOT),
+        ("Backgrind, mark,\ndice, tape and reel", DRY),
+    ], cols=3, note="Unverified: from the notes of 10 November 2026.")
+    flow("zincate-mechanism-flow.svg", "What a zincate dip does to an aluminium pad", [
+        ("Alkaline bath\ndissolves the oxide", WET),
+        ("Zinc swaps places\nwith bare aluminium", WET),
+        ("Film stops growing at\ntens of nanometres", WET),
+        ("Zinc shields the pad\nthrough the rinse", WET),
+        ("Nickel bath: nickel\nreplaces the zinc", HOT),
+    ], cols=5, note="2 Al + 3 Zn(2+) gives 2 Al(3+) + 3 Zn. Nickel then keeps growing on itself.")
+
+
 if __name__ == "__main__":
     fig_bare()
     fig_enig()
@@ -659,3 +680,4 @@ if __name__ == "__main__":
     fig_fc01()
     fig_caravel_bumps()
     fig_sky130_probe_pads()
+    fig_notes_flows()
