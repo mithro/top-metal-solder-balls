@@ -1,45 +1,65 @@
 # Summary
 
-Status: first-pass literature and vendor survey, 2026-11-14. Nothing here has
-been tried on real die yet. Cost figures are flagged as either sourced or as a
-rough guess; most vendors do not publish prices, so the guesses need quotes
-behind them before anyone relies on them.
+Status: literature survey, 2026-11-14. Nothing here has been tried on real die
+yet. Where a claim is my own reasoning rather than something a source says, it
+is marked "my reasoning".
 
+## What we are after
+
+Solder balls, or something that does the same job, on the aluminium top metal
+of wafer.space GF180MCU die, using only things that can be done at home.
+
+- Home methods only: beakers, hobby plating kits, reballing stencils, a hot
+  plate or hot air. No cleanrooms, wire bonders or bumping services.
+- A wide process window and a high failure rate are acceptable. A slot yields
+  1000 die, so losing most of them while learning is fine.
+- It only has to "kind of work" between 0 C and 50 C. Thermal cycling,
+  humidity and multi-year life are not requirements.
+
+Those three constraints change the ranking a lot compared with an industry
+survey. Methods that industry rejects for reliability are back in play.
 
 ```{figure} /_static/diagrams/routes.svg
-:alt: Every workable route has two steps. The choice of under bump metal matters far more than how the ball is added.
+:alt: The home routes covered here. Step 1 is the hard part; step 2 is ordinary reballing.
 :width: 100%
 
-Every workable route has two steps. The choice of under bump metal matters far more than how the ball is added.
+The home routes covered here. Step 1 is the hard part; step 2 is ordinary reballing.
 ```
 
-- Solder does not wet aluminium, and tin and aluminium form no useful joint, so
-  every mainstream route puts a solderable, diffusion-blocking "under bump
-  metal" (UBM) on the pad first and attaches the ball to that. The real question
-  is how to get a UBM onto loose diced die cheaply.
-- **Best fit for small batches of diced die: electroless Ni / immersion Au
-  (ENIG) via double zincation, then solder balls placed by stencil or by laser
-  jetting.** It is maskless, needs only beakers and a hotplate, has been shown on
-  single die, and gives a real Ni barrier. The main risks are the thin top metal
-  (1.1 um on the 11 kA stack, right at the commonly quoted 1 um minimum) and
-  stray plating on die edges and backside.
-- **Lowest effort to try first: gold stud bumps as the UBM**, done by a service
-  on single die with no chemistry, followed by solder. It is quick, but Au on Al
-  degrades above roughly 200 C and a gold stud is a large gold source for tin, so
-  it is a prototype route, not a reliable one, unless the stud is capped.
-- **Most robust: buy the undiced wafer and have it bumped commercially**
-  (wafer.space lists a full undiced 200 mm wafer as an add-on). This turns the
-  job into ordinary wafer-level bumping at Micross, PacTech, Fraunhofer ISIT and
-  similar, at the cost of an NRE-sized lot charge and the fact that the wafer
-  carries everyone's designs.
-- Direct-to-aluminium tricks (ultrasonic soldering, active solders such as
-  S-Bond, Sn-Zn alloys, conductive adhesives on bare Al) are real technologies
-  but I found no evidence of any of them working on ~1 um thin-film pads at
-  250 um ball scale. They are worth a cheap experiment, not a plan.
-- Because wafer.space allows a custom pad ring or none at all, the pad geometry
-  is ours to choose. Large, round or octagonal, area-array pads sized for the
-  ball make every method below much easier than reusing 60 um wire-bond pads.
+## Ranking for home use
 
+1. **[Zincate plus a hobby electroless nickel kit](methods/zincate-nickel.md),
+   then reball.** The home version of what industry does. About $150 to $200 of
+   chemicals. Gives a real nickel surface that ordinary solder wets. The risk
+   is the pad: zincate eats 0.3 to 0.4 um of a 1.1 um pad.
+2. **[Aluminium solder paste or flux straight on the pad](methods/aluminium-solder.md).**
+   The fewest steps of anything here: print, heat, rinse. Proven on bulk
+   aluminium, completely untested on a 1.1 um film. Cheap enough to just try.
+3. **[A flex PCB as the package, joined with Z-axis adhesive](methods/flex-ztape.md).**
+   Avoids soldering to aluminium at all. The balls go on the flex's gold pads,
+   which is easy. Common Z-axis tape is too coarse, so this needs real
+   anisotropic film or a different adhesive trick.
+4. **[Silver epoxy dots](methods/adhesives.md).** No solder and no heat. Contact
+   to bare aluminium is poor and drifts, but may be good enough at 0 to 50 C.
+5. **[Silver mirror and other silver deposits](methods/silver.md).** Easy
+   chemistry, but the silver coats everything, does not remove the oxide, and
+   dissolves in molten solder. More useful as a surface for epoxy than for
+   solder.
+
+[Reballing](methods/reballing.md) is common to routes 1 to 3 and is the easy
+part: stencils, 0.25 mm balls and hot plates are all cheap hobby items.
+
+The [open research page](research.md) lists ideas nobody seems to have tried
+that could make this much simpler.
+
+## The one design decision that matters most
+
+wafer.space allows any pad ring, so the pads can be designed for this. Big
+round pads (200 um or more), 0.5 mm pitch to match off-the-shelf reballing
+stencils, and several pads per signal where there is room make every home
+method far more forgiving. See [Starting point](background.md).
+
+<!-- links: generated by update_links.py, edit _links.md instead -->
 [wafer.space]: https://wafer.space/
 [template]: https://github.com/wafer-space/gf180mcu-project-template
 [open_pdks]: https://github.com/rtimothyedwards/open_pdks
@@ -92,3 +112,40 @@ Every workable route has two steps. The choice of under bump metal matters far m
 [psi-indium]: https://arxiv.org/abs/physics/0510021
 [micross]: https://www.micross.com/components-and-services/component-design-packaging/wafer-bumping-wlp
 [izm]: https://www.izm.fraunhofer.de/content/dam/izm/en/documents/Abteilungen/High_Density_Interconnect_Wafer_Level_Packaging/Services_IZM-ASSID_Q4_15.pdf
+[caswell-al]: https://support.caswellplating.com/portal/en/kb/articles/can-i-use-your-kits-to-plate-aluminum
+[caswell-kit]: https://caswellplating.com/one-plate-1-electroless-nickel-kit/
+[caswell-zincate]: https://caswellplating.com/zincate-8-fl-oz.html
+[caswell-tutorial]: https://caswellplating.com/electroless_tutorial.html
+[en-wiki]: https://en.wikipedia.org/wiki/Electroless_nickel-phosphorus_plating
+[sciencemadness-en]: https://www.sciencemadness.org/whisper/viewthread.php?tid=70835
+[zincate-formulas]: https://www.finishing.com/424/16.shtml
+[superior-paste]: https://superiorflux.com/papers/DirectALSolderPasteIMAPS2011.pdf
+[superior-guide]: https://superiorflux.com/papers/AluminumSolderingGuide.pdf
+[superior-tech]: https://superiorflux.com/techniques-for-soldering-aluminum/
+[tollens]: https://en.wikipedia.org/wiki/Tollens%27_reagent
+[rsc-mirror]: https://edu.rsc.org/resources/a-giant-silver-mirror-experiment/822.article
+[brevnov]: https://data.zhenzhi.com/details/1/908811770
+[immersion-ag-patent]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6319543
+[ag-mirror-al-patent]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6695458
+[ag-dissolution]: https://link.springer.com/doi/10.1007/s11664-019-07316-1
+[ag-leaching]: https://www.circuitnet.com/experts/87721.html
+[ams2420]: https://saemobilus.sae.org/content/AMS2420E/
+[stencil-kit]: https://www.amazon.com/Universal-Reballing-Stencil-Template-0-25-0-76mm/dp/B01HHQIZOC
+[kit-27]: https://www.hklrf.com/27pcs-Universal-Stencil-BGA-Balls-Station-kit_1255.html
+[balls-set]: https://www.amazon.com/clp/B07YXRQ4K4
+[jlc-stencil]: https://jlcpcb.com/capabilities/pcb-stencil-manufacturing
+[reball-guide]: https://pcbsync.com/bga-reballing-process/
+[badcaps]: https://www.badcaps.net/forum/troubleshooting-hardware-devices-and-electronics-theory/equipment-usage-soldering-techniques-and-reviews/76158-noob-reballing-balling-stencil-questions
+[mitxela]: https://hackaday.com/2018/06/26/no-caffeine-no-problem-a-hand-soldered-chip-scale-package/
+[mhp30]: https://www.sparkfun.com/catalog/product/view/id/8333
+[bisn]: https://www.caplinq.com/bi58sn42-low-eutectic-temperature-lead-free-solder-spheres-bi58sn42.html
+[ica-aging]: https://incurelab.com/wp/how-conductive-epoxy-contact-resistance-changes-with-cure-and-aging
+[meridian-al]: https://meridianadhesives.com/product-information-insights/tech-tip-24-bonding-to-aluminum-with-epoxy-key-challenges-and-best-practices/
+[3m-9703]: https://multimedia.3m.com/mws/media/66235O/3m-electrically-conductive-adhesive-transfer-tape-9703.pdf
+[3m-7303]: https://multimedia.3m.com/mws/media/66294O/3mtm-anisotropic-conductive-film-7303.PDF
+[acf-params]: https://jiutustore.com/blogs/news/acf-bonding-machine-parameters-temperature-pressure-time
+[jlc-flex]: https://jlcpcb.com/capabilities/flex-pcb-capabilities
+[egain]: https://physicsworld.com/a/liquid-metal-disintegrates-implanted-medical-devices-on-demand/
+[nanosilver-al]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8987911
+[die-carrier]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6583635
+[bare-die-test]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/7940070

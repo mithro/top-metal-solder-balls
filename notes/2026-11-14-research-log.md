@@ -80,3 +80,30 @@ Written up in `docs/` (Sphinx, one page per method). Extra findings that fed it:
 - No vendor publishes prices. All cost figures in the docs are rough guesses.
 
 Still to do: read more sources in full, get quotes, confirm wafer.space stack.
+
+## 6. Scope change and third pass (same day)
+
+Tim narrowed the scope: home methods only, high failure rates fine, only needs
+to work 0 to 50 C, include novel ideas, flex PCBs and Z-axis tape. Docs were
+reorganised: home methods first, industry routes moved to `docs/industry/`.
+
+- Caswell: zincate concentrate plus One-Plate 1 electroless nickel mini kit
+  ($148 listed) plates aluminium if zincated first. Zincate 75 F, 15 s to
+  2 min. Nickel 185 to 195 F, 15 to 60 min.
+- Superior Flux "Direct Aluminum Soldering Paste" (Sn96.5Ag3.5, hot plate,
+  water-soluble residue, Ag-Al intermetallic, 882 psi Al-Al lap joints). Read
+  from the PDFs. Bulk aluminium only; nothing on thin film.
+- Tollens / silver mirror: non-selective, alkaline, explosive silver nitride
+  on standing. Thin silver leaches into molten tin.
+- Brevnov et al.: silver displaces onto Al films alloyed with ~0.5% Cu but
+  not onto pure Al. Selective, so worth an experiment.
+- 3M 9703 Z-axis tape: minimum gap 0.4 mm, minimum pad area 3.2 mm2. Far too
+  coarse for 200 um pads. Real ACF needs ~140 to 200 C and 20 bar or more.
+- JLCPCB flex: 3/3 mil, ENIG, 25 or 50 um polyimide. Stencils from $7.
+- Reballing: 0.25 mm balls and universal stencils (0.25 mm ball / 0.5 mm
+  pitch) are cheap hobby items; MHP30 mini hot plate 30 x 30 mm.
+- Gallium destroys aluminium (grain boundary attack): ruled out.
+- Patents: nanosilver paste sinters onto Al pads at ~250 C without pressure.
+
+Not yet researched: consumer aluminium fluxes, where to buy ACF in small
+quantities, hobby ultrasonic irons, whether GF180MCU top metal is AlCu.

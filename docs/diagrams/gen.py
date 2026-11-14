@@ -262,6 +262,42 @@ def fig_adhesive():
     s.save("adhesive-cross-section.svg")
 
 
+def fig_flex():
+    s = Svg(W + 120, H, "Bare die on a flex circuit with Z-axis adhesive", shift=60)
+    s.text(380, 30, "Flex circuit as a home-made package", size=16, anchor="middle", weight="bold")
+    s.rect(140, 60, 480, 60, SI)
+    s.text(380, 96, "die (face down)", anchor="middle", fill="#ffffff")
+    s.rect(140, 120, 480, 14, PASS)
+    for x0 in (220, 460):
+        s.rect(x0, 120, 80, 10, AL)
+        s.rect(x0 + 6, 130, 68, 4, "#fbf3d0", stroke="none")
+    s.rect(140, 134, 480, 22, "#fbf3d0", stroke="none")
+    import random
+    rnd = random.Random(4)
+    for _ in range(70):
+        s.circle(rnd.uniform(146, 614), rnd.uniform(138, 152), 3, "#b0b0b0", sw=0.5)
+    for x0 in (220, 460):
+        s.rect(x0, 142, 80, 14, AU)
+        for k in range(6):
+            s.circle(x0 + 10 + k * 12, 137, 4.5, "#d8d8d8", sw=0.6)
+    s.rect(80, 156, 600, 40, POLY)
+    s.text(600, 181, "polyimide flex", anchor="middle", size=12)
+    for x0 in (220, 460):
+        s.rect(x0 + 30, 156, 20, 40, CU)
+        s.rect(x0 - 20, 196, 120, 12, AU)
+        s.circle(x0 + 40, 250, 46, SOLDER)
+        s.rect(x0 - 20, 196, 120, 12, AU)
+    s.rect(60, 296, 640, 14, CU)
+    s.rect(60, 310, 640, 50, PCB)
+    s.text(380, 340, "main PCB", anchor="middle", fill="#ffffff")
+    s.label(590, 240, "ordinary solder balls on the\nflex's gold-plated copper pads", 545, 250)
+    s.label(225, 250, "plated via carries the\nsignal through the flex", 258, 180, anchor="end")
+    s.label(120, 110, "Al pad, untreated", 226, 125, anchor="end")
+    s.label(625, 105, "particles trapped between\nAl pad and flex pad", 538, 137)
+    s.text(380, 436, "Not to scale. The join to aluminium is adhesive; the solder only ever touches the flex.", size=11, anchor="middle", fill="#555555")
+    s.save("flex-ztape-cross-section.svg")
+
+
 def fig_wlcsp():
     s = Svg(W + 120, H, "Wafer level chip scale package with redistribution layer", shift=60)
     s.text(380, 30, "Commercial wafer-level bumping with redistribution", size=16, anchor="middle", weight="bold")
@@ -336,6 +372,40 @@ def fig_flows():
         ("Immersion Au\n90 C, 1 min", HOT),
         ("Rinse, dry,\nrelease from carrier", DRY),
     ], note="DI water rinse between every wet step. Times from the Virginia Tech single-die thesis.")
+    flow("home-nickel-flow.svg", "Home zincate and electroless nickel: process flow", [
+        ("Stick die to a holder,\npaint edges and back", DRY),
+        ("Degrease\n(IPA, detergent)", WET),
+        ("Zincate dip\n15 to 30 s, room temp", WET),
+        ("Strip in nitric acid,\nzincate again (optional)", WET),
+        ("Electroless nickel kit\n85 to 90 C, 10 to 20 min", HOT),
+        ("Rinse and dry", WET),
+        ("Flux and reball\nthe same day", HOT),
+        ("Test: continuity,\npush on the balls", DRY),
+    ], note="Distilled water rinse between every wet step. Times are starting points, not a proven recipe.")
+    flow("al-paste-flow.svg", "Aluminium solder paste: process flow", [
+        ("Die in a nest\nunder a stencil", DRY),
+        ("Print aluminium\nsolder paste", WET),
+        ("Hot plate reflow,\nreach temperature fast", HOT),
+        ("Rinse residue off\nin hot water", WET),
+        ("Inspect bumps,\ncheck pad still there", DRY),
+        ("Optional: reball on\ntop of the tinned pads", HOT),
+    ], cols=3)
+    flow("silver-mirror-flow.svg", "Silver mirror: process flow", [
+        ("Mask everything\nexcept the pads", DRY),
+        ("Mix fresh Tollens\nreagent, small batch", WET),
+        ("Add glucose,\nimmerse die", WET),
+        ("Rinse, remove mask\n(lifts stray silver)", WET),
+        ("Destroy leftover\nreagent with acid", HOT),
+        ("Join with silver epoxy\nor low-temp solder", DRY),
+    ], cols=3, note="Never store Tollens reagent: it forms explosive silver nitride on standing.")
+    flow("ball-attach-flow.svg", "Reballing a bare die: process flow", [
+        ("Die with treated\npads in a nest", DRY),
+        ("Thin smear of\ntacky flux", WET),
+        ("Align stencil,\nbrush balls into holes", DRY),
+        ("Lift stencil (or leave a\ndirect-heat stencil on)", DRY),
+        ("Heat from below until\nballs go shiny and round", HOT),
+        ("Clean flux,\nprod each ball", WET),
+    ], cols=3)
     flow("stud-bump-flow.svg", "Stud bump route: process flow", [
         ("Mount die on\nheated chuck", DRY),
         ("Thermosonic\nball bond on pad", HOT),
@@ -352,14 +422,6 @@ def fig_flows():
         ("Remove mask,\ninspect", DRY),
         ("Ball attach", HOT),
     ], cols=3)
-    flow("ball-attach-flow.svg", "Ball attach by stencil: process flow", [
-        ("Die with UBM\nin a nest", DRY),
-        ("Apply tacky flux\nto the pads", WET),
-        ("Align stencil,\nsweep balls into holes", DRY),
-        ("Lift stencil,\ninspect, fix strays", DRY),
-        ("Reflow\n(about 245 C for SAC)", HOT),
-        ("Clean flux,\nshear test samples", WET),
-    ], cols=3)
     flow("wafer-level-flow.svg", "Commercial wafer-level bumping: process flow", [
         ("Lay out pads to the\nbump house rules", DRY),
         ("Buy the\nundiced wafer", DRY),
@@ -371,40 +433,96 @@ def fig_flows():
 
 
 def fig_routes():
-    s = Svg(820, 470, "Routes from bare aluminium pad to solder ball")
-    s.text(410, 30, "Two steps: make the pad solderable, then add the solder", size=16, anchor="middle", weight="bold")
-    s.text(170, 62, "Step 1: under bump metal", size=13, anchor="middle", weight="bold")
-    s.text(650, 62, "Step 2: solder", size=13, anchor="middle", weight="bold")
+    s = Svg(860, 500, "Home routes from bare aluminium pad to solder ball")
+    s.text(430, 30, "Home routes: make the pad solderable, then add the solder", size=16, anchor="middle", weight="bold")
+    s.text(180, 62, "Step 1: treat the Al pad", size=13, anchor="middle", weight="bold")
+    s.text(680, 62, "Step 2: add the solder", size=13, anchor="middle", weight="bold")
     left = [
-        ("Electroless Ni / Au (zincate)", DRY, 90),
-        ("Sputtered Ti / Ni / Au", DRY, 150),
-        ("Gold stud bump", HOT, 210),
-        ("Commercial wafer bumping", DRY, 270),
-    ]
-    right = [
-        ("Stencil ball placement", 90),
-        ("Laser solder jetting", 170),
-        ("Paste printing", 250),
+        ("Zincate + electroless nickel kit", DRY, 90),
+        ("Aluminium solder paste or flux", HOT, 160),
+        ("Silver: mirror or displacement", "#f6d5d2", 230),
     ]
     for t, c, y in left:
-        s.rect(40, y, 260, 40, c, rx=8)
-        s.text(170, y + 25, t, anchor="middle")
-    for t, y in right:
-        s.rect(540, y, 220, 40, "#e9f0f7", rx=8)
-        s.text(650, y + 25, t, anchor="middle")
-    for _, _, y in left[:2]:
-        for _, ry in right:
-            s.line(300, y + 20, 538, ry + 20, sw=1, extra='marker-end="url(#arr)"')
-    s.line(300, 230, 538, 195, sw=1, extra='marker-end="url(#arr)" stroke-dasharray="5 4"')
-    s.line(300, 290, 538, 115, sw=1, extra='marker-end="url(#arr)"')
-    s.rect(40, 350, 260, 40, "#f6d5d2", rx=8)
-    s.text(170, 375, "Ultrasonic / active solder, Sn-Zn", anchor="middle")
-    s.rect(540, 350, 220, 40, "#f6d5d2", rx=8)
-    s.text(650, 375, "Solder straight on Al", anchor="middle")
-    s.line(300, 370, 538, 370, sw=1, extra='marker-end="url(#arr)" stroke-dasharray="5 4"')
-    s.text(410, 425, "Solid arrows: established combinations. Dashed: works for prototypes or unproven on thin pads.", size=12, anchor="middle", fill="#555555")
-    s.text(410, 445, "Green: gives a real barrier layer. Orange: no barrier. Red: no under bump metal at all.", size=12, anchor="middle", fill="#555555")
+        s.rect(40, y, 280, 44, c, rx=8)
+        s.text(180, y + 27, t, anchor="middle")
+    s.rect(560, 90, 240, 44, "#e9f0f7", rx=8)
+    s.text(680, 117, "Reballing stencil + 0.25 mm balls", anchor="middle")
+    s.rect(560, 160, 240, 44, "#e9f0f7", rx=8)
+    s.text(680, 187, "Paste already leaves a bump", anchor="middle")
+    s.rect(560, 300, 240, 44, "#e9f0f7", rx=8)
+    s.text(680, 327, "Silver epoxy dots (no solder)", anchor="middle")
+    s.line(320, 112, 558, 112, sw=1.4, extra='marker-end="url(#arr)"')
+    s.line(320, 182, 558, 182, sw=1.4, extra='marker-end="url(#arr)"')
+    s.line(320, 176, 558, 120, sw=1, extra='marker-end="url(#arr)"')
+    s.line(320, 252, 558, 126, sw=1, extra='marker-end="url(#arr)" stroke-dasharray="5 4"')
+    s.line(320, 258, 558, 316, sw=1, extra='marker-end="url(#arr)"')
+    s.rect(40, 300, 280, 44, "#eeeeee", rx=8)
+    s.text(180, 327, "Nothing (bare Al, scratched)", anchor="middle")
+    s.line(320, 322, 558, 322, sw=1, extra='marker-end="url(#arr)" stroke-dasharray="5 4"')
+    s.text(430, 400, "Green: real nickel barrier, most steps. Orange: fewest steps, unproven on thin pads.", size=12, anchor="middle", fill="#555555")
+    s.text(430, 420, "Red: silver dissolves in molten solder, so it suits epoxy better than solder.", size=12, anchor="middle", fill="#555555")
+    s.text(430, 440, "Dashed arrows: expected to be marginal.", size=12, anchor="middle", fill="#555555")
     s.save("routes.svg")
+
+
+def fig_home_nickel():
+    s = Svg(W + 120, H, "Home zincate and electroless nickel with solder ball", shift=60)
+    ball(s, 270, 108)
+    base(s)
+    ni = [
+        (CX - OPEN, Y_PAD), (CX + OPEN, Y_PAD), (CX + OPEN, Y_PASS),
+        (CX + OPEN + 8, Y_PASS), (CX + OPEN + 8, 272), (CX + OPEN + 5, 270),
+        (CX - OPEN - 5, 270), (CX - OPEN - 8, 272), (CX - OPEN - 8, Y_PASS),
+        (CX - OPEN, Y_PASS),
+    ]
+    s.poly(ni, NI)
+    s.line(CX - OPEN + 2, Y_PAD - 1, CX + OPEN - 2, Y_PAD - 1, stroke=IMC, sw=2)
+    s.label(560, 150, "0.25 mm solder ball from\na reballing stencil", CX + 100, 190)
+    s.label(570, 222, "no gold at home: solder soon,\nwith an active flux", CX + 104, 270, fill=WARN)
+    s.label(570, 266, "electroless nickel from a\nhobby kit, a few um", CX + 80, 286)
+    s.label(225, 200, "nickel grows only on metal,\nso no mask is needed", CX - OPEN - 6, 275, anchor="end")
+    s.label(225, 250, "zincate dip: eats 0.3 to 0.4 um\nof a 1.1 um pad", CX - 70, Y_PAD - 1, anchor="end", fill=IMC)
+    s.text(380, 30, "Home zincate and electroless nickel", size=16, anchor="middle", weight="bold")
+    s.save("home-nickel-cross-section.svg")
+
+
+def fig_al_paste():
+    s = Svg(W + 120, H, "Aluminium solder paste reflowed directly on the pad", shift=60)
+    r, hw = 115, 96
+    d = math.sqrt(r * r - hw * hw)
+    s.circle(CX, Y_PAD + d, r, SOLDER)
+    s.rect(0, Y_PAD, W, 200, "#ffffff", stroke="none")
+    base(s)
+    s.line(CX - 96, Y_PAD, CX + 96, Y_PAD, stroke=IMC, sw=3)
+    s.label(560, 170, "Sn-Ag solder dome left\nby the printed paste", CX + 40, 262)
+    s.label(570, 230, "silver-aluminium intermetallic\nmakes the bond (seen on bulk Al)", CX + 60, Y_PAD, fill=IMC)
+    s.label(225, 190, "aggressive flux removes the oxide:\nmust be rinsed off afterwards", CX - 90, 285, anchor="end", fill=WARN)
+    s.label(225, 250, "unknown: does a 1.1 um pad\nsurvive the flux and the tin?", CX - 108, Y_PAD + 10, anchor="end", fill=WARN)
+    s.text(380, 30, "Aluminium solder paste straight on the pad", size=16, anchor="middle", weight="bold")
+    s.save("al-paste-cross-section.svg")
+
+
+def fig_silver():
+    s = Svg(W + 120, H, "Silver mirror deposit covering pads and passivation", shift=60)
+    s.text(380, 30, "Silver mirror: the silver goes everywhere", size=16, anchor="middle", weight="bold")
+    s.rect(60, Y_SUB, 640, 70, SI)
+    s.text(380, 362, "inter-metal dielectric, lower metals, silicon", anchor="middle", fill="#ffffff")
+    for x0 in (150, 430):
+        s.rect(x0, Y_PAD, 180, 20, AL)
+    for x0, w in ((60, 110), (310, 140), (590, 110)):
+        s.rect(x0, Y_PASS, w, 40, PASS)
+    pts = [(60, Y_PASS), (170, Y_PASS), (170, Y_PAD), (310, Y_PAD), (310, Y_PASS),
+           (450, Y_PASS), (450, Y_PAD), (590, Y_PAD), (590, Y_PASS), (700, Y_PASS)]
+    up = [(x, y - 5) for x, y in pts]
+    up[1] = (175, Y_PASS - 5); up[2] = (175, Y_PAD - 5); up[3] = (305, Y_PAD - 5); up[4] = (305, Y_PASS - 5)
+    up[5] = (455, Y_PASS - 5); up[6] = (455, Y_PAD - 5); up[7] = (585, Y_PAD - 5); up[8] = (585, Y_PASS - 5)
+    s.poly(pts + up[::-1], "#f2f2f2", sw=0.8)
+    s.label(560, 150, "silver film about 0.1 um, on\npads and passivation alike", 520, Y_PAD - 4)
+    s.label(570, 215, "bridge between pads: must be\nmasked or removed", 380, Y_PASS - 4, fill=WARN)
+    s.label(225, 160, "alkaline bath also etches\nthe aluminium", 240, Y_PAD + 6, anchor="end", fill=WARN)
+    s.label(225, 220, "oxide stays under the silver\nunless removed first", 200, Y_PAD - 1, anchor="end", fill=WARN)
+    s.text(380, 436, "Two neighbouring pads. Not to scale.", size=11, anchor="middle", fill="#555555")
+    s.save("silver-mirror-cross-section.svg")
 
 
 def fig_array():
@@ -437,8 +555,11 @@ if __name__ == "__main__":
     fig_stud()
     fig_sputter("sputtered-ubm-cross-section.svg", "Sputtered thin-film UBM with solder ball",
                 "SAC solder ball,\n250 um")
-    fig_direct()
+    fig_home_nickel()
+    fig_al_paste()
+    fig_silver()
     fig_adhesive()
+    fig_flex()
     fig_wlcsp()
     fig_flows()
     fig_routes()

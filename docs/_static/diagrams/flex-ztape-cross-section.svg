@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img" aria-label="Bare die on a flex circuit with Z-axis adhesive">
+<title>Bare die on a flex circuit with Z-axis adhesive</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d2733"/></marker></defs>
+<rect width="880" height="450" fill="#ffffff"/>
+<g transform="translate(60,0)">
+<text x="380" y="30" font-size="16" text-anchor="middle" fill="#1d2733" font-weight="bold" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Flex circuit as a home-made package</text>
+<rect x="140" y="60" width="480" height="60" rx="0" fill="#8d99a6" stroke="#1d2733" stroke-width="1" />
+<text x="380" y="96" font-size="13" text-anchor="middle" fill="#ffffff" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">die (face down)</text>
+<rect x="140" y="120" width="480" height="14" rx="0" fill="#7fb77e" stroke="#1d2733" stroke-width="1" />
+<rect x="220" y="120" width="80" height="10" rx="0" fill="#c9d6e2" stroke="#1d2733" stroke-width="1" />
+<rect x="226" y="130" width="68" height="4" rx="0" fill="#fbf3d0" stroke="none" stroke-width="1" />
+<rect x="460" y="120" width="80" height="10" rx="0" fill="#c9d6e2" stroke="#1d2733" stroke-width="1" />
+<rect x="466" y="130" width="68" height="4" rx="0" fill="#fbf3d0" stroke="none" stroke-width="1" />
+<rect x="140" y="134" width="480" height="22" rx="0" fill="#fbf3d0" stroke="none" stroke-width="1" />
+<circle cx="256.47050599711935" cy="139.44432447923003" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="331.3552575417987" cy="140.16961179123373" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="177.12906477804808" cy="143.62227420279106" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="575.6029601650525" cy="149.20633292094132" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="504.0960979725452" cy="141.10699445966443" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="397.1662438258127" cy="141.8735570081803" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="226.80699970555264" cy="139.48656609404142" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="246.33940244693292" cy="150.98465883999285" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="533.9345828283003" cy="149.29313285383253" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="520.6095884381082" cy="140.70809865226937" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="291.0097800161826" cy="146.7776584337838" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="488.52672375524" cy="149.96507701187886" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="557.8637516370413" cy="139.2140555368889" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="429.53868158090376" cy="147.40382039123062" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="382.78636703247435" cy="140.48906243937097" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="367.63913138984793" cy="139.25084690171548" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="583.387354305157" cy="150.11677838259118" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="402.29499096674124" cy="142.20344035402655" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="571.3512954460732" cy="146.0131352236025" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="558.9244682632736" cy="149.8726172351309" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="383.9182716557277" cy="143.79524460384425" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="426.2910369849151" cy="144.0346022421063" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="221.49804366491276" cy="142.27156235005833" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="526.2932051210025" cy="138.60533856701147" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="167.67869553364392" cy="146.76891043755865" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="277.2427430363904" cy="145.4847051283119" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="366.5403603018167" cy="142.7998057159102" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="612.7265131125486" cy="140.7380289206664" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="339.1878991986281" cy="140.83738862641354" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="442.08721147819693" cy="141.86826768943556" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="312.52879315624074" cy="148.45719753386646" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="296.07304672087923" cy="145.8194057701675" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="569.2194675163478" cy="139.41371214205003" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="174.8335932748023" cy="141.20417216334272" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="504.0959289406971" cy="146.61604905180175" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="257.1112354782525" cy="142.63493793520428" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="229.08857655638866" cy="144.42626253038247" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="166.0356358819852" cy="147.76208634046125" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="565.2942006243329" cy="151.36632637679284" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="489.9228836297973" cy="151.43814628258133" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="154.5117618372679" cy="142.0459505506118" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="598.0911622610815" cy="148.85335209315207" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="338.08015474023375" cy="151.20631714294174" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="436.39890064493164" cy="149.45098920977554" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="283.31599871141816" cy="140.67981286732234" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="353.85856807719034" cy="139.9101267717828" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="324.60500905098706" cy="151.46539071369668" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="301.0517832652192" cy="138.1315505287539" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="166.9650862875546" cy="140.37393861347937" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="512.7929758163941" cy="143.07813973695482" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="281.87642263949874" cy="139.35943098478447" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="605.4583679809182" cy="143.93533526980443" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="243.30508194247878" cy="138.83075333290495" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="171.86665258536357" cy="140.3613837982527" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="462.755091028285" cy="140.09496748813424" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="165.13762759890895" cy="144.8693466198244" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="262.55944882654114" cy="151.96691137923327" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="203.22388457290833" cy="145.4093822099321" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="508.1347146224371" cy="143.73049723448284" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="608.223655981737" cy="144.6886674823226" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="259.19149378959116" cy="143.7487148410614" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="163.25477849335059" cy="143.8970934615212" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="262.3382358476511" cy="150.45020583264318" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="534.9300518405203" cy="144.9801160739954" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="160.8123671801775" cy="141.56151125987935" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="259.43811006856635" cy="140.91291690478042" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="254.32639410509944" cy="150.1759332244368" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="212.31642732103603" cy="138.71783215160934" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="580.3195261001126" cy="145.91481880572425" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<circle cx="609.5870938496575" cy="143.64146892337928" r="3" fill="#b0b0b0" stroke="#1d2733" stroke-width="0.5"/>
+<rect x="220" y="142" width="80" height="14" rx="0" fill="#e0b020" stroke="#1d2733" stroke-width="1" />
+<circle cx="230" cy="137" r="4.5" fill="#d8d8d8" stroke="#1d2733" stroke-width="0.6"/>
+<circle cx="242" cy="137" r="4.5" fill="#d8d8d8" stroke="#1d2733" stroke-width="0.6"/>
+<circle cx="254" cy="137" r="4.5" fill="#d8d8d8" stroke="#1d2733" stroke-width="0.6"/>
+<circle cx="266" cy="137" r="4.5" fill="#d8d8d8" stroke="#1d2733" stroke-width="0.6"/>
+<circle cx="278" cy="137" r="4.5" fill="#d8d8d8" stroke="#1d2733" stroke-width="0.6"/>
+<circle cx="290" cy="137" r="4.5" fill="#d8d8d8" stroke="#1d2733" stroke-width="0.6"/>
+<rect x="460" y="142" width="80" height="14" rx="0" fill="#e0b020" stroke="#1d2733" stroke-width="1" />
+<circle cx="470" cy="137" r="4.5" fill="#d8d8d8" stroke="#1d2733" stroke-width="0.6"/>
+<circle cx="482" cy="137" r="4.5" fill="#d8d8d8" stroke="#1d2733" stroke-width="0.6"/>
+<circle cx="494" cy="137" r="4.5" fill="#d8d8d8" stroke="#1d2733" stroke-width="0.6"/>
+<circle cx="506" cy="137" r="4.5" fill="#d8d8d8" stroke="#1d2733" stroke-width="0.6"/>
+<circle cx="518" cy="137" r="4.5" fill="#d8d8d8" stroke="#1d2733" stroke-width="0.6"/>
+<circle cx="530" cy="137" r="4.5" fill="#d8d8d8" stroke="#1d2733" stroke-width="0.6"/>
+<rect x="80" y="156" width="600" height="40" rx="0" fill="#e8c98a" stroke="#1d2733" stroke-width="1" />
+<text x="600" y="181" font-size="12" text-anchor="middle" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">polyimide flex</text>
+<rect x="250" y="156" width="20" height="40" rx="0" fill="#c8763a" stroke="#1d2733" stroke-width="1" />
+<rect x="200" y="196" width="120" height="12" rx="0" fill="#e0b020" stroke="#1d2733" stroke-width="1" />
+<circle cx="260" cy="250" r="46" fill="#d9dde2" stroke="#1d2733" stroke-width="1"/>
+<rect x="200" y="196" width="120" height="12" rx="0" fill="#e0b020" stroke="#1d2733" stroke-width="1" />
+<rect x="490" y="156" width="20" height="40" rx="0" fill="#c8763a" stroke="#1d2733" stroke-width="1" />
+<rect x="440" y="196" width="120" height="12" rx="0" fill="#e0b020" stroke="#1d2733" stroke-width="1" />
+<circle cx="500" cy="250" r="46" fill="#d9dde2" stroke="#1d2733" stroke-width="1"/>
+<rect x="440" y="196" width="120" height="12" rx="0" fill="#e0b020" stroke="#1d2733" stroke-width="1" />
+<rect x="60" y="296" width="640" height="14" rx="0" fill="#c8763a" stroke="#1d2733" stroke-width="1" />
+<rect x="60" y="310" width="640" height="50" rx="0" fill="#3f7f4f" stroke="#1d2733" stroke-width="1" />
+<text x="380" y="340" font-size="13" text-anchor="middle" fill="#ffffff" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">main PCB</text>
+<line x1="586" y1="244" x2="545" y2="250" stroke="#1d2733" stroke-width="0.8" />
+<circle cx="545" cy="250" r="2" fill="#1d2733" stroke="#1d2733" stroke-width="1"/>
+<text x="590" y="240" font-size="13" text-anchor="start" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">ordinary solder balls on the</text>
+<text x="590" y="256" font-size="13" text-anchor="start" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">flex's gold-plated copper pads</text>
+<line x1="229" y1="254" x2="258" y2="180" stroke="#1d2733" stroke-width="0.8" />
+<circle cx="258" cy="180" r="2" fill="#1d2733" stroke="#1d2733" stroke-width="1"/>
+<text x="225" y="250" font-size="13" text-anchor="end" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">plated via carries the</text>
+<text x="225" y="266" font-size="13" text-anchor="end" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">signal through the flex</text>
+<line x1="124" y1="106" x2="226" y2="125" stroke="#1d2733" stroke-width="0.8" />
+<circle cx="226" cy="125" r="2" fill="#1d2733" stroke="#1d2733" stroke-width="1"/>
+<text x="120" y="110" font-size="13" text-anchor="end" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Al pad, untreated</text>
+<line x1="621" y1="109" x2="538" y2="137" stroke="#1d2733" stroke-width="0.8" />
+<circle cx="538" cy="137" r="2" fill="#1d2733" stroke="#1d2733" stroke-width="1"/>
+<text x="625" y="105" font-size="13" text-anchor="start" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">particles trapped between</text>
+<text x="625" y="121" font-size="13" text-anchor="start" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Al pad and flex pad</text>
+<text x="380" y="436" font-size="11" text-anchor="middle" fill="#555555" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Not to scale. The join to aluminium is adhesive; the solder only ever touches the flex.</text>
+</g>
+</svg>
