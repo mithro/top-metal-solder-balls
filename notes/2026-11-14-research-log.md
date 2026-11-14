@@ -53,3 +53,57 @@ in `docs/`. Claims are only as good as the linked source; items marked
 - PacTech also sells electroless Ni/Au, Ni/Pd, Ni/Pd/Au UBM as a contract
   service; single die acceptance needs to be confirmed with them. **(unverified)**
 - CIL (UK OSAT) brought an SB2-Jet online in 2026.
+
+## 5. Second pass (same day)
+
+Written up in `docs/` (Sphinx, one page per method). Extra findings that fed it:
+
+- Target geometry comes from Tim's two planning sheets: full area arrays,
+  "250um ball", pitches mostly 0.40 to 0.65 mm, 16 to 110 balls. A note in the
+  sheet says "Micross could be a good option".
+- wafer.space: 5 metal layers, slots 3.93 x 5.12 mm down to 1.94 x 2.53 mm,
+  1000 dies per slot, custom or no pad ring allowed, chip-on-board add-on
+  $1,500, full undiced 200 mm wafer listed at $2,000 (text looked stale).
+- gf180mcuD top metal is 11 kA (1.1 um); gf180mcuC is 9 kA. GF reported pad
+  delamination with the thinner one.
+- GF180MCU design manual section 9.4.3 has solder bump pad rules (TM.1 to
+  TM.10). A 200 um opening gives a minimum pitch of 356 um.
+- Virginia Tech thesis (Jittinorasett, 1999) read in full for the single-die
+  ENIG recipe: 50% nitric 5 s, zincate 30 s twice, Ni 88 C pH 5 for 15 min
+  (5 um), Au 90 C 1 min; double zincate removes 0.3 to 0.4 um of Al.
+- Single-die stud bump services: QP Technologies (Quik-Pak), ALTER Technology,
+  Hybrid SA, CMC via QP and 3IT.Micro. Laser jetting: PacTech, CIL (UK).
+- CERN-hosted seminar deck (Kreidl, 2017): manual single-chip ENIG is "time
+  consuming, bad yield"; "solder jetting works well".
+- Found nothing showing ultrasonic, active solder or Sn-Zn working on ~1 um
+  thin-film IC pads. Closest is solar cell rear-contact tinning.
+- No vendor publishes prices. All cost figures in the docs are rough guesses.
+
+Still to do: read more sources in full, get quotes, confirm wafer.space stack.
+
+## 6. Scope change and third pass (same day)
+
+Tim narrowed the scope: home methods only, high failure rates fine, only needs
+to work 0 to 50 C, include novel ideas, flex PCBs and Z-axis tape. Docs were
+reorganised: home methods first, industry routes moved to `docs/industry/`.
+
+- Caswell: zincate concentrate plus One-Plate 1 electroless nickel mini kit
+  ($148 listed) plates aluminium if zincated first. Zincate 75 F, 15 s to
+  2 min. Nickel 185 to 195 F, 15 to 60 min.
+- Superior Flux "Direct Aluminum Soldering Paste" (Sn96.5Ag3.5, hot plate,
+  water-soluble residue, Ag-Al intermetallic, 882 psi Al-Al lap joints). Read
+  from the PDFs. Bulk aluminium only; nothing on thin film.
+- Tollens / silver mirror: non-selective, alkaline, explosive silver nitride
+  on standing. Thin silver leaches into molten tin.
+- Brevnov et al.: silver displaces onto Al films alloyed with ~0.5% Cu but
+  not onto pure Al. Selective, so worth an experiment.
+- 3M 9703 Z-axis tape: minimum gap 0.4 mm, minimum pad area 3.2 mm2. Far too
+  coarse for 200 um pads. Real ACF needs ~140 to 200 C and 20 bar or more.
+- JLCPCB flex: 3/3 mil, ENIG, 25 or 50 um polyimide. Stencils from $7.
+- Reballing: 0.25 mm balls and universal stencils (0.25 mm ball / 0.5 mm
+  pitch) are cheap hobby items; MHP30 mini hot plate 30 x 30 mm.
+- Gallium destroys aluminium (grain boundary attack): ruled out.
+- Patents: nanosilver paste sinters onto Al pads at ~250 C without pressure.
+
+Not yet researched: consumer aluminium fluxes, where to buy ACF in small
+quantities, hobby ultrasonic irons, whether GF180MCU top metal is AlCu.
