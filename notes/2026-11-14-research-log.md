@@ -107,3 +107,28 @@ reorganised: home methods first, industry routes moved to `docs/industry/`.
 
 Not yet researched: consumer aluminium fluxes, where to buy ACF in small
 quantities, hobby ultrasonic irons, whether GF180MCU top metal is AlCu.
+
+## 7. Gap filling (same day)
+
+- Aluminium flux in small bottles: Superior No. 1260 5 oz at SRA ($38.99, old
+  listing), Kapp Golden Flux 2 oz ($39), generic 10 ml bottles about $10.
+- ACF reels for screen repair: about $30 for 25 to 50 m, widths 1.2 to 2.0 mm,
+  short shelf life. Particle size not stated by sellers. Pulse-heat bonding
+  machines from about $700.
+- Ultrasonic soldering irons: listings start around $2,000. Not a hobby tool.
+- Top metal alloy: not found. klayout-pex PR gives Metal5 = 40 mohm/sq on the
+  11 kA stack, about 4.4 uohm cm, which hints at alloy or barrier layers.
+  Whether a TiN cap remains on pads is unknown and matters a lot. Ask
+  wafer.space.
+
+## 8. Past wafer.space runs (same day)
+
+- All packaging so far is chip-on-board wire bonding. Run 1 results: TQVA
+  80/80, JKU1 20/20, GD02 19/20 boards pass. 11 designs have results.
+- Run 2: 24 of 40 designs chose chip-on-board; first bare dies shipped
+  2026-10-30; no bonding results yet.
+- Run 2 design FC01 "Flip Chip pad test version 1": quarter slot, 12 pads, no
+  transistors, no public repo. From the render: six ~220 um square pads at
+  0.4 mm pitch (2 x 3) plus six ~120 x 60 um pads, joined by traces.
+- Not published: wire type, bonder, die thickness, pad metal, passivation.
+- Crowd Supply pages return 403 to automated fetches.

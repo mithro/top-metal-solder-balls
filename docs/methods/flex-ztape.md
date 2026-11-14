@@ -45,6 +45,13 @@ tape. It is what holds the driver chip on most phone and laptop screens.
   20 mm2, 20 bar is about 40 N, a 4 kg weight (my arithmetic). A clamp and a
   hot plate can do that; a proper hot-bar press does it repeatably. Small ACF
   hot-bar machines are sold for phone and LCD ribbon repair.
+- It is easy to buy. Reels sold for phone and TV screen repair cost about $30
+  for 25 to 50 m ([acf-reel], [acf-amazon]). Two catches: the tape is only 1.2
+  to 2.0 mm wide, so a 2 to 4 mm die needs two or three strips side by side,
+  and it has a short shelf life (one buyer notes 8 months).
+- Pulse-heat bonding machines for screen repair are listed from about $700
+  ([acf-machine]). A clamp on a hot plate is the zero-cost version (my
+  suggestion; untested).
 - ACF on bare aluminium pads has been studied. It connects, but contact
   resistance rises with ageing as oxide grows under the particles
   ([cityu-acf]). That is a reliability complaint, which matters little here.
@@ -170,3 +177,23 @@ temperature range well.
 [nanosilver-al]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8987911
 [die-carrier]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6583635
 [bare-die-test]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/7940070
+[sra-1260]: https://sra-shops.com/flux-aluminum-solder-1260-5oz
+[kapp-flux]: https://www.kappalloy.com/liquid-paste-flux/flux-for-aluminum/kapp-liquid-golden-flux/
+[generic-al-flux]: https://www.walmart.com/ip/Sinyiin-10ml-bottle-Liquid-Flux-for-Pure-Aluminum-Sheet-Soldering-Liquid-Flux-No-Clean/17396371621
+[us-iron-price]: https://reach.dog/shop/cheersonic/products/ultrasonic-soldering-iron
+[acf-reel]: https://www.aliexpress.us/item/2255800552723491.html
+[acf-amazon]: https://www.amazon.com/AC-7206U-18-Screen-Original-Anisotropic-Conductive/dp/B09BBJ6967
+[acf-machine]: https://www.alibaba.fr/product-detail/Silman-ST-100SW-PLC-Core-Hot_1601428207164.html
+[klayout-pex]: https://github.com/iic-jku/klayout-pex/pull/229
+[alcu-barrier]: https://patents.google.com/patent/US20040253807
+[ws-run1]: https://wafer.space/ws-run1/
+[ws-run2]: https://wafer.space/ws-run2/
+[ws-run1-cob]: https://wafer.space/ws-run1-cob/
+[fc01]: https://wafer.space/ws-run2/projects/FC01.html
+[fc01-render]: https://wafer.space/ws-run2/renders/FC01_full.webp
+[cob-pcbs]: https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs
+[cob-wirebonding]: https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs/blob/main/run-1/wirebonding/README.md
+[cob-results-repo]: https://github.com/wafer-space/ws-run1-cob
+[gfmpw0]: https://wafer.space/google-gf180mcu-mpw0/
+[cs-run1]: https://www.crowdsupply.com/wafer-space/gf180mcu-run-1
+[cs-cob-update]: https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/chip-on-board
