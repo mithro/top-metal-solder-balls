@@ -20,7 +20,7 @@ ENIG under bump metal with a solder ball. Nickel grows only on the exposed alumi
 
 The Virginia Tech thesis by Jittinorasett is the most useful single reference
 because it is exactly this on loose die. Its recipe: 50% nitric dips of about
-5 s, two 30 s room-temperature dips in a commercial zincate at pH 12,
+5 s, two 30 s room-temperature dips in a proprietary zincate at pH 12,
 electroless Ni at 88 C and pH 5 for 15 minutes (about 1 um per 3 minutes, giving
 5 um), then immersion Au at 90 C for 1 minute. Die were held on a carrier with
 thermoplastic adhesive film, which also protects the backside. It reports
