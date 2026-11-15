@@ -74,7 +74,7 @@ method (5% edge padding, pitch = padded size / ball count) to wafer.space slots:
 | 1.94 x 2.53 mm | 4 x 6 | 24 | 0.46 mm | 0.40 mm |
 
 So the working target is **250 um balls at 0.4 to 0.5 mm pitch**, which is
-standard WLCSP territory: commercial parts use 0.40 mm pitch with 0.25 mm balls
+standard WLCSP territory: proprietary parts use 0.40 mm pitch with 0.25 mm balls
 ([nxp-wlcsp]) and Fraunhofer ISIT quotes 200 um balls at 400 um pitch as routine
 ([isit]). With a 200 um passivation opening the GF180 rules give a 220 um UBM
 opening, a 232 um top metal pad and a minimum pitch of 356 um, so a 0.4 mm

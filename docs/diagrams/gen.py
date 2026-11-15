@@ -300,7 +300,7 @@ def fig_flex():
 
 def fig_wlcsp():
     s = Svg(W + 120, H, "Wafer level chip scale package with redistribution layer", shift=60)
-    s.text(380, 30, "Commercial wafer-level bumping with redistribution", size=16, anchor="middle", weight="bold")
+    s.text(380, 30, "Proprietary wafer-level bumping with redistribution", size=16, anchor="middle", weight="bold")
     bx, r = 520, 105
     s.circle(bx, 274 - math.sqrt(r * r - 70 * 70), r, SOLDER)
     s.rect(60, 350, 640, 60, SI)
@@ -422,7 +422,7 @@ def fig_flows():
         ("Remove mask,\ninspect", DRY),
         ("Ball attach", HOT),
     ], cols=3)
-    flow("wafer-level-flow.svg", "Commercial wafer-level bumping: process flow", [
+    flow("wafer-level-flow.svg", "Proprietary wafer-level bumping: process flow", [
         ("Lay out pads to the\nbump house rules", DRY),
         ("Buy the\nundiced wafer", DRY),
         ("Repassivation and\nRDL (optional)", HOT),

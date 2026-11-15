@@ -1,4 +1,4 @@
-# Commercial wafer-level bumping
+# Proprietary wafer-level bumping
 
 **How it works.** Buy the whole wafer, send it to a bumping house, get it
 back bumped and diced. The house applies its own UBM (electroless Ni/Au, or

@@ -38,7 +38,7 @@ Reballing a bare die with a stencil and heat from below.
 - A hobbyist has hand-soldered a 12-ball, 0.4 mm pitch chip-scale package
   with a stencil and hot air, so handling parts this small at home is
   realistic ([mitxela]).
-- Flux choice matters. One patent reports a commercial flux giving bridging
+- Flux choice matters. One patent reports a proprietary flux giving bridging
   and zero yield on a hand-scale wafer-level ball attach ([flux-patent]).
 
 ## Design the die for the stencil
