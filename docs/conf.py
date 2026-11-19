@@ -18,3 +18,4 @@ html_context = {
     "github_repo": "top-metal-solder-balls",
     "github_version": "main/docs/",
 }
+html_css_files = ["custom.css"]
