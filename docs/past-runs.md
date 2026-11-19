@@ -1,6 +1,6 @@
 # Past wafer.space runs
 
-Checked on 2026-11-14 against the public run pages. Short version: every die
+Every die
 packaged so far was wire bonded onto a small PCB. Nobody has published a
 solder ball or flip chip result, but **a flip chip pad test die already exists
 on Run 2.**
@@ -19,7 +19,7 @@ campaign stated there were no QFN or other package options ([cs-run1]).
 
 ### Chip-on-board results from Run 1
 
-Eleven designs have results. The three I read:
+Eleven designs have published results. Three of them:
 
 | Design | Boards | Pass | Fail |
 | --- | --- | --- | --- |

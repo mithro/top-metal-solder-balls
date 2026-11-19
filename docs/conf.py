@@ -10,3 +10,12 @@ exclude_patterns = ["_build", "diagrams", "_links.md"]
 html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
 html_title = project
+
+# "Edit on GitHub" link at the top of every page.
+html_context = {
+    "display_github": True,
+    "github_user": "mithro",
+    "github_repo": "top-metal-solder-balls",
+    "github_version": "main/docs/",
+}
+html_css_files = ["custom.css"]

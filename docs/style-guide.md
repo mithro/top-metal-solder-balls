@@ -1,24 +1,50 @@
 # Docs style guide
 
-How pages on this site are written and checked. It has two sources: the rules
-Tim has set for this project, and the feedback Tim (GitHub login `mithro`) has
-given on documentation in other open source projects.
+How pages on this site are written and checked. Read it before changing a
+page. It has three sources: what Tim has said about writing docs, the rules he
+has set for this project, and the feedback he (GitHub login `mithro`) has given
+on documentation in other open source projects.
 
-```{note}
-The second group was gathered by an AI model reading public GitHub issues and
-pull requests on 2026-11-19. The model could not read most inline review
-comments, so the points are paraphrased, not quoted, and each one links to the
-thread it came from. The evidence is mostly about docs tooling. Nothing was
-found in Tim's own words about prose style or units, so those rules are
-marked as house choices.
-```
+## Tim's rules for writing docs
+
+These are Tim's own words.
+
+1. "State the current state and don't reference random past state or items
+   which are no longer relevant."
+2. "Git stores the history and version information, don't replicate it in the
+   documentation."
+3. "Think about the who the reader is and what they need to get out of the
+   document."
+4. "Properly organize the documents and make sure to properly use links
+   between pages, repository, github and other places."
+
+What that means on this site:
+
+- **Current state only.** A page says what is known now. It does not say what
+  an earlier draft said, what was changed, or when a page was written or last
+  checked. No "status as of" lines, no "now moved to", no changelog. An option
+  that has been ruled out is left out, unless a reader would otherwise go
+  looking for it, in which case it gets one sentence.
+- **History lives in git.** Use the commit message to say what changed and
+  why. A date belongs on a page only when it is a fact about the world, such
+  as when a run shipped.
+- **Write for the reader.** The reader has wafer.space die, or a tapeout
+  coming, and wants to bump them at home. Each page opens by saying what the
+  reader gets from it. How the research was done, who asked for it and which
+  document a fact was first seen in are not what the reader came for. Say
+  where a claim comes from with a citation, and stop there.
+- **Organise and link.** Every page sits in one of the sidebar sections. The
+  first mention of a method, a term or a file on a page links to its page on
+  this site, to the file on GitHub, or to the outside source. Do not leave the
+  reader to search for something a sentence is talking about.
 
 ## Project rules
 
 These come from Tim directly, in this project.
 
 - **Everything ends up on Read the Docs, with proper diagrams.** Work in
-  progress goes in `notes/` in the repository and is written up here.
+  progress goes in [`notes/`](https://github.com/mithro/top-metal-solder-balls/tree/main/notes)
+  in the repository and is written up here.
 - **Home methods only.** A method belongs in [Home methods](methods/index.md)
   only if it can be done with hobby tools. A wide process window and a high
   failure rate are fine, and parts only need to work from 0 °C to 50 °C.
@@ -27,10 +53,17 @@ These come from Tim directly, in this project.
 - **Say "proprietary", not "commercial".**
 - **GF180MCU is the target.** All tests are planned on the gf180mcu PDK.
   sky130 material is comparison only.
-- **The top metal is aluminium on the 11 kÅ stack.** The 9 kÅ option is not in
-  use, so do not plan around it.
+- **The top metal is aluminium on the 11 kÅ stack.** Do not plan around any
+  other GF180MCU top metal option.
 
 ## What Tim asks for in docs elsewhere
+
+```{note}
+This table was gathered by an AI model reading public GitHub issues and pull
+requests. It could not read most inline review comments, so the points are
+paraphrased, not quoted, and each one links to the thread it came from. They
+are mostly about docs tooling.
+```
 
 | Rule | Where it comes from |
 | --- | --- |
@@ -63,9 +96,10 @@ repository, not from review comments:
 ### Claims and sources
 
 - A claim from a source carries a citation such as `[vt-thesis]`. The keys
-  and URLs live in `docs/_links.md`, one line each, with a description.
-  `docs/update_links.py` copies the ones a page cites to the end of that page
-  and rebuilds [Sources](sources.md).
+  and URLs live in [`docs/_links.md`](https://github.com/mithro/top-metal-solder-balls/blob/main/docs/_links.md), one line each, with
+  a description. [`docs/update_links.py`](https://github.com/mithro/top-metal-solder-balls/blob/main/docs/update_links.py) copies the
+  ones a page cites to the end of that page and rebuilds
+  [Sources](sources.md).
 - A claim that is the author's own inference is marked "my reasoning". "I"
   on these pages is the AI model that drafted them.
 - Nothing on this site has been tried on real die yet. When that changes, mark
@@ -88,8 +122,9 @@ one method needs go between "How it works" and "Fit".
 
 ### Diagrams
 
-- Every diagram is an SVG generated by `docs/diagrams/gen.py`. Change the
-  script and rerun it. Do not edit the SVG files.
+- Every diagram is an SVG generated by
+  [`docs/diagrams/gen.py`](https://github.com/mithro/top-metal-solder-balls/blob/main/docs/diagrams/gen.py). Change the script and
+  rerun it. Do not edit the SVG files.
 - Backgrounds are transparent. Cross-sections and process flows share one
   canvas width, so their text renders at one size.
 - Labels must not overlap the drawing or each other. Look at the rendered page
@@ -99,7 +134,7 @@ one method needs go between "How it works" and "Fit".
 
 ### Wording and units
 
-These are house choices. No feedback from Tim was found on them.
+These are house choices, not Tim's.
 
 - Units use their proper symbols with a space: 250 µm, 0.5 mm, 50 °C, 11 kÅ.
 - Dimensions use ×, as in 3.93 × 5.12 mm.
@@ -119,7 +154,7 @@ The first three must be clean. The link check needs a person to read it: some
 sites answer 403 to any robot, which is not a broken link. Then open the built
 pages and look at them.
 
-## Not done yet
+## Open items
 
 - The repository has no `LICENSE` file and the pages state no licence. Tim
   needs to choose one.

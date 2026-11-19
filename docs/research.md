@@ -74,6 +74,28 @@ nickel "strike" baths are mentioned as alternatives ([vt-thesis]).
 **Question:** is there a hobby-accessible activation that consumes less
 aluminium?
 
+## 10. Borrow the gate array metal step
+
+wafer.space has a [gate array plan][gatearray] that adds one extra metal layer
+to finished die, with features of about 2 µm, using small maskless or stepper
+tools.
+
+That gate array is programmed by depositing and patterning one more metal layer
+on finished die. That is the same operation as adding a solderable layer over
+the pads, only finer. Two consequences:
+
+- Whatever tool ends up patterning the gate array layer at 2 µm can pattern
+  200 µm pads with a great deal of margin. If that tool chain exists, a
+  deposited nickel or copper pad becomes available without any wet plating on
+  the aluminium.
+- The gate array layer has to make electrical contact to foundry aluminium
+  through its oxide, which is the central problem here too
+  ([Starting point](background.md)). A contact recipe that works for one works for
+  the other.
+
+This needs lab tools, not kitchen ones, so it is not ranked with the home
+methods.
+
 ## Things that look tempting and are not
 
 - **Gallium or liquid metal.** Gallium wets aluminium through its oxide
@@ -100,4 +122,5 @@ chemistry can be screened without spending chips.
 [nanosilver-al]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8987911 "US patent 8987911: silver nanoparticle paste on aluminium pads"
 [die-carrier]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6583635 "US patent 6583635: bare die carrier"
 [bare-die-test]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/7940070 "US patent 7940070: bare die test contact"
-[us-iron-price]: https://reach.dog/shop/cheersonic/products/ultrasonic-soldering-iron "Ultrasonic soldering iron listing (removed by November 2026)"
+[us-iron-price]: https://reach.dog/shop/cheersonic/products/ultrasonic-soldering-iron "Ultrasonic soldering iron listing (listing has been removed)"
+[gatearray]: https://wafer.space/gatearray-v1 "GF180MCU gate array plan"

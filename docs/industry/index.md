@@ -1,14 +1,15 @@
 # Industry routes (out of scope)
 
-These came out of the first survey. They need a wire bonder, a vacuum system
-or an outside bumping service, so they are not home methods. They are kept for
-reference, and because the [ENIG page](enig.md) is the basis for the home
-[zincate and nickel](../methods/zincate-nickel.md) route.
+These routes need a wire bonder, a vacuum system or an outside bumping
+service, so they are not home methods. Read them to see what each home method
+is an approximation of. The [ENIG page](enig.md) is the lab recipe behind the
+home [zincate and nickel](../methods/zincate-nickel.md) route.
 
-One note given the relaxed requirements: gold stud bumps were marked down in
-the first survey for failing above about 200 °C and in thermal cycling. At 0 to
-50 °C with low temperature solder they would be fine, if a ball bonder is ever
-within reach.
+The "Fit" ratings on these pages judge each route against industrial
+reliability targets. Under this project's 0 to 50 °C requirement some do
+better than their rating: [gold stud bumps](stud-bump.md) fail above about
+200 °C and in thermal cycling, but with low temperature solder they would be
+fine, if a ball bonder is ever within reach.
 
 Laser solder jetting (PacTech SB2, and CIL in the UK) places and reflows
 preformed balls with a laser pulse and suits single die ([sb2-paper], [cil],

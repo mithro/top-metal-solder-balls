@@ -1,5 +1,9 @@
 # Starting point
 
+The facts every method page relies on: what the die is, what the foundry
+rules say about bumps, what ball geometry to aim for, and the problems any
+method has to solve. Read this before designing pads for a tapeout.
+
 ## Constraints
 
 - Home methods only. No cleanroom tools, wire bonders or outside services.
@@ -12,7 +16,7 @@
 | --- | --- | --- |
 | Process | GF180MCU, 5 metal layers, MIM caps | [wafer.space] |
 | PDK variant | project template uses a fork of gf180mcuD | [template] |
-| Top metal | Al, 11 kÅ (1.1 µm), the gf180mcuD stack. The 9 kÅ (0.9 µm) gf180mcuC stack is not in use on wafer.space | [open_pdks], [vlsida] |
+| Top metal | Al, 11 kÅ (1.1 µm), the gf180mcuD stack | [open_pdks], [vlsida] |
 | Slot sizes | 3.93 × 5.12 mm, 1.94 × 5.12 mm, 3.93 × 2.53 mm, 1.94 × 2.53 mm | [wafer.space] |
 | Seal ring | about 26 µm per side | [wafer.space] |
 | Quantity | 1000 dies per slot | [wafer.space] |
@@ -25,10 +29,9 @@ the top metal alloy, and whether the undiced wafer option is really available
 (the page text for it looked stale). These are tracked as
 [open questions](next-steps.md#open-questions).
 
-OpenLane's PDK notes say GlobalFoundries reported pad delamination problems
-with the thinner 9 kÅ top metal, which is why the 11 kÅ variant exists
-([openlane-pdks]). The 9 kÅ stack is not in use on wafer.space, so every die
-here has the thicker metal. That still matters: every wet UBM process eats some pad metal.
+The 11 kÅ stack exists because GlobalFoundries reported pad delamination with
+thinner top metal ([openlane-pdks]). Even so, 1.1 µm is not much: every wet
+process on this site eats some of it.
 
 
 ```{figure} /_static/diagrams/pad-bare.svg
@@ -60,8 +63,10 @@ and says bumps are used with nitride or polyimide final passivation
 
 ## Target geometry from the planning spreadsheets
 
-Tim's two planning sheets ("SKY130 WCSP Packaging Options and Pin Planning" and
-"IO expander pin planning") lay out full area arrays of balls: 49 to 110 balls
+Tim's two planning sheets
+([SKY130 WCSP Packaging Options and Pin Planning](https://docs.google.com/spreadsheets/d/1Z_N7JC3ojdWWKlBMjMNIVLnZtj-f9CPzcEkb3u6oa9o/edit)
+and [IO expander pin planning](https://docs.google.com/spreadsheets/d/1jmzXiSVEg-4fcQAXFHPnMVlpZ_Wju7oL8SX0JeLioJM/edit),
+both access-controlled) lay out full area arrays of balls: 49 to 110 balls
 on dies of 16 to 22 mm², and 16 to 42 balls on small dies, with a note of
 "250um ball" and pitches mostly between 0.40 and 0.65 mm. Applying the same
 method (5% edge padding, pitch = padded size / ball count) to wafer.space slots:
@@ -99,8 +104,11 @@ circuit-under-pad rules and routing blockage on metal 5 become design questions.
 ## What any method has to solve
 
 1. **Oxide.** Al carries a tough native oxide that solder flux will not remove.
-   It must be chemically displaced (zincate), mechanically broken (ultrasonic,
-   thermosonic stud bond) or covered under vacuum (sputter after back-etch).
+   It must be chemically displaced ([zincate](methods/zincate-nickel.md)),
+   attacked by a special flux ([aluminium solder](methods/aluminium-solder.md)),
+   mechanically broken (ultrasonic iron, or a
+   [stud bond](industry/stud-bump.md)) or removed under vacuum
+   ([sputtering](industry/sputtered-ubm.md)).
 2. **Barrier.** Sn must be kept away from the Al, and the wettable layer must
    survive reflow without dissolving. Ni does this well; Au and Cu alone do not.
 3. **Thin pad metal.** About 1.1 µm of Al. Double zincation removes roughly
