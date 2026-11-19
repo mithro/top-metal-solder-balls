@@ -5,22 +5,20 @@ top metal of [wafer.space](https://wafer.space) GF180MCU chips, so that a bare
 die can carry solder balls and be reflowed onto a board like a wafer-level chip
 scale package.
 
-The scope is deliberately narrow: methods simple enough to do at home, where a
-high failure rate is acceptable and the parts only need to work between 0 °C
-and 50 °C.
+The scope is methods simple enough to do at home, where a high failure rate is
+acceptable and the parts only need to work between 0 °C and 50 °C.
 
 ```{warning}
 This is a literature survey drafted by an AI model. Nothing here has been
-tried on real die yet. Claims carry a source where there is one, and the
-model's own inferences are marked "my reasoning".
+tried on real die. Claims without a source are marked "unsourced".
 ```
 
 ```{figure} /_static/diagrams/home-nickel-cross-section.svg
 :alt: Cross-section of a solder ball on an aluminium pad plated with nickel
 :width: 100%
 
-The leading home candidate: zincate and a hobby electroless nickel kit, then a
-0.25 mm solder ball from a reballing stencil.
+The first-ranked home method: zincate and a hobby electroless nickel kit, then
+a 0.25 mm solder ball from a reballing stencil.
 ```
 
 ## Who this is for

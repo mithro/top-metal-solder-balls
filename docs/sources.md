@@ -1,12 +1,12 @@
 # Sources
 
-Each entry is a short description of the page, not its exact title. The list
-is generated from `docs/_links.md`.
+Every source cited on this site. Each entry is a short description of the
+page, not its exact title. The list is generated from `docs/_links.md`.
 
-Caveats on sources: most were read as search-result summaries rather than in
-full. The Virginia Tech thesis, the GF180MCU design manual pages and the
-wafer.space pages were read directly. Several vendor pages are marketing
-material, and the Quik-Pak release dates from 2011.
+Check a source before relying on a number from it. Only the Virginia Tech
+thesis, the GF180MCU design manual pages and the wafer.space pages were read
+in full. The rest are cited from summaries, and several are vendor marketing
+pages.
 
 - [wafer.space home page: slots, pricing and delivery options](https://wafer.space/)
 - [wafer.space GF180MCU project template](https://github.com/wafer-space/gf180mcu-project-template)

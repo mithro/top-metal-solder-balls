@@ -1,8 +1,9 @@
 # Reballing: getting the balls on
 
-This is the easy half, and it is well-trodden hobby ground. It applies once
-the pads are solderable, whether by [nickel](zincate-nickel.md),
-[aluminium solder](aluminium-solder.md), or because the pads are the gold pads
+Reballing puts solder balls on pads that are already solderable, using a
+stencil, flux and a hot plate. It is an established hobby technique. It
+applies whether the pads were made solderable by [nickel](zincate-nickel.md),
+by [aluminium solder](aluminium-solder.md), or because they are the gold pads
 of a [flex circuit](flex-ztape.md).
 
 ```{figure} /_static/diagrams/ball-attach-flow.svg
@@ -45,9 +46,10 @@ Reballing a bare die with a stencil and heat from below.
 
 Off-the-shelf universal stencils pair 0.25 mm balls with 0.5 mm pitch. If the
 die's pad array is drawn on a 0.5 mm grid, a $10 stencil fits it with no
-custom tooling (my reasoning). On the full slot that allows 7 × 10 = 70 balls;
-on the quarter slot 3 × 5 = 15, or 4 × 5 = 20 at about 0.46 mm with a custom
-stencil.
+custom tooling (unsourced). On the full slot a 0.5 mm grid allows
+7 × 10 = 70 balls; on the quarter slot 3 × 5 = 15, or 4 × 5 = 20 at about
+0.46 mm with a custom stencil. The slot sizes and pitch options are in
+[Starting point](../background.md).
 
 ## Lower temperature options
 

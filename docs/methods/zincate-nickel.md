@@ -1,9 +1,10 @@
 # Zincate and a hobby electroless nickel kit
 
-**Idea.** Do at home what industry calls ENIG, minus the gold. A zincate dip
-swaps the aluminium oxide for a thin zinc layer, and an electroless nickel bath
-then plates nickel on the zinc. Nickel only grows on metal, so the passivation
-acts as the mask and no patterning is needed.
+This method is the home version of what industry calls ENIG, without the gold.
+A zincate dip swaps the aluminium oxide for a thin zinc layer
+([what the dip does chemically](../bumping-notes.md#how-it-works)), and an
+electroless nickel bath then plates nickel on the zinc. Nickel only grows on
+metal, so the passivation acts as the mask and no patterning is needed.
 
 ```{figure} /_static/diagrams/home-nickel-cross-section.svg
 :alt: Nickel plated on the pad at home, then an ordinary solder ball. Without a gold flash the nickel needs soldering soon.
@@ -15,8 +16,8 @@ Nickel plated on the pad at home, then an ordinary solder ball. Without a gold f
 ## How it works
 
 1. Stick the die to a holder and paint the edges and back, so that only the
-   pads see chemistry (my reasoning: nail varnish or a strippable lacquer;
-   the Virginia Tech work used thermoplastic film).
+   pads see chemistry. Nail varnish or a strippable lacquer are candidates
+   (unsourced); the Virginia Tech work used thermoplastic film.
 2. Degrease.
 3. Zincate dip, 15 to 30 seconds at room temperature. Caswell's instructions
    for its hobby zincate give 15 seconds to 2 minutes at 75 °F
@@ -24,11 +25,11 @@ Nickel plated on the pad at home, then an ordinary solder ball. Without a gold f
 4. Optionally strip the zinc in nitric acid and zincate again. The double dip
    gives a finer zinc layer and better adhesion ([vt-thesis], [uyemura]), but
    it also eats more aluminium. With a thin pad a single short dip may be the
-   better trade (my reasoning).
+   better trade (unsourced).
 5. Electroless nickel at 85 to 90 °C. Caswell's kit runs at 185 to 195 °F and
    plates for 15 to 60 minutes depending on thickness ([caswell-tutorial]).
    The lab recipe on loose die was 88 °C for 15 minutes for 5 µm
-   ([vt-thesis]). A few µm is plenty here.
+   ([vt-thesis]). A few µm is enough here.
 6. Rinse, dry, and [reball](reballing.md) the same day.
 
 ```{figure} /_static/diagrams/home-nickel-flow.svg
@@ -38,7 +39,7 @@ Nickel plated on the pad at home, then an ordinary solder ball. Without a gold f
 Process flow with hobby chemicals.
 ```
 
-The full lab recipe this is based on is on the
+The lab recipe these steps are based on is on the
 [ENIG reference page](../industry/enig.md).
 
 ## What to buy
@@ -50,7 +51,7 @@ The full lab recipe this is based on is on the
 | Nitric acid | only for the double zincate | varies |
 | Hot plate, beakers, thermometer, distilled water | | household |
 
-Home-brew baths are possible. The classic zincate is just zinc oxide dissolved
+Home-brew baths are possible. The classic zincate is zinc oxide dissolved
 in sodium hydroxide ([zincate-formulas]) and electroless nickel is nickel
 sulfate with sodium hypophosphite ([en-wiki]). Hobbyists report home-made
 nickel baths working at first and then going unstable
@@ -61,33 +62,30 @@ nickel baths working at first and then going unstable
 - **Pad consumption.** Double zincation removes 0.3 to 0.4 µm of aluminium and
   1 µm is the usual quoted minimum ([vt-thesis], [us6503343]). The pad is about
   1.1 µm. A forum report describes 0.8 µm pads dissolving completely
-  ([finishing]). Expect some pads to vanish.
+  ([finishing]). Expect to lose some pads.
 - **No gold.** Industry adds immersion gold to keep the nickel solderable.
   Without it the nickel oxidises within hours to days. Solder promptly and use
-  an active flux (my reasoning; not tested).
+  an active flux (unsourced, untested).
 - **Stray plating.** Die edges and backside are bare silicon and can plate.
   A CERN-hosted seminar deck calls manual single-chip ENIG "time consuming, bad
   yield" ([kreidl]). Bad yield is acceptable here.
 - **Bath contamination.** Caswell recommends a copper flash between zincate
   and nickel because zinc poisons the nickel bath over time ([caswell-al]).
-  For a small throwaway bath this can be ignored (my reasoning).
-- **Hobby chemistry on thin films is untested.** I found no account of anyone
-  using these kits on IC pads. The kits are sold for car parts.
+  For a small throwaway bath the copper flash can be skipped (unsourced).
+- **Hobby chemistry on thin films is untested.** No account of these kits
+  being used on IC pads was found. The kits are sold for car parts.
 
 ## Safety
 
-Sodium hydroxide based zincate, nitric acid, hot nickel salts (nickel is a
-sensitiser and suspected carcinogen) and hydrogen evolution. Gloves, eye
-protection, ventilation, and proper disposal of nickel waste.
+The hazards are sodium hydroxide based zincate, nitric acid, hot nickel salts
+(nickel is a sensitiser and suspected carcinogen) and hydrogen evolution. Use
+gloves, eye protection and ventilation, and dispose of nickel waste properly.
 
 ## Fit
 
-**High.** Most steps of any home route, but every step is an established
-process and the result is a surface that normal solder wets. Best first
-serious attempt.
-
-A step by step description of what the zincate dip does chemically is in
-[How industry bumps aluminium pads](../bumping-notes.md#how-it-works).
+**High.** This method has the most steps of any home route, but every step is
+an established process and the result is a surface that normal solder wets.
+It is ranked first in the [Summary](../summary.md).
 
 <!-- links: generated by update_links.py, edit _links.md instead -->
 [vt-thesis]: https://vtechworks.lib.vt.edu/handle/10919/34792 "Virginia Tech thesis (Jittinorasett): electroless nickel and gold under-bump metal on loose die"

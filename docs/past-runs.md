@@ -1,9 +1,9 @@
 # Past wafer.space runs
 
-Every die
-packaged so far was wire bonded onto a small PCB. Nobody has published a
-solder ball or flip chip result, but **a flip chip pad test die already exists
-on Run 2.**
+How die from earlier runs were packaged, what results are published, and what
+is known about FC01, the flip chip pad test die on Run 2. Every die packaged
+so far was wire bonded onto a small PCB. No solder ball or flip chip result
+has been published.
 
 ## Packaging used so far
 
@@ -11,7 +11,7 @@ on Run 2.**
 | --- | --- | --- |
 | GFMPW-0 (Google / Efabless, 2022 to 2023) | assembled by Efabless | only schedule dates ([gfmpw0]) |
 | Run 1 (dies shipped from 2026-04) | bare die in Gel-Paks, or chip-on-board | board-level pass and fail counts ([ws-run1], [ws-run1-cob]) |
-| Run 2 (first dies shipped 2026-10-30) | bare die, or chip-on-board; 24 of 40 designs chose chip-on-board | no bonding results yet ([ws-run2]) |
+| Run 2 (first dies shipped 2026-10-30) | bare die, or chip-on-board; 24 of 40 designs chose chip-on-board | no bonding results ([ws-run2]) |
 
 Chip-on-board means the die is glued to a small PCB and wire bonded to it. It
 costs $1.50 per die and needs the default pad ring ([wafer.space]). The Run 1
@@ -27,9 +27,9 @@ Eleven designs have published results. Three of them:
 | JKU1 | 20 | 20 | 0 |
 | GD02 | 20 | 19 | 1 |
 
-So wire bonding to these pads works well, which says the pad metal is sound
-and bondable. The pages give no failure modes and nothing about pad lifting or
-cratering ([ws-run1-cob], [cob-results-repo]).
+Wire bonding to these pads works, which indicates the pad metal is sound and
+bondable. The results pages give no failure modes and nothing about pad
+lifting or cratering ([ws-run1-cob], [cob-results-repo]).
 
 ### What the chip-on-board documentation says
 
@@ -40,14 +40,13 @@ cratering ([ws-run1-cob], [cob-results-repo]).
   mask in the bonding area ([cob-wirebonding]).
 - A Run 1 campaign update noted that long bond wires add inductance and that
   finding small-volume wire bonding services is hard, which is part of the
-  motivation for this project (from a search summary of [cs-cob-update]; I
-  could not open the page itself).
+  motivation for this project (reported second-hand; [cs-cob-update]).
 
-### What is not published anywhere I could find
+### What is not published
 
 Wire material, wedge or ball bonding, the bonding vendor, PCB surface finish,
 die thickness, dicing method, pad metal composition and thickness, and the
-passivation type. These need asking directly.
+passivation type. These have to be asked for directly.
 
 ## FC01: a flip chip pad test die on Run 2
 
@@ -66,26 +65,27 @@ described as "Just some test pads for flip chip bonding trials" ([fc01]).
 :alt: Sketch of the FC01 die with six large square pads and six small pads
 :width: 100%
 
-FC01 as I read it from the public layout render. The numbers are my own
-measurements off the image, not published dimensions.
+FC01, redrawn from the public layout render. The dimensions are estimates
+measured from the image, not published values.
 ```
 
-Measuring the public render ([fc01-render]) at about 2.5 µm per pixel, the die
-has six large square pads of roughly 220 µm on a 0.4 mm grid, arranged 2 × 3,
-and six small pads of roughly 120 × 60 µm near one edge. Traces run between
-the large and small pads, so each large pad can apparently be probed or wire
-bonded from a small one. That makes it a continuity test for whatever is
-attached to the large pads.
+Measured from the public render ([fc01-render]) at about 2.5 µm per pixel, the
+die has six large square pads of roughly 220 µm on a 0.4 mm grid, arranged
+2 × 3, and six small pads of roughly 120 × 60 µm near one edge. Traces run
+between the large and small pads, so each large pad can apparently be probed
+or wire bonded from a small one. That makes the die a continuity test for
+whatever is attached to the large pads.
 
-Why this matters for this project:
+What FC01 offers as a test vehicle, and what it lacks:
 
-- Run 2 bare dies started shipping on 2026-10-30, so **real test die
-  with ball-sized aluminium pads may already be in hand.** One reticle
-  placement of a quarter slot should mean on the order of 1000 die.
+- Run 2 bare dies started shipping on 2026-10-30, so test die with ball-sized
+  aluminium pads may be available. One reticle placement of a quarter slot
+  should mean on the order of 1000 die.
 - The large pads are close to the 200 to 240 µm pads assumed on this site, at
-  the 0.4 mm pitch end of the target range.
-- Six pads at 0.4 mm pitch can be reballed with a custom stencil, or tried
-  with every method in [Home methods](methods/index.md).
+  the 0.4 mm pitch end of the [target range](background.md).
+- Six pads at 0.4 mm pitch can be [reballed](methods/reballing.md) with a
+  custom stencil, or tried with every method in
+  [Home methods](methods/index.md).
 - The pads are square, where the GF180MCU bump rules ask for at least
   octagonal. That is a reliability rule and unlikely to matter here.
 - With only two columns, the die does not test bridging across a full array
@@ -93,12 +93,13 @@ Why this matters for this project:
   through a mating board, pads on a 0.5 mm grid for stock stencils, and a
   few very large pads for Z-axis tape. See [Next steps](next-steps.md).
 
-## What this tells us about the top metal
+## What this says about the top metal
 
-Less than hoped. The successful wire bonding shows the pad surface is
-bondable aluminium, not something capped with a hard barrier, which is good
-news for zincate and for aluminium flux (my reasoning). The alloy is
-still unconfirmed; see the open questions in [Next steps](next-steps.md).
+Little. The successful wire bonding shows the pad surface is bondable
+aluminium, not something capped with a hard barrier, which favours
+[zincate](methods/zincate-nickel.md) and
+[aluminium flux](methods/aluminium-solder.md) (unsourced). The alloy is not
+confirmed; see the [open questions](next-steps.md#open-questions).
 
 <!-- links: generated by update_links.py, edit _links.md instead -->
 [wafer.space]: https://wafer.space/ "wafer.space home page: slots, pricing and delivery options"

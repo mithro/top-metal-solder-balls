@@ -1,10 +1,10 @@
 # Flex PCB and Z-axis tape
 
-**Idea.** Stop trying to solder to aluminium. Make a small two-layer flex
-circuit whose top pads mirror the die's pads and whose bottom pads carry
-ordinary solder balls. Glue the die face down onto the flex with an adhesive
-that conducts only through its thickness. The flex becomes a home-made
-chip-scale package, and every solder joint is to gold-plated copper.
+This method avoids soldering to aluminium. A small two-layer flex circuit has
+top pads that mirror the die's pads and bottom pads that carry ordinary
+[solder balls](reballing.md). The die is glued face down onto the flex with an
+adhesive that conducts only through its thickness. The flex becomes a
+home-made chip-scale package, and every solder joint is to gold-plated copper.
 
 ```{figure} /_static/diagrams/flex-ztape-cross-section.svg
 :alt: Die bonded face down to a flex circuit with anisotropic adhesive. Solder never touches the aluminium.
@@ -22,9 +22,9 @@ that are too sparse to touch each other sideways. Pressed between two pads,
 the particles bridge the gap vertically.
 
 The common hobby product is 3M 9703. Its datasheet numbers rule it out for
-this job ([3m-9703]):
+pads of the target size ([3m-9703]):
 
-| 3M 9703 figure | Value | Our pads |
+| 3M 9703 figure | Value | Target pads |
 | --- | --- | --- |
 | Minimum gap between conductors | 0.4 mm (15 mil) | 0.15 to 0.3 mm |
 | Minimum pad overlap area | 3.2 mm² (5000 mil²) | about 0.03 to 0.05 mm² |
@@ -34,17 +34,17 @@ A 200 µm round pad has about 1% of the recommended contact area, so many pads
 would catch no particle at all. Meeting the datasheet takes pads about 1.8 mm
 square with 0.4 mm gaps, which is roughly four contacts on a full slot. The
 realistic use is somewhere in between: pads as large as the pin count allows,
-accepting higher resistance and some dead pads (my reasoning; untested).
+accepting higher resistance and some dead pads (unsourced, untested).
 
-### Real anisotropic conductive film
+### Anisotropic conductive film
 
 Display makers bond chips straight to glass and flex with anisotropic
-conductive film (ACF), which has far finer and denser particles than Z-axis
-tape. It is what holds the driver chip on most phone and laptop screens.
+conductive film (ACF), which has finer and denser particles than Z-axis
+tape. ACF is what holds the driver chip on most phone and laptop screens.
 
 - It needs heat and pressure together: around 140 to 200 °C, 20 bar or more,
   for 10 to 30 seconds ([3m-7303], [acf-params]). For a full-size slot of
-  20 mm², 20 bar is about 40 N, a 4 kg weight (my arithmetic). A clamp and a
+  20 mm², 20 bar is about 40 N, a 4 kg weight (calculated). A clamp and a
   hot plate can do that; a proper hot-bar press does it repeatably. Small ACF
   hot-bar machines are sold for phone and LCD ribbon repair.
 - It is easy to buy. Reels sold for phone and TV screen repair cost about $30
@@ -52,14 +52,15 @@ tape. It is what holds the driver chip on most phone and laptop screens.
   to 2.0 mm wide, so a 2 to 4 mm die needs two or three strips side by side,
   and it has a short shelf life (one buyer notes 8 months).
 - Pulse-heat bonding machines for screen repair are listed from about $700
-  ([acf-machine]). A clamp on a hot plate is the zero-cost version (my
-  suggestion; untested).
+  ([acf-machine]). A clamp on a hot plate is the zero-cost version
+  (unsourced, untested).
 - ACF on bare aluminium pads has been studied. It connects, but contact
   resistance rises with ageing as oxide grows under the particles
   ([cityu-acf]). That is a reliability complaint, which matters little here.
-- Chip-on-glass normally relies on gold bumps on the chip. Our pads sit about
-  1 µm below the passivation, but copper pads on a flex stand 12 to 35 µm
-  proud, so the flex pad plays the part of the bump (my reasoning; untested).
+- Chip-on-glass normally relies on gold bumps on the chip. The die pads sit
+  about 1 µm below the passivation, but copper pads on a flex stand 12 to
+  35 µm proud, so the flex pad plays the part of the bump (unsourced,
+  untested).
 
 ### The flex circuit
 
@@ -78,14 +79,14 @@ soaks up the expansion mismatch between silicon and the main board.
 - Solder, if the die pads have been [nickel plated](zincate-nickel.md) or
   [tinned](aluminium-solder.md) first. Then the flex is only there to fan out
   and to take the strain.
-- Plain non-conductive glue with pressure: the flex pads are simply held
+- Plain non-conductive glue with pressure: the flex pads are held
   against the die pads while the glue cures and shrinks. Industry does this
   with gold bumps. On bare aluminium it is an [open question](../research.md).
 
 ## Fit
 
-**Medium to high.** Needs a board design and an alignment jig, and the right
-adhesive is not a hobby-shop item. But it replaces the hardest problem
+**Medium to high.** This method needs a board design and an alignment jig, and
+the right adhesive is not a hobby-shop item. It replaces the hardest problem
 (solder on aluminium) with a contact problem that tolerates a narrow
 temperature range well.
 

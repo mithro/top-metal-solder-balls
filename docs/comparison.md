@@ -1,7 +1,8 @@
 # Comparison
 
-Judged for home use, with high failure rates accepted and a 0 to 50 °C
-operating range.
+The home methods side by side, judged for home use with high failure rates
+accepted and a 0 to 50 °C operating range. The reasoning behind the order is
+in the [Summary](summary.md).
 
 | Method | Steps | Rough cost to start | Evidence on thin Al pads | Gives solder balls | Fit |
 | --- | --- | --- | --- | --- | --- |
@@ -13,9 +14,8 @@ operating range.
 | [Silver mirror](methods/silver.md) | wet + masking | $30 (guess) | none; several reasons to doubt | no | low |
 | [Ultrasonic iron](methods/aluminium-solder.md) | 1 | $2,000 and up | solar cells only | yes | low on cost |
 
-Costs marked "guess" are my estimates and have not been checked against
-listings. The nickel kit, flux, film and ultrasonic iron prices are from
-listings and may be out of date.
+Costs marked "guess" are unsourced estimates. The nickel kit, flux, film and
+ultrasonic iron prices are from listings and may be out of date.
 
 For the methods that need a wire bonder, a vacuum system or an outside
 service, see [Industry routes](industry/index.md).
