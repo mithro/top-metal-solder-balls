@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" width="860" height="500" role="img" aria-label="Home routes from bare aluminium pad to solder ball">
 <title>Home routes from bare aluminium pad to solder ball</title>
 <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d2733"/></marker></defs>
-<rect width="860" height="500" fill="#ffffff"/>
 <g transform="translate(0,0)">
 <text x="430" y="30" font-size="16" text-anchor="middle" fill="#1d2733" font-weight="bold" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Home routes: make the pad solderable, then add the solder</text>
 <text x="180" y="62" font-size="13" text-anchor="middle" fill="#1d2733" font-weight="bold" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Step 1: treat the Al pad</text>

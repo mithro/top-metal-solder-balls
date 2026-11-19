@@ -1,9 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="Ball arrays drawn to scale on wafer.space slots">
 <title>Ball arrays drawn to scale on wafer.space slots</title>
 <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d2733"/></marker></defs>
-<rect width="1040" height="600" fill="#ffffff"/>
 <g transform="translate(0,0)">
-<text x="520" y="30" font-size="16" text-anchor="middle" fill="#1d2733" font-weight="bold" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Ball arrays to scale: 250 um balls</text>
+<text x="520" y="30" font-size="16" text-anchor="middle" fill="#1d2733" font-weight="bold" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Ball arrays to scale: 250 µm balls</text>
 <rect x="40" y="60" width="353.7" height="460.8" rx="0" fill="#dfe5ec" stroke="#1d2733" stroke-width="1" />
 <circle cx="69.84343750000001" cy="93.408" r="11.25" fill="#d9dde2" stroke="#1d2733" stroke-width="1"/>
 <circle cx="69.84343750000001" cy="137.18400000000003" r="11.25" fill="#d9dde2" stroke="#1d2733" stroke-width="1"/>

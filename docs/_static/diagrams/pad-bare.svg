@@ -1,18 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img" aria-label="Bare GF180MCU bump pad cross-section">
 <title>Bare GF180MCU bump pad cross-section</title>
 <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d2733"/></marker></defs>
-<rect width="880" height="450" fill="#ffffff"/>
 <g transform="translate(60,0)">
 <rect x="60" y="320" width="640" height="70" rx="0" fill="#8d99a6" stroke="#1d2733" stroke-width="1" />
 <rect x="60" y="280" width="220" height="40" rx="0" fill="#7fb77e" stroke="#1d2733" stroke-width="1" />
 <rect x="480" y="280" width="220" height="40" rx="0" fill="#7fb77e" stroke="#1d2733" stroke-width="1" />
 <rect x="264" y="300" width="232" height="20" rx="0" fill="#c9d6e2" stroke="#1d2733" stroke-width="1" />
 <text x="380" y="362" font-size="13" text-anchor="middle" fill="#ffffff" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">inter-metal dielectric, lower metals, silicon</text>
-<text x="380" y="436" font-size="11" text-anchor="middle" fill="#555555" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Horizontal: about 1 px per um. Layer thicknesses greatly exaggerated.</text>
+<text x="380" y="436" font-size="11" text-anchor="middle" fill="#555555" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Horizontal: about 1 px per µm. Layer thicknesses greatly exaggerated.</text>
 <line x1="280" y1="262" x2="480" y2="262" stroke="#1d2733" stroke-width="1" marker-start="url(#arr)" marker-end="url(#arr)"/>
-<text x="380.0" y="257" font-size="12" text-anchor="middle" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">passivation opening A (200 um here)</text>
+<text x="380.0" y="257" font-size="12" text-anchor="middle" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">opening A = 200 µm</text>
 <line x1="264" y1="232" x2="496" y2="232" stroke="#1d2733" stroke-width="1" marker-start="url(#arr)" marker-end="url(#arr)"/>
-<text x="380.0" y="227" font-size="12" text-anchor="middle" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">top metal bump pad, A + 32</text>
+<text x="380.0" y="227" font-size="12" text-anchor="middle" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">top metal pad, A + 32 = 232 µm</text>
 <line x1="264" y1="236" x2="264" y2="300" stroke="#1d2733" stroke-width="0.6" stroke-dasharray="3 3"/>
 <line x1="496" y1="236" x2="496" y2="300" stroke="#1d2733" stroke-width="0.6" stroke-dasharray="3 3"/>
 <line x1="556" y1="184" x2="420" y2="300" stroke="#b3261e" stroke-width="0.8" />
@@ -22,11 +21,11 @@
 <line x1="229" y1="184" x2="272" y2="310" stroke="#1d2733" stroke-width="0.8" />
 <circle cx="272" cy="310" r="2" fill="#1d2733" stroke="#1d2733" stroke-width="1"/>
 <text x="225" y="180" font-size="13" text-anchor="end" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Al top metal,</text>
-<text x="225" y="196" font-size="13" text-anchor="end" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">about 1.1 um (11 kA)</text>
-<line x1="229" y1="254" x2="150" y2="290" stroke="#1d2733" stroke-width="0.8" />
-<circle cx="150" cy="290" r="2" fill="#1d2733" stroke="#1d2733" stroke-width="1"/>
+<text x="225" y="196" font-size="13" text-anchor="end" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">about 1.1 µm (11 kÅ)</text>
+<line x1="229" y1="254" x2="250" y2="290" stroke="#1d2733" stroke-width="0.8" />
+<circle cx="250" cy="290" r="2" fill="#1d2733" stroke="#1d2733" stroke-width="1"/>
 <text x="225" y="250" font-size="13" text-anchor="end" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">passivation</text>
-<text x="225" y="266" font-size="13" text-anchor="end" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">(nitride or polyimide)</text>
+<text x="225" y="266" font-size="13" text-anchor="end" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">(material not published)</text>
 <text x="380" y="40" font-size="16" text-anchor="middle" fill="#1d2733" font-weight="bold" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Starting point: a bump pad in top metal</text>
 </g>
 </svg>
