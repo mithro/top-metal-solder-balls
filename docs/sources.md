@@ -1,7 +1,8 @@
 # Sources
 
 Every source cited on this site. Each entry is a short description of the
-page, not its exact title. The list is generated from `docs/_links.md`.
+page, not its exact title. The list is generated from
+[`docs/_links.md`](https://github.com/mithro/top-metal-solder-balls/blob/main/docs/_links.md).
 
 Check a source before relying on a number from it. Only the Virginia Tech
 thesis, the GF180MCU design manual pages and the wafer.space pages were read

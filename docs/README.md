@@ -12,6 +12,7 @@ and MyST. Read the site, not these files, unless you are changing a page.
 | [`_static/diagrams/`](_static/diagrams/) | The generated SVG files. Do not edit them |
 | [`_links.md`](_links.md) | Every cited source: key, URL and description |
 | [`update_links.py`](update_links.py) | Copies cited sources into each page and rebuilds `sources.md` |
+| [`_templates/`](_templates/) | The site-wide notice shown on every page |
 | [`conf.py`](conf.py) | Sphinx configuration |
 
 How to write and check a page is in [CONTRIBUTING.md](../CONTRIBUTING.md).

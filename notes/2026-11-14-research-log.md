@@ -130,7 +130,6 @@ quantities, hobby ultrasonic irons, whether GF180MCU top metal is AlCu.
 - Run 2 design FC01 "Flip Chip pad test version 1": quarter slot, 12 pads, no
   transistors, no public repo. From the render: six ~220 um square pads at
   0.4 mm pitch (2 x 3) plus six ~120 x 60 um pads, joined by traces.
-- Not published: wire type, bonder, die thickness, pad metal, passivation.
 - Crowd Supply pages return 403 to automated fetches.
 
 ## 9. sky130 comparison and existing project documents (same day)
@@ -149,14 +148,8 @@ quantities, hobby ultrasonic irons, whether GF180MCU top metal is AlCu.
   500 um. sky130 die 3588 x 5188 um, GF180 die 3880 x 5070 um. GF180 pads:
   60 um glass cuts; 21 left at 205 um, 20 right at 215 um, 11 top and 11
   bottom at 275 um.
-- Drive: COB packaging doc (60 um pad opening, Caravel pitches), metal layer
-  rules doc (GF recommends 1.1 um top metal), gate array doc (post-fab extra
-  metal layer at ~2 um features), bumping notes of 2026-11-10 (zincate + EN
-  judged DIY feasible; suggestion to ask reballing machine makers).
-- Left out of the repo on purpose: names, prices, quotes and a vendor design
-  rule PDF marked confidential.
 
 Correction to section 9: the open test tile docs in the raw data repo
-(docs/sky130-testtile-open/testinterface.png) do give pad geometry, in an
-image I had not opened: 40 x 40 um probe pads, 60 um pitch along a row, 80 um
+(docs/sky130-testtile-open/testinterface.png) do give pad geometry:
+40 x 40 um probe pads, 60 um pitch along a row, 80 um
 between rows, 6 x 3 per group, over 1400 pads on the tile.

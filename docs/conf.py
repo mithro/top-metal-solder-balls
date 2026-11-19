@@ -3,7 +3,7 @@ author = "top-metal-solder-balls contributors"
 copyright = "2026, top-metal-solder-balls contributors"
 
 extensions = ["myst_parser"]
-myst_enable_extensions = ["colon_fence"]
+myst_enable_extensions = ["colon_fence", "dollarmath"]
 myst_heading_anchors = 3
 
 exclude_patterns = ["_build", "diagrams", "_links.md", "README.md"]
@@ -19,3 +19,4 @@ html_context = {
     "github_version": "main/docs/",
 }
 html_css_files = ["custom.css"]
+templates_path = ["_templates"]
