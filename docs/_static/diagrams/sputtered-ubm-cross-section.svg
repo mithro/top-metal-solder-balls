@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img" aria-label="Sputtered thin-film UBM with solder ball">
 <title>Sputtered thin-film UBM with solder ball</title>
 <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d2733"/></marker></defs>
-<rect width="880" height="450" fill="#ffffff"/>
 <g transform="translate(60,0)">
 <circle cx="380" cy="204.41799027172164" r="135" fill="#d9dde2" stroke="#1d2733" stroke-width="1"/>
 <ellipse cx="335" cy="149.41799027172164" rx="26" ry="16" fill="#ffffff" opacity="0.6"/>
@@ -10,7 +9,7 @@
 <rect x="480" y="280" width="220" height="40" rx="0" fill="#7fb77e" stroke="#1d2733" stroke-width="1" />
 <rect x="264" y="300" width="232" height="20" rx="0" fill="#c9d6e2" stroke="#1d2733" stroke-width="1" />
 <text x="380" y="362" font-size="13" text-anchor="middle" fill="#ffffff" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">inter-metal dielectric, lower metals, silicon</text>
-<text x="380" y="436" font-size="11" text-anchor="middle" fill="#555555" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Horizontal: about 1 px per um. Layer thicknesses greatly exaggerated.</text>
+<text x="380" y="436" font-size="11" text-anchor="middle" fill="#555555" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Horizontal: about 1 px per µm. Layer thicknesses greatly exaggerated.</text>
 <rect x="290" y="270" width="180" height="20" rx="0" fill="#d9dde2" stroke="none" stroke-width="1" />
 <polygon points="260.0,280.0 280.0,280.0 280.0,300.0 480.0,300.0 480.0,280.0 500.0,280.0 500.0,277.0 477.0,277.0 477.0,297.0 283.0,297.0 283.0,277.0 260.0,277.0" fill="#4a4a6a" stroke="#1d2733" stroke-width="0.5" stroke-linejoin="round"/>
 <polygon points="260.0,277.0 283.0,277.0 283.0,297.0 477.0,297.0 477.0,277.0 500.0,277.0 500.0,272.0 472.0,272.0 472.0,292.0 288.0,292.0 288.0,272.0 260.0,272.0" fill="#6f7f8f" stroke="#1d2733" stroke-width="0.5" stroke-linejoin="round"/>
@@ -18,10 +17,10 @@
 <line x1="556" y1="154" x2="480" y2="195" stroke="#1d2733" stroke-width="0.8" />
 <circle cx="480" cy="195" r="2" fill="#1d2733" stroke="#1d2733" stroke-width="1"/>
 <text x="560" y="150" font-size="13" text-anchor="start" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">SAC solder ball,</text>
-<text x="560" y="166" font-size="13" text-anchor="start" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">250 um</text>
+<text x="560" y="166" font-size="13" text-anchor="start" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">250 µm</text>
 <line x1="566" y1="218" x2="492" y2="271" stroke="#1d2733" stroke-width="0.8" />
 <circle cx="492" cy="271" r="2" fill="#1d2733" stroke="#1d2733" stroke-width="1"/>
-<text x="570" y="222" font-size="13" text-anchor="start" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Au cap, 0.1 to 0.2 um</text>
+<text x="570" y="222" font-size="13" text-anchor="start" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Au cap, 0.1 to 0.2 µm</text>
 <line x1="566" y1="242" x2="494" y2="275" stroke="#1d2733" stroke-width="0.8" />
 <circle cx="494" cy="275" r="2" fill="#1d2733" stroke="#1d2733" stroke-width="1"/>
 <text x="570" y="246" font-size="13" text-anchor="start" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Ni (or NiV, Cu) wettable layer</text>
@@ -31,7 +30,7 @@
 <line x1="229" y1="204" x2="268" y2="275" stroke="#1d2733" stroke-width="0.8" />
 <circle cx="268" cy="275" r="2" fill="#1d2733" stroke="#1d2733" stroke-width="1"/>
 <text x="225" y="200" font-size="13" text-anchor="end" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">film overlaps the passivation,</text>
-<text x="225" y="216" font-size="13" text-anchor="end" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">sealing the Al (10 um or more)</text>
+<text x="225" y="216" font-size="13" text-anchor="end" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">sealing the Al (10 µm or more)</text>
 <line x1="229" y1="254" x2="320" y2="299" stroke="#1d2733" stroke-width="0.8" />
 <circle cx="320" cy="299" r="2" fill="#1d2733" stroke="#1d2733" stroke-width="1"/>
 <text x="225" y="250" font-size="13" text-anchor="end" fill="#1d2733" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">oxide removed in vacuum</text>

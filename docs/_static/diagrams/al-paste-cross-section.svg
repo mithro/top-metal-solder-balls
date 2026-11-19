@@ -1,16 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 450" width="880" height="450" role="img" aria-label="Aluminium solder paste reflowed directly on the pad">
 <title>Aluminium solder paste reflowed directly on the pad</title>
 <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1d2733"/></marker></defs>
-<rect width="880" height="450" fill="#ffffff"/>
 <g transform="translate(60,0)">
-<circle cx="380" cy="363.3166644731069" r="115" fill="#d9dde2" stroke="#1d2733" stroke-width="1"/>
-<rect x="0" y="300" width="760" height="200" rx="0" fill="#ffffff" stroke="none" stroke-width="1" />
+<path d="M284,300 A115,115 0 0 1 476,300 z" fill="#d9dde2" stroke="#1d2733"/>
 <rect x="60" y="320" width="640" height="70" rx="0" fill="#8d99a6" stroke="#1d2733" stroke-width="1" />
 <rect x="60" y="280" width="220" height="40" rx="0" fill="#7fb77e" stroke="#1d2733" stroke-width="1" />
 <rect x="480" y="280" width="220" height="40" rx="0" fill="#7fb77e" stroke="#1d2733" stroke-width="1" />
 <rect x="264" y="300" width="232" height="20" rx="0" fill="#c9d6e2" stroke="#1d2733" stroke-width="1" />
 <text x="380" y="362" font-size="13" text-anchor="middle" fill="#ffffff" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">inter-metal dielectric, lower metals, silicon</text>
-<text x="380" y="436" font-size="11" text-anchor="middle" fill="#555555" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Horizontal: about 1 px per um. Layer thicknesses greatly exaggerated.</text>
+<text x="380" y="436" font-size="11" text-anchor="middle" fill="#555555" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Horizontal: about 1 px per µm. Layer thicknesses greatly exaggerated.</text>
 <line x1="284" y1="300" x2="476" y2="300" stroke="#8b3fa0" stroke-width="3" />
 <line x1="556" y1="174" x2="420" y2="262" stroke="#1d2733" stroke-width="0.8" />
 <circle cx="420" cy="262" r="2" fill="#1d2733" stroke="#1d2733" stroke-width="1"/>
@@ -26,7 +24,7 @@
 <text x="225" y="206" font-size="13" text-anchor="end" fill="#b3261e" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">must be rinsed off afterwards</text>
 <line x1="229" y1="254" x2="272" y2="310" stroke="#b3261e" stroke-width="0.8" />
 <circle cx="272" cy="310" r="2" fill="#b3261e" stroke="#b3261e" stroke-width="1"/>
-<text x="225" y="250" font-size="13" text-anchor="end" fill="#b3261e" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">unknown: does a 1.1 um pad</text>
+<text x="225" y="250" font-size="13" text-anchor="end" fill="#b3261e" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">unknown: does a 1.1 µm pad</text>
 <text x="225" y="266" font-size="13" text-anchor="end" fill="#b3261e" font-weight="normal" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">survive the flux and the tin?</text>
 <text x="380" y="30" font-size="16" text-anchor="middle" fill="#1d2733" font-weight="bold" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">Aluminium solder paste straight on the pad</text>
 </g>

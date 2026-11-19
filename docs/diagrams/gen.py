@@ -5,9 +5,9 @@ Run from anywhere: ``python3 docs/diagrams/gen.py``. Output goes to
 ``docs/_static/diagrams/``. The SVGs are committed so that Read the Docs does
 not need to run this script.
 
-Cross-sections use roughly 1 px = 1 um horizontally. Layer thicknesses are
-exaggerated by a large factor, otherwise 1 um of aluminium would be invisible
-next to a 250 um ball.
+Cross-sections use roughly 1 px = 1 µm horizontally. Layer thicknesses are
+exaggerated by a large factor, otherwise 1 µm of aluminium would be invisible
+next to a 250 µm ball.
 """
 
 import math
@@ -44,7 +44,6 @@ class Svg:
             '<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" '
             'markerWidth="7" markerHeight="7" orient="auto-start-reverse">'
             f'<path d="M0,0 L10,5 L0,10 z" fill="{INK}"/></marker></defs>',
-            f'<rect width="{w}" height="{h}" fill="#ffffff"/>',
             f'<g transform="translate({shift},0)">',
         ]
 
@@ -107,10 +106,10 @@ class Svg:
 # --- Shared pad geometry ---------------------------------------------------
 W, H = 760, 450
 CX = 380
-OPEN = 100  # half passivation opening: 200 um
-PADHALF = 116  # half top metal pad: 232 um
+OPEN = 100  # half passivation opening: 200 µm
+PADHALF = 116  # half top metal pad: 232 µm
 Y_SUB, Y_PAD, Y_PASS = 320, 300, 280
-NOTE = "Horizontal: about 1 px per um. Layer thicknesses greatly exaggerated."
+NOTE = "Horizontal: about 1 px per µm. Layer thicknesses greatly exaggerated."
 
 
 def ball(s, chord_y, half_width, r=135, fill=SOLDER):
@@ -152,13 +151,13 @@ def conformal(o, t, overlap=20):
 def fig_bare():
     s = Svg(W + 120, H, "Bare GF180MCU bump pad cross-section", shift=60)
     base(s)
-    s.dim(CX - OPEN, CX + OPEN, 262, "passivation opening A (200 um here)")
-    s.dim(CX - PADHALF, CX + PADHALF, 232, "top metal bump pad, A + 32")
+    s.dim(CX - OPEN, CX + OPEN, 262, "opening A = 200 µm")
+    s.dim(CX - PADHALF, CX + PADHALF, 232, "top metal pad, A + 32 = 232 µm")
     s.line(CX - PADHALF, 236, CX - PADHALF, Y_PAD, sw=0.6, extra='stroke-dasharray="3 3"')
     s.line(CX + PADHALF, 236, CX + PADHALF, Y_PAD, sw=0.6, extra='stroke-dasharray="3 3"')
     s.label(560, 180, "native Al oxide, a few nm:\nsolder will not wet this", CX + 40, Y_PAD, fill=WARN)
-    s.label(225, 180, "Al top metal,\nabout 1.1 um (11 kA)", CX - 108, Y_PAD + 10, anchor="end")
-    s.label(225, 250, "passivation\n(nitride or polyimide)", 150, Y_PASS + 10, anchor="end")
+    s.label(225, 180, "Al top metal,\nabout 1.1 µm (11 kÅ)", CX - 108, Y_PAD + 10, anchor="end")
+    s.label(225, 250, "passivation\n(material not published)", 250, Y_PASS + 10, anchor="end")
     s.text(380, 40, "Starting point: a bump pad in top metal", size=16, anchor="middle", weight="bold")
     s.save("pad-bare.svg")
 
@@ -176,11 +175,11 @@ def fig_enig():
     s.poly(ni, NI)
     s.line(CX - OPEN - 6, 270, CX + OPEN + 6, 270, stroke=AU, sw=3)
     s.line(CX - OPEN + 2, Y_PAD - 1, CX + OPEN - 2, Y_PAD - 1, stroke=IMC, sw=2)
-    s.label(560, 150, "SAC solder ball,\n250 um", CX + 100, 190)
-    s.label(570, 215, "immersion Au, 0.05 to 0.1 um\n(dissolves into the solder)", CX + 104, 269)
-    s.label(570, 262, "electroless Ni-P, about 5 um:\nbarrier and wettable layer", CX + 80, 286)
-    s.label(225, 200, "Ni mushrooms about 5 um\nover the passivation edge", CX - OPEN - 6, 275, anchor="end")
-    s.label(225, 250, "zincate seed layer on Al\n(0.3 to 0.4 um of Al consumed)", CX - 70, Y_PAD - 1, anchor="end", fill=IMC)
+    s.label(560, 130, "SAC solder ball,\n250 µm", CX + 100, 170)
+    s.label(570, 185, "immersion Au, 0.05 to 0.1 µm\n(dissolves into the solder)", CX + 104, 269)
+    s.label(570, 234, "electroless Ni-P, about 5 µm:\nbarrier and wettable layer", CX + 80, 286)
+    s.label(225, 200, "Ni mushrooms about 5 µm\nover the passivation edge", CX - OPEN - 6, 275, anchor="end")
+    s.label(225, 250, "zincate seed layer on Al\n(0.3 to 0.4 µm of Al consumed)", CX - 70, Y_PAD - 1, anchor="end", fill=IMC)
     s.text(380, 30, "ENIG under bump metal on the Al pad", size=16, anchor="middle", weight="bold")
     s.save("enig-cross-section.svg")
 
@@ -197,9 +196,9 @@ def fig_stud():
     s.rect(CX - 12, 246, 24, 24, AU, rx=6)
     s.line(CX - 36, Y_PAD, CX + 36, Y_PAD, stroke=IMC, sw=3)
     s.label(560, 120, "solder ball", CX + 90, 150)
-    s.label(570, 200, "Au stud from a ball bonder,\n60 to 120 um across", CX + 30, 282)
+    s.label(570, 200, "Au stud from a ball bonder,\n60 to 120 µm across", CX + 30, 282)
     s.label(570, 250, "AuSn4 forms around the stud:\nbrittle when gold is plentiful", CX + 46, 266, fill=IMC)
-    s.label(225, 180, "Au-Al intermetallic grows\nabove about 200 C", CX - 20, Y_PAD, anchor="end", fill=IMC)
+    s.label(225, 180, "Au-Al intermetallic grows\nabove about 200 °C", CX - 20, Y_PAD, anchor="end", fill=IMC)
     s.label(225, 240, "bare Al beside the stud:\nnot wetted, not sealed", CX - 75, Y_PAD, anchor="end", fill=WARN)
     s.text(380, 30, "Gold stud bump as the solderable surface", size=16, anchor="middle", weight="bold")
     s.save("stud-bump-cross-section.svg")
@@ -213,10 +212,10 @@ def fig_sputter(name, title, top_label, ball_fill=SOLDER, r=135, layers=None):
     for o, t, c in layers or [(0, 3, TI), (3, 5, NI), (8, 2, AU)]:
         s.poly(conformal(o, t), c, sw=0.5)
     s.label(560, 150, top_label, CX + 100, 195)
-    s.label(570, 222, "Au cap, 0.1 to 0.2 um", CX + 112, 271)
+    s.label(570, 222, "Au cap, 0.1 to 0.2 µm", CX + 112, 271)
     s.label(570, 246, "Ni (or NiV, Cu) wettable layer", CX + 114, 275)
     s.label(570, 270, "Ti or TiW adhesion / barrier", CX + 116, 279)
-    s.label(225, 200, "film overlaps the passivation,\nsealing the Al (10 um or more)", CX - OPEN - 12, 275, anchor="end")
+    s.label(225, 200, "film overlaps the passivation,\nsealing the Al (10 µm or more)", CX - OPEN - 12, 275, anchor="end")
     s.label(225, 250, "oxide removed in vacuum\nbefore deposition", CX - 60, Y_PAD - 1, anchor="end")
     s.text(380, 30, title, size=16, anchor="middle", weight="bold")
     s.save(name)
@@ -229,35 +228,34 @@ def fig_direct():
     s.line(CX - 96, Y_PAD, CX + 96, Y_PAD, stroke=WARN, sw=3)
     s.label(560, 150, "Sn-based solder, wetted with\nultrasonic or active alloy", CX + 100, 200)
     s.label(570, 230, "Sn directly on Al: no barrier,\nAl dissolves, galvanic couple", CX + 60, Y_PAD, fill=WARN)
-    s.label(225, 200, "only about 1.1 um of Al to\nsurvive cavitation and tin", CX - 108, Y_PAD + 10, anchor="end")
+    s.label(225, 200, "only about 1.1 µm of Al to\nsurvive cavitation and tin", CX - 108, Y_PAD + 10, anchor="end")
     s.label(225, 255, "pad edge not sealed", CX - 98, Y_PAD - 2, anchor="end", fill=WARN)
     s.text(380, 30, "Direct soldering to the Al pad (no under bump metal)", size=16, anchor="middle", weight="bold")
     s.save("direct-to-al-cross-section.svg")
 
 
 def fig_adhesive():
-    s = Svg(W + 120, H, "Stud bump with conductive adhesive flip chip joint", shift=60)
-    s.text(380, 30, "Flip chip with a gold stud and conductive adhesive", size=16, anchor="middle", weight="bold")
+    s = Svg(W + 120, H, "Silver epoxy dot joining a bare aluminium pad to a board pad", shift=60)
+    s.text(380, 30, "Silver epoxy dot straight on the aluminium pad", size=16, anchor="middle", weight="bold")
     # Die, face down.
     s.rect(60, 60, 640, 70, SI)
     s.text(380, 100, "die (face down)", anchor="middle", fill="#ffffff")
     s.rect(60, 130, 220, 30, PASS)
     s.rect(480, 130, 220, 30, PASS)
     s.rect(264, 130, 232, 16, AL)
-    # Underfill, adhesive, stud.
-    s.rect(60, 160, 640, 150, "#f3ead7", stroke="none")
-    s.rect(280, 146, 200, 14, "#f3ead7", stroke="none")
-    s.add(f'<ellipse cx="{CX}" cy="268" rx="78" ry="44" fill="{ICA}" stroke="{INK}"/>')
-    s.rect(CX - 40, 146, 80, 44, AU, rx=10)
-    s.rect(CX - 14, 186, 28, 60, AU, rx=8)
+    # Epoxy dot squeezed between the pad and the board.
+    s.poly([(284, 147), (476, 147), (476, 160), (492, 176), (500, 230), (486, 300),
+            (274, 300), (260, 230), (268, 176), (284, 160)], ICA)
+    s.line(286, 147, 474, 147, stroke=WARN, sw=3)
     # Board.
-    s.rect(240, 300, 280, 16, CU)
+    s.rect(240, 300, 280, 16, AU)
     s.rect(60, 316, 640, 70, PCB)
-    s.text(380, 356, "substrate / PCB", anchor="middle", fill="#ffffff")
-    s.label(560, 200, "Au stud bump on the Al pad", CX + 38, 170)
-    s.label(570, 262, "silver-filled conductive adhesive", CX + 70, 262)
-    s.label(570, 296, "Cu pad with Au finish", 500, 306)
-    s.label(225, 215, "underfill (often needed\nfor strength)", 200, 240, anchor="end")
+    s.text(380, 356, "board or flex circuit", anchor="middle", fill="#ffffff")
+    s.label(570, 180, "native oxide stays under the epoxy:\nhigh, drifting contact resistance", CX + 60, 147, fill=WARN)
+    s.label(570, 240, "silver-filled epoxy dot,\nabout 200 µm across", CX + 90, 240)
+    s.label(570, 296, "gold-finished copper pad", 505, 308)
+    s.label(225, 190, "Al pad, untreated or\nscrubbed while the epoxy is wet", 272, 139, anchor="end")
+    s.label(225, 262, "air gap: no underfill, so the\ndots carry all the load", 200, 240, anchor="end")
     s.text(380, 436, "Not to scale.", size=11, anchor="middle", fill="#555555")
     s.save("adhesive-cross-section.svg")
 
@@ -291,7 +289,7 @@ def fig_flex():
     s.rect(60, 310, 640, 50, PCB)
     s.text(380, 340, "main PCB", anchor="middle", fill="#ffffff")
     s.label(590, 240, "ordinary solder balls on the\nflex's gold-plated copper pads", 545, 250)
-    s.label(225, 250, "plated via carries the\nsignal through the flex", 258, 180, anchor="end")
+    s.label(190, 262, "plated via carries the\nsignal through the flex", 258, 180, anchor="end")
     s.label(120, 110, "Al pad, untreated", 226, 125, anchor="end")
     s.label(625, 105, "particles trapped between\nAl pad and flex pad", 538, 137)
     s.text(380, 436, "Not to scale. The join to aluminium is adhesive; the solder only ever touches the flex.", size=11, anchor="middle", fill="#555555")
@@ -317,9 +315,9 @@ def fig_wlcsp():
     s.rect(450, 284, 140, 18, SOLDER, stroke="none")
     s.poly([(440, 284), (450, 284), (450, 302), (590, 302), (590, 284), (600, 284),
             (600, 276), (584, 276), (584, 296), (456, 296), (456, 276), (440, 276)], NI)
-    s.label(130, 150, "small Al pad\n(any pad ring)", 155, 344, anchor="end")
-    s.label(150, 215, "polymer repassivation,\ntwo layers", 210, 293, anchor="end")
-    s.label(395, 190, "plated Cu redistribution\ntrace moves the ball\naway from the pad", 350, 307, anchor="end")
+    s.label(120, 250, "small Al pad\n(any pad ring)", 155, 344, anchor="end")
+    s.label(150, 170, "polymer repassivation,\ntwo layers", 210, 293, anchor="end")
+    s.label(395, 190, "plated Cu redistribution\ntrace moves the ball\naway from the pad", 420, 307, anchor="end")
     s.label(650, 130, "solder ball on\nplated UBM", bx + 60, 190, anchor="start")
     s.text(380, 436, "Not to scale.", size=11, anchor="middle", fill="#555555")
     s.save("wlcsp-rdl-cross-section.svg")
@@ -328,7 +326,8 @@ def fig_wlcsp():
 def flow(name, title, steps, cols=4, note=None):
     bw, bh, gx, gy = 160, 64, 28, 40
     rows = math.ceil(len(steps) / cols)
-    w = 40 + cols * bw + (cols - 1) * gx + 40
+    w = 880  # same canvas width as the cross-sections, so text renders at one size
+    x_left = (w - cols * bw - (cols - 1) * gx) / 2
     h = 70 + rows * bh + (rows - 1) * gy + (50 if note else 24)
     s = Svg(w, h, title)
     s.text(w / 2, 30, title, size=16, anchor="middle", weight="bold")
@@ -337,7 +336,7 @@ def flow(name, title, steps, cols=4, note=None):
         r, c = divmod(i, cols)
         if r % 2:
             c = cols - 1 - c
-        x = 40 + c * (bw + gx)
+        x = x_left + c * (bw + gx)
         y = 56 + r * (bh + gy)
         pos.append((x, y))
         text, fill = st if isinstance(st, tuple) else (st, "#e9f0f7")
@@ -368,8 +367,8 @@ def fig_flows():
         ("First zincate\n30 s, room temp", WET),
         ("Strip zinc in\n50% nitric, 5 s", WET),
         ("Second zincate\n30 s, room temp", WET),
-        ("Electroless Ni-P\n88 C, 15 min, 5 um", HOT),
-        ("Immersion Au\n90 C, 1 min", HOT),
+        ("Electroless Ni-P\n88 °C, 15 min, 5 µm", HOT),
+        ("Immersion Au\n90 °C, 1 min", HOT),
         ("Rinse, dry,\nrelease from carrier", DRY),
     ], note="DI water rinse between every wet step. Times from the Virginia Tech single-die thesis.")
     flow("home-nickel-flow.svg", "Home zincate and electroless nickel: process flow", [
@@ -377,7 +376,7 @@ def fig_flows():
         ("Degrease\n(IPA, detergent)", WET),
         ("Zincate dip\n15 to 30 s, room temp", WET),
         ("Strip in nitric acid,\nzincate again (optional)", WET),
-        ("Electroless nickel kit\n85 to 90 C, 10 to 20 min", HOT),
+        ("Electroless nickel kit\n85 to 90 °C, 10 to 20 min", HOT),
         ("Rinse and dry", WET),
         ("Flux and reball\nthe same day", HOT),
         ("Test: continuity,\npush on the balls", DRY),
@@ -477,11 +476,11 @@ def fig_home_nickel():
     ]
     s.poly(ni, NI)
     s.line(CX - OPEN + 2, Y_PAD - 1, CX + OPEN - 2, Y_PAD - 1, stroke=IMC, sw=2)
-    s.label(560, 150, "0.25 mm solder ball from\na reballing stencil", CX + 100, 190)
-    s.label(570, 222, "no gold at home: solder soon,\nwith an active flux", CX + 104, 270, fill=WARN)
-    s.label(570, 266, "electroless nickel from a\nhobby kit, a few um", CX + 80, 286)
+    s.label(560, 130, "0.25 mm solder ball from\na reballing stencil", CX + 100, 170)
+    s.label(570, 185, "no gold at home: solder soon,\nwith an active flux", CX + 104, 270, fill=WARN)
+    s.label(570, 234, "electroless nickel from a\nhobby kit, a few µm", CX + 80, 286)
     s.label(225, 200, "nickel grows only on metal,\nso no mask is needed", CX - OPEN - 6, 275, anchor="end")
-    s.label(225, 250, "zincate dip: eats 0.3 to 0.4 um\nof a 1.1 um pad", CX - 70, Y_PAD - 1, anchor="end", fill=IMC)
+    s.label(225, 250, "zincate dip: eats 0.3 to 0.4 µm\nof a 1.1 µm pad", CX - 70, Y_PAD - 1, anchor="end", fill=IMC)
     s.text(380, 30, "Home zincate and electroless nickel", size=16, anchor="middle", weight="bold")
     s.save("home-nickel-cross-section.svg")
 
@@ -490,14 +489,14 @@ def fig_al_paste():
     s = Svg(W + 120, H, "Aluminium solder paste reflowed directly on the pad", shift=60)
     r, hw = 115, 96
     d = math.sqrt(r * r - hw * hw)
-    s.circle(CX, Y_PAD + d, r, SOLDER)
-    s.rect(0, Y_PAD, W, 200, "#ffffff", stroke="none")
+    s.add(f'<path d="M{CX - hw},{Y_PAD} A{r},{r} 0 0 1 {CX + hw},{Y_PAD} z" '
+          f'fill="{SOLDER}" stroke="{INK}"/>')
     base(s)
     s.line(CX - 96, Y_PAD, CX + 96, Y_PAD, stroke=IMC, sw=3)
     s.label(560, 170, "Sn-Ag solder dome left\nby the printed paste", CX + 40, 262)
     s.label(570, 230, "silver-aluminium intermetallic\nmakes the bond (seen on bulk Al)", CX + 60, Y_PAD, fill=IMC)
     s.label(225, 190, "aggressive flux removes the oxide:\nmust be rinsed off afterwards", CX - 90, 285, anchor="end", fill=WARN)
-    s.label(225, 250, "unknown: does a 1.1 um pad\nsurvive the flux and the tin?", CX - 108, Y_PAD + 10, anchor="end", fill=WARN)
+    s.label(225, 250, "unknown: does a 1.1 µm pad\nsurvive the flux and the tin?", CX - 108, Y_PAD + 10, anchor="end", fill=WARN)
     s.text(380, 30, "Aluminium solder paste straight on the pad", size=16, anchor="middle", weight="bold")
     s.save("al-paste-cross-section.svg")
 
@@ -517,10 +516,10 @@ def fig_silver():
     up[1] = (175, Y_PASS - 5); up[2] = (175, Y_PAD - 5); up[3] = (305, Y_PAD - 5); up[4] = (305, Y_PASS - 5)
     up[5] = (455, Y_PASS - 5); up[6] = (455, Y_PAD - 5); up[7] = (585, Y_PAD - 5); up[8] = (585, Y_PASS - 5)
     s.poly(pts + up[::-1], "#f2f2f2", sw=0.8)
-    s.label(560, 150, "silver film about 0.1 um, on\npads and passivation alike", 520, Y_PAD - 4)
+    s.label(560, 150, "silver film about 0.1 µm, on\npads and passivation alike", 520, Y_PAD - 4)
     s.label(570, 215, "bridge between pads: must be\nmasked or removed", 380, Y_PASS - 4, fill=WARN)
     s.label(225, 160, "alkaline bath also etches\nthe aluminium", 240, Y_PAD + 6, anchor="end", fill=WARN)
-    s.label(225, 220, "oxide stays under the silver\nunless removed first", 200, Y_PAD - 1, anchor="end", fill=WARN)
+    s.label(180, 228, "oxide stays under the silver\nunless removed first", 200, Y_PAD - 1, anchor="end", fill=WARN)
     s.text(380, 436, "Two neighbouring pads. Not to scale.", size=11, anchor="middle", fill="#555555")
     s.save("silver-mirror-cross-section.svg")
 
@@ -529,7 +528,7 @@ def fig_array():
     sc = 90  # px per mm
     dw, dh = 3.93, 5.12
     s = Svg(1040, 600, "Ball arrays drawn to scale on wafer.space slots")
-    s.text(520, 30, "Ball arrays to scale: 250 um balls", size=16, anchor="middle", weight="bold")
+    s.text(520, 30, "Ball arrays to scale: 250 µm balls", size=16, anchor="middle", weight="bold")
 
     def die(x0, y0, w, h, nx, ny, cap):
         s.rect(x0, y0, w * sc, h * sc, "#dfe5ec")
@@ -550,7 +549,7 @@ def fig_array():
 
 
 def fig_fc01():
-    sc = 0.2  # px per um
+    sc = 0.2  # px per µm
     s = Svg(820, 620, "Sketch of the FC01 flip chip pad test die")
     s.text(410, 30, "FC01 on Run 2: pad layout as estimated from the public render", size=16, anchor="middle", weight="bold")
     x0, y0 = 60, 60
@@ -561,11 +560,11 @@ def fig_fc01():
         s.rect(x0 + bx * sc, y0 + by * sc, 220 * sc, 220 * sc, AL)
     for sx, sy in small:
         s.rect(x0 + sx * sc, y0 + sy * sc, 120 * sc, 60 * sc, AL)
-    s.label(500, 150, "6 small pads, roughly 120 x 60 um,\nfor probing or wire bonding", x0 + 345 * sc, y0 + 365 * sc)
-    s.label(500, 330, "6 large pads, roughly 220 um square\non a 0.4 mm grid (2 x 3)", x0 + 1295 * sc, y0 + 1265 * sc)
+    s.label(500, 150, "6 small pads, roughly 120 x 60 µm,\nfor probing or wire bonding", x0 + 345 * sc, y0 + 365 * sc)
+    s.label(500, 330, "6 large pads, roughly 220 µm square\non a 0.4 mm grid (2 x 3)", x0 + 1295 * sc, y0 + 1265 * sc)
     s.text(500, 430, "traces join large pads to small pads\n(not drawn: pairing not verified)", fill="#8a6fb0")
     s.label(500, 520, "die 1.94 x 2.53 mm, no transistors", x0 + 1940 * sc, y0 + 2300 * sc)
-    s.text(410, 600, "Dimensions are measured off an image at about 2.5 um per pixel, so treat them as plus or minus 10%.", size=11, anchor="middle", fill="#555555")
+    s.text(410, 600, "Dimensions are measured off an image at about 2.5 µm per pixel, so treat them as plus or minus 10%.", size=11, anchor="middle", fill="#555555")
     s.save("fc01-layout.svg")
 
 
@@ -577,7 +576,7 @@ def fig_caravel_bumps():
     x0, y0 = 60, 60
     s.rect(x0, y0, dw * sc, dh * sc, "#dfe5ec")
 
-    def pt(x, y):  # die coordinates in um, origin bottom left
+    def pt(x, y):  # die coordinates in µm, origin bottom left
         return x0 + x * sc / 1000, y0 + (dh * 1000 - y) * sc / 1000
 
     pad = 60 * sc / 1000
@@ -600,25 +599,25 @@ def fig_caravel_bumps():
     s.text(x0 + dw * sc / 2, y0 + dh * sc + 20, "die 3.88 x 5.07 mm, 63 wire bond pads, 60 bumps",
            size=12, anchor="middle")
     px, py = pt(3780, 482.5 + 215 * 19)
-    s.label(470, 100, "wire bond pads, 60 x 60 um openings,\n205 to 275 um pitch (inset from\nthe edge is not to scale)", px, py)
+    s.label(470, 100, "wire bond pads, 60 x 60 µm openings,\n205 to 275 µm pitch (inset from\nthe edge is not to scale)", px, py)
     px, py = pt(1940 + 2.5 * 500, 2535 + 2.5 * 500)
-    s.label(470, 185, "bump sites on a 0.5 mm grid, joined to the\npads by 15 um wide copper traces (not drawn)", px, py)
+    s.label(470, 185, "bump sites on a 0.5 mm grid, joined to the\npads by 15 µm wide copper traces (not drawn)", px, py)
 
-    # One bump site, enlarged: 1 px = 1 um.
+    # One bump site, enlarged: 1 px = 1 µm.
     cx, cy = 720, 400
     s.text(cx, 262, "One bump site, enlarged", size=13, anchor="middle", weight="bold")
     s.circle(cx, cy, 135, CU)
     s.circle(cx, cy, 125, NI)
     s.circle(cx, cy, 110, POLY)
-    s.label(880, 300, "copper pad,\n270 um", cx + 92, cy - 96)
-    s.label(880, 370, "under-bump metal,\n250 um", cx + 118, cy - 30)
-    s.label(880, 440, "opening in top\npolymer, 220 um", cx + 60, cy + 40)
-    s.text(cx, 560, "A 250 um ball sits on the under-bump metal.", size=11, anchor="middle", fill="#555555")
+    s.label(880, 300, "copper pad,\n270 µm", cx + 92, cy - 96)
+    s.label(880, 370, "under-bump metal,\n250 µm", cx + 118, cy - 30)
+    s.label(880, 440, "opening in top\npolymer, 220 µm", cx + 60, cy + 40)
+    s.text(cx, 560, "A 250 µm ball sits on the under-bump metal.", size=11, anchor="middle", fill="#555555")
     s.save("caravel-bump-layout.svg")
 
 
 def fig_sky130_probe_pads():
-    sc = 1.6  # px per um
+    sc = 1.6  # px per µm
     s = Svg(900, 520, "Probe pad grid of the open sky130 test tile")
     s.text(450, 30, "Open sky130 test tile: probe pad grid", size=16, anchor="middle", weight="bold")
     x0, y0 = 60, 90
@@ -627,16 +626,16 @@ def fig_sky130_probe_pads():
             x, y = x0 + i * 60 * sc, y0 + j * 80 * sc
             s.rect(x, y, 40 * sc, 40 * sc, AL)
             s.text(x + 20 * sc, y + 20 * sc + 4, f"{i + 1},{3 - j}", size=11, anchor="middle")
-    s.dim(x0, x0 + 40 * sc, y0 - 12, "40 um")
-    s.dim(x0, x0 + 60 * sc, y0 + 200 * sc + 30, "60 um pitch")
+    s.dim(x0, x0 + 40 * sc, y0 - 12, "40 µm")
+    s.dim(x0, x0 + 60 * sc, y0 + 200 * sc + 30, "60 µm pitch")
     bx = x0 + 4 * 60 * sc
     s.rect(bx + 4, y0 + 40 * sc + 6, 40 * sc - 8, 40 * sc - 12, "none", stroke=WARN, sw=1.2,
            extra='stroke-dasharray="5 3"')
     s.label(680, 150, "device under test\nsits between rows", bx + 40 * sc - 8, y0 + 60 * sc)
     px = x0 + 5 * 60 * sc + 40 * sc + 14
     s.line(px, y0 + 80 * sc, px, y0 + 160 * sc, extra='marker-start="url(#arr)" marker-end="url(#arr)"')
-    s.text(px + 10, y0 + 120 * sc + 4, "80 um pitch between rows", size=12)
-    s.text(450, 490, "A 250 um solder ball would cover a block of about 4 x 3 of these pads.",
+    s.text(px + 10, y0 + 120 * sc + 4, "80 µm pitch between rows", size=12)
+    s.text(450, 490, "A 250 µm solder ball would cover a block of about 4 x 3 of these pads.",
            size=11, anchor="middle", fill="#555555")
     s.save("sky130-probe-pads.svg")
 
@@ -646,20 +645,20 @@ def fig_notes_flows():
         ("Finished wafer, Al pads\nunder nitride", DRY),
         ("Spin, pattern and cure\npolyimide or PBO", HOT),
         ("Sputter seed: 100 nm Ti,\n200 to 500 nm Cu", DRY),
-        ("Thick resist mould,\n5 to 50 um", DRY),
-        ("Electroplate Cu,\n5 to 10 um traces", WET),
+        ("Thick resist mould,\n5 to 50 µm", DRY),
+        ("Electroplate Cu,\n5 to 10 µm traces", WET),
         ("Strip resist, etch\nseed Cu and Ti", WET),
-        ("Repeat for UBM: Cu,\n2 to 3 um Ni, Au flash", WET),
+        ("Repeat for UBM: Cu,\n2 to 3 µm Ni, Au flash", WET),
         ("Drop balls through a\nstencil and reflow", HOT),
         ("Backgrind, mark,\ndice, tape and reel", DRY),
-    ], cols=3, note="Unverified: from the notes of 10 November 2026.")
+    ], cols=3, note="Unverified: from the notes of 2026-11-10.")
     flow("zincate-mechanism-flow.svg", "What a zincate dip does to an aluminium pad", [
         ("Alkaline bath\ndissolves the oxide", WET),
         ("Zinc swaps places\nwith bare aluminium", WET),
         ("Film stops growing at\ntens of nanometres", WET),
         ("Zinc shields the pad\nthrough the rinse", WET),
         ("Nickel bath: nickel\nreplaces the zinc", HOT),
-    ], cols=5, note="2 Al + 3 Zn(2+) gives 2 Al(3+) + 3 Zn. Nickel then keeps growing on itself.")
+    ], cols=3, note="2 Al + 3 Zn(2+) gives 2 Al(3+) + 3 Zn. Nickel then keeps growing on itself.")
 
 
 if __name__ == "__main__":
@@ -667,7 +666,7 @@ if __name__ == "__main__":
     fig_enig()
     fig_stud()
     fig_sputter("sputtered-ubm-cross-section.svg", "Sputtered thin-film UBM with solder ball",
-                "SAC solder ball,\n250 um")
+                "SAC solder ball,\n250 µm")
     fig_home_nickel()
     fig_al_paste()
     fig_silver()

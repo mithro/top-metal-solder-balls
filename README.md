@@ -9,20 +9,28 @@ under-bump metal, adhesives) directly to the aluminium top metal of
 [wafer.space](https://wafer.space) GF180MCU chips.
 
 Scope: methods simple enough to do at home, where high failure rates are
-acceptable and the parts only need to work between 0 C and 50 C.
+acceptable and the parts only need to work between 0 °C and 50 °C.
 
-- `docs/` is a Sphinx site built by Read the Docs (see `.readthedocs.yaml`).
-  Start at `docs/index.md`.
-- `docs/diagrams/gen.py` regenerates the SVG diagrams in `docs/_static/diagrams/`.
-- `docs/_links.md` holds the shared source links; run `docs/update_links.py`
-  after editing it.
-- `notes/` holds work-in-progress research logs, committed as the work happens.
+The docs are a literature survey drafted by an AI model (Claude). Nothing in
+them has been tried on real die yet.
 
-Build the docs locally:
+## Quick start
 
 ```sh
 pip install -r docs/requirements.txt
-sphinx-build -W -b html docs docs/_build/html
+sphinx-build -W -n -b html docs docs/_build/html
 ```
 
-Everything here is work in progress.
+Then open `docs/_build/html/index.html`.
+
+## Layout
+
+- `docs/` is a Sphinx site built by Read the Docs (see `.readthedocs.yaml`).
+  Start at `docs/index.md`.
+- `docs/style-guide.md` says how pages are written and what to run before
+  merging.
+- `docs/diagrams/gen.py` regenerates the SVG diagrams in
+  `docs/_static/diagrams/`. Do not edit the SVG files by hand.
+- `docs/_links.md` holds the shared source links. Run `docs/update_links.py`
+  after editing it.
+- `notes/` holds work-in-progress research logs, committed as the work happens.

@@ -1,119 +1,116 @@
-[wafer.space]: https://wafer.space/
-[template]: https://github.com/wafer-space/gf180mcu-project-template
-[open_pdks]: https://github.com/rtimothyedwards/open_pdks
-[vlsida]: https://vlsida.github.io/chip-tutorials/gf180mcu.html
-[openlane-pdks]: https://openlane2.readthedocs.io/en/latest/usage/about_pdks.html
-[gf180-io]: https://gf180mcu-pdk.readthedocs.io/en/latest/IPs/IO/gf180mcu_fd_io/features.html
-[drm-9.4.1]: https://gf180mcu-pdk.readthedocs.io/en/latest/physical_verification/design_manual/drm_09_4_1.html
-[drm-9.4.2]: https://gf180mcu-pdk.readthedocs.io/en/latest/physical_verification/design_manual/drm_09_4_2.html
-[drm-9.4.3]: https://gf180mcu-pdk.readthedocs.io/en/latest/physical_verification/design_manual/drm_09_4_3.html
-[nxp-wlcsp]: https://www.mouser.com/pdfdocs/AN3846.PDF
-[isit]: https://www.isit.fraunhofer.de/en/technology/micro-manufacturing-processes/processes-on-wafer-level/waferbumping-balling.html
-[vt-thesis]: https://vtechworks.lib.vt.edu/handle/10919/34792
-[us6503343]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6503343
-[us6548327]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6548327
-[uyemura]: https://www.uyemura.com/under-bump-metallization-to-reduce-wafer-processing-costs.htm
-[ipc-single-ic]: https://www.electronics.org/system/files/technical_resource/E8%26S33_02.pdf
-[imaps-nipd]: https://imapsource.org/article/66866-processing-bumping-and-assembly-of-single-chip-plated-ni-pd-over-alcap-bond-pads-for-flip-chip-applications-and-prototyping
-[pactech-ipc]: https://www.ipc.org/system/files/technical_resource/E6%26S08_01.pdf
-[pactech-profile]: https://abachy.com/catalog/semiconductor-equipment/wafer-processing-equipment/thin-film-deposition-equipment/plating-equipment/pac-tech-packaging-technologies-gmbh
-[kreidl]: https://indico.cern.ch/event/602046/contributions/2429701/attachments/1423997/2183622/BumpingAndFlipChipOfAsics.pdf
-[lauser]: https://indico.cern.ch/event/1581713/contributions/6767522/attachments/3173934/5643703/DRD3_Week_Cern_20251114_Lauser.pdf
-[chen-nip]: https://bib-pubdb1.desy.de/record/83597
-[enepig]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5459027
-[finishing]: https://finishing.com/08/78.shtml
-[hybrid]: https://hybrid.swiss/solutions/gold-bumping/
-[ks4524]: https://caeonline.com/buy/bonders/k-s-4524/9208341
-[quikpak]: https://www.delphon.com/company-overview/company-news/quik-pak-offers-innovative-approach/
-[alter]: https://semiconductor.altertechnology.com/flip-chip-bump-technology-au-stud/
-[cmc]: https://www.cmc.ca/flip-chip-assembly-services/
-[sandia]: https://www.osti.gov/servlets/purl/1109262
-[bump-buck]: https://sst.semiconductor-digest.com/2008/05/choosing-the-best-bump-for-the-buck/
-[calpoly-au]: https://digitalcommons.calpoly.edu/theses/605
-[cu-stud]: https://sst.semiconductor-digest.com/?p=36832
-[desy]: https://indico.desy.de/event/5679/contributions/75884/attachments/50318/61474/BumpBonding.pdf
-[ubm-interface]: https://sst.semiconductor-digest.com/?p=36840
-[sb2-paper]: https://www.researchgate.net/publication/228938323_Placement_and_reflow_of_solder_balls_for_FC_BGA_wafer-level-CSP_optoelectronic_components_and_MEMS_by_using_a_new_solder_jetting_method
-[cil]: https://mail.iconnect007.com/article/149040/cil-brings-advanced-semiconductor-solder-bumping-to-the-uk/149037/smt
-[reball-patent]: https://uspto.report/patent/app/20080308612
-[flux-patent]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/7108755
-[lboro]: https://repository.lboro.ac.uk/articles/online_resource/Under_bump_metallisation_of_fine_pitch_flip-chip_using_electroless_nickel_deposition/9557078
-[us-solder]: https://en.wikipedia.org/wiki/Ultrasonic_soldering
-[ohsu]: https://digitalcollections.ohsu.edu/record/2584/files/3328_etd.pdf
-[sbond]: https://link.springer.com/doi/10.1007/s11664-007-0190-9
-[cerasolzer]: https://www.electronicdesign.com/interconnects/ultrasonic-system-bonds-unsolderable-materials
-[ise-us]: https://publica.fraunhofer.de/entities/publication/e322d70d-24ca-44bf-a382-3b242f0f0cca
-[isfh]: https://isfh.de/publikationen/ultrasonic-tinning-of-al-busbars-for-a-silver-free-rear-side-on-bifacial-silicon-solar-cells
-[snzn-patent]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/9808890
-[snzn-review]: https://pmc.ncbi.nlm.nih.gov/articles/PMC9609569
-[cityu-acf]: https://scholars.cityu.edu.hk/en/publications/contact-resistance-and-adhesion-performance-of-acf-interconnectio/
-[psi-indium]: https://arxiv.org/abs/physics/0510021
-[micross]: https://www.micross.com/components-and-services/component-design-packaging/wafer-bumping-wlp
-[izm]: https://www.izm.fraunhofer.de/content/dam/izm/en/documents/Abteilungen/High_Density_Interconnect_Wafer_Level_Packaging/Services_IZM-ASSID_Q4_15.pdf
-[caswell-al]: https://support.caswellplating.com/portal/en/kb/articles/can-i-use-your-kits-to-plate-aluminum
-[caswell-kit]: https://caswellplating.com/one-plate-1-electroless-nickel-kit/
-[caswell-zincate]: https://caswellplating.com/zincate-8-fl-oz.html
-[caswell-tutorial]: https://caswellplating.com/electroless_tutorial.html
-[en-wiki]: https://en.wikipedia.org/wiki/Electroless_nickel-phosphorus_plating
-[sciencemadness-en]: https://www.sciencemadness.org/whisper/viewthread.php?tid=70835
-[zincate-formulas]: https://www.finishing.com/424/16.shtml
-[superior-paste]: https://superiorflux.com/papers/DirectALSolderPasteIMAPS2011.pdf
-[superior-guide]: https://superiorflux.com/papers/AluminumSolderingGuide.pdf
-[superior-tech]: https://superiorflux.com/techniques-for-soldering-aluminum/
-[tollens]: https://en.wikipedia.org/wiki/Tollens%27_reagent
-[rsc-mirror]: https://edu.rsc.org/resources/a-giant-silver-mirror-experiment/822.article
-[brevnov]: https://data.zhenzhi.com/details/1/908811770
-[immersion-ag-patent]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6319543
-[ag-mirror-al-patent]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6695458
-[ag-dissolution]: https://link.springer.com/doi/10.1007/s11664-019-07316-1
-[ag-leaching]: https://www.circuitnet.com/experts/87721.html
-[ams2420]: https://saemobilus.sae.org/content/AMS2420E/
-[stencil-kit]: https://www.amazon.com/Universal-Reballing-Stencil-Template-0-25-0-76mm/dp/B01HHQIZOC
-[kit-27]: https://www.hklrf.com/27pcs-Universal-Stencil-BGA-Balls-Station-kit_1255.html
-[balls-set]: https://www.amazon.com/clp/B07YXRQ4K4
-[jlc-stencil]: https://jlcpcb.com/capabilities/pcb-stencil-manufacturing
-[reball-guide]: https://pcbsync.com/bga-reballing-process/
-[badcaps]: https://www.badcaps.net/forum/troubleshooting-hardware-devices-and-electronics-theory/equipment-usage-soldering-techniques-and-reviews/76158-noob-reballing-balling-stencil-questions
-[mitxela]: https://hackaday.com/2018/06/26/no-caffeine-no-problem-a-hand-soldered-chip-scale-package/
-[mhp30]: https://www.sparkfun.com/catalog/product/view/id/8333
-[bisn]: https://www.caplinq.com/bi58sn42-low-eutectic-temperature-lead-free-solder-spheres-bi58sn42.html
-[ica-aging]: https://incurelab.com/wp/how-conductive-epoxy-contact-resistance-changes-with-cure-and-aging
-[meridian-al]: https://meridianadhesives.com/product-information-insights/tech-tip-24-bonding-to-aluminum-with-epoxy-key-challenges-and-best-practices/
-[3m-9703]: https://multimedia.3m.com/mws/media/66235O/3m-electrically-conductive-adhesive-transfer-tape-9703.pdf
-[3m-7303]: https://multimedia.3m.com/mws/media/66294O/3mtm-anisotropic-conductive-film-7303.PDF
-[acf-params]: https://jiutustore.com/blogs/news/acf-bonding-machine-parameters-temperature-pressure-time
-[jlc-flex]: https://jlcpcb.com/capabilities/flex-pcb-capabilities
-[egain]: https://physicsworld.com/a/liquid-metal-disintegrates-implanted-medical-devices-on-demand/
-[nanosilver-al]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8987911
-[die-carrier]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6583635
-[bare-die-test]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/7940070
-[sra-1260]: https://sra-shops.com/flux-aluminum-solder-1260-5oz
-[kapp-flux]: https://www.kappalloy.com/liquid-paste-flux/flux-for-aluminum/kapp-liquid-golden-flux/
-[generic-al-flux]: https://www.walmart.com/ip/Sinyiin-10ml-bottle-Liquid-Flux-for-Pure-Aluminum-Sheet-Soldering-Liquid-Flux-No-Clean/17396371621
-[us-iron-price]: https://reach.dog/shop/cheersonic/products/ultrasonic-soldering-iron
-[acf-reel]: https://www.aliexpress.us/item/2255800552723491.html
-[acf-amazon]: https://www.amazon.com/AC-7206U-18-Screen-Original-Anisotropic-Conductive/dp/B09BBJ6967
-[acf-machine]: https://www.alibaba.fr/product-detail/Silman-ST-100SW-PLC-Core-Hot_1601428207164.html
-[klayout-pex]: https://github.com/iic-jku/klayout-pex/pull/229
-[alcu-barrier]: https://patents.google.com/patent/US20040253807
-[ws-run1]: https://wafer.space/ws-run1/
-[ws-run2]: https://wafer.space/ws-run2/
-[ws-run1-cob]: https://wafer.space/ws-run1-cob/
-[fc01]: https://wafer.space/ws-run2/projects/FC01.html
-[fc01-render]: https://wafer.space/ws-run2/renders/FC01_full.webp
-[cob-pcbs]: https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs
-[cob-wirebonding]: https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs/blob/main/run-1/wirebonding/README.md
-[cob-results-repo]: https://github.com/wafer-space/ws-run1-cob
-[gfmpw0]: https://wafer.space/google-gf180mcu-mpw0/
-[cs-run1]: https://www.crowdsupply.com/wafer-space/gf180mcu-run-1
-[cs-cob-update]: https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/chip-on-board
-[sky130-raw]: https://github.com/google/skywater-pdk-sky130-raw-data
-[sky130-rules]: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html
-[bump-gen]: https://github.com/RTimothyEdwards/open_pdks/tree/main/sky130/custom/scripts/bump_bond_generator
-[caravel-bump-sky130]: https://github.com/efabless/caravel/blob/main/scripts/make_bump_bonds.tcl
-[caravel-bump-gf180]: https://github.com/efabless/caravel-gf180mcu/blob/main/scripts/make_bump_bonds.tcl
-[gatearray]: https://wafer.space/gatearray-v1
-[reball-video-1]: https://www.youtube.com/watch?v=MG_TanKc0E0
-[reball-video-2]: https://www.youtube.com/watch?v=7kQ6FeKp754
-[sky130-open-tile]: https://github.com/google/skywater-pdk-sky130-raw-data/tree/main/docs/sky130-testtile-open
-[dataifeng]: https://www.dataifeng.com/?products/dfg-944922.html
+[wafer.space]: https://wafer.space/ "wafer.space home page: slots, pricing and delivery options"
+[template]: https://github.com/wafer-space/gf180mcu-project-template "wafer.space GF180MCU project template"
+[open_pdks]: https://github.com/rtimothyedwards/open_pdks "open_pdks, the open PDK installer"
+[vlsida]: https://vlsida.github.io/chip-tutorials/gf180mcu.html "VLSI DA chip tutorial: GF180MCU metal stacks"
+[openlane-pdks]: https://openlane2.readthedocs.io/en/latest/usage/about_pdks.html "OpenLane 2 documentation: about PDKs"
+[gf180-io]: https://gf180mcu-pdk.readthedocs.io/en/latest/IPs/IO/gf180mcu_fd_io/features.html "GF180MCU PDK documentation: I/O library features"
+[drm-9.4.1]: https://gf180mcu-pdk.readthedocs.io/en/latest/physical_verification/design_manual/drm_09_4_1.html "GF180MCU design manual 9.4.1"
+[drm-9.4.2]: https://gf180mcu-pdk.readthedocs.io/en/latest/physical_verification/design_manual/drm_09_4_2.html "GF180MCU design manual 9.4.2"
+[drm-9.4.3]: https://gf180mcu-pdk.readthedocs.io/en/latest/physical_verification/design_manual/drm_09_4_3.html "GF180MCU design manual 9.4.3: solder bump rules"
+[nxp-wlcsp]: https://www.mouser.com/pdfdocs/AN3846.PDF "NXP application note AN3846: wafer-level chip scale packages"
+[isit]: https://web.archive.org/web/20250621082454/https://www.isit.fraunhofer.de/en/technology/micro-manufacturing-processes/processes-on-wafer-level/waferbumping-balling.html "Fraunhofer ISIT: wafer bumping and balling (archived copy)"
+[vt-thesis]: https://vtechworks.lib.vt.edu/handle/10919/34792 "Virginia Tech thesis (Jittinorasett): electroless nickel and gold under-bump metal on loose die"
+[us6503343]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6503343 "US patent 6503343: zincation of thin aluminium pads"
+[us6548327]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6548327 "US patent 6548327: low cost electroless plating for single chips and wafer parts"
+[uyemura]: https://www.uyemura.com/articles/under-bump-metallization-to-reduce-wafer-processing-costs.html "Uyemura article: under-bump metallisation to reduce wafer processing costs"
+[ipc-single-ic]: https://www.electronics.org/system/files/technical_resource/E8%26S33_02.pdf "IPC conference paper: selective electroless nickel and gold on individual ICs"
+[imaps-nipd]: https://imapsource.org/article/66866-processing-bumping-and-assembly-of-single-chip-plated-ni-pd-over-alcap-bond-pads-for-flip-chip-applications-and-prototyping "IMAPS paper: nickel and palladium plating on single die for flip chip prototyping"
+[pactech-ipc]: https://www.electronics.org/system/files/technical_resource/E6%26S08_01.pdf "PacTech conference paper: electroless nickel and gold bumping"
+[pactech-profile]: https://abachy.com/catalog/semiconductor-equipment/wafer-processing-equipment/thin-film-deposition-equipment/plating-equipment/pac-tech-packaging-technologies-gmbh "PacTech company profile on a used equipment marketplace"
+[kreidl]: https://indico.cern.ch/event/602046/contributions/2429701/attachments/1423997/2183622/BumpingAndFlipChipOfAsics.pdf "Seminar slides (Kreidl): bumping and flip chip of ASICs"
+[lauser]: https://indico.cern.ch/event/1581713/contributions/6767522/attachments/3173934/5643703/DRD3_Week_Cern_20251114_Lauser.pdf "Detector R&D talk (Lauser, 2025): flip chip for single dies"
+[chen-nip]: https://bib-pubdb1.desy.de/record/83597 "Study of nickel-phosphorus under-bump metal thickness and joint strength"
+[enepig]: https://pmc.ncbi.nlm.nih.gov/articles/PMC5459027 "Paper comparing ENEPIG and ENIG solder joint reliability"
+[finishing]: https://finishing.com/08/78.shtml "finishing.com thread: zincate dissolving thin aluminium pads"
+[hybrid]: https://hybrid.swiss/solutions/gold-bumping/ "Hybrid SA: gold stud bumping service"
+[ks4524]: https://caeonline.com/buy/bonders/k-s-4524/9208341 "K&S 4524 manual ball bonder listing"
+[quikpak]: https://www.delphon.com/company-overview/company-news/quik-pak-offers-innovative-approach/ "Quik-Pak press release: stud bumping individual die"
+[alter]: https://packaging.altertechnology.com/assembly-processes/flip-chip/ "ALTER Technology: flip chip assembly"
+[cmc]: https://www.cmc.ca/flip-chip-assembly-services/ "CMC Microsystems: flip chip assembly services"
+[sandia]: https://www.osti.gov/servlets/purl/1109262 "Sandia report: gold stud bumps on aluminium pads"
+[bump-buck]: https://sst.semiconductor-digest.com/2008/05/choosing-the-best-bump-for-the-buck/ "Solid State Technology: choosing the best bump for the buck"
+[calpoly-au]: https://digitalcommons.calpoly.edu/theses/605 "Cal Poly thesis: gold embrittlement of solder joints"
+[cu-stud]: https://sst.semiconductor-digest.com/2006/03/flip-chip-interconnection-using-copper-wire-bumps/ "Solid State Technology: flip chip interconnection using copper wire bumps"
+[desy]: https://indico.desy.de/event/5679/contributions/75884/attachments/50318/61474/BumpBonding.pdf "DESY slides: bump bonding for detector prototypes"
+[ubm-interface]: https://sst.semiconductor-digest.com/2008/04/ubm-creating-the-critical-interface/ "Solid State Technology: UBM, creating the critical interface"
+[sb2-paper]: https://www.researchgate.net/publication/228938323_Placement_and_reflow_of_solder_balls_for_FC_BGA_wafer-level-CSP_optoelectronic_components_and_MEMS_by_using_a_new_solder_jetting_method "Paper on placing and reflowing solder balls by laser solder jetting"
+[cil]: https://mail.iconnect007.com/article/149040/cil-brings-advanced-semiconductor-solder-bumping-to-the-uk/149037/smt "News item: CIL brings solder ball jetting to the UK"
+[flux-patent]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/7108755 "US patent 7108755: flux for wafer-level ball attach"
+[us-solder]: https://en.wikipedia.org/wiki/Ultrasonic_soldering "Wikipedia: ultrasonic soldering"
+[ohsu]: https://digitalcollections.ohsu.edu/record/2584/files/3328_etd.pdf "OHSU thesis on ultrasonic soldering"
+[sbond]: https://link.springer.com/doi/10.1007/s11664-007-0190-9 "Paper on S-Bond active solder joining"
+[cerasolzer]: https://www.electronicdesign.com/technologies/components/interconnects/article/21767462/ultrasonic-system-bonds-unsolderable-materials "Electronic Design: ultrasonic system bonds unsolderable materials"
+[ise-us]: https://publica.fraunhofer.de/entities/publication/e322d70d-24ca-44bf-a382-3b242f0f0cca "Fraunhofer ISE publication: ultrasonic soldering on aluminium for solar cells"
+[isfh]: https://web.archive.org/web/20250912121926/https://isfh.de/publikationen/ultrasonic-tinning-of-al-busbars-for-a-silver-free-rear-side-on-bifacial-silicon-solar-cells "ISFH publication: ultrasonic tinning of aluminium busbars (archived copy)"
+[snzn-patent]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/9808890 "US patent 9808890: tin-zinc solder for aluminium"
+[snzn-review]: https://pmc.ncbi.nlm.nih.gov/articles/PMC9609569 "Review paper: tin-zinc solders"
+[cityu-acf]: https://scholars.cityu.edu.hk/en/publications/contact-resistance-and-adhesion-performance-of-acf-interconnectio/ "CityU paper: contact resistance and adhesion of anisotropic film on aluminium pads"
+[psi-indium]: https://arxiv.org/abs/physics/0510021 "PSI paper: indium bump bonding for pixel detectors"
+[micross]: https://www.micross.com/components-and-services/component-design-packaging/wafer-bumping-wlp "Micross: wafer bumping and wafer-level packaging services"
+[izm]: https://www.izm.fraunhofer.de/content/dam/izm/en/documents/Abteilungen/High_Density_Interconnect_Wafer_Level_Packaging/Services_IZM-ASSID_Q4_15.pdf "Fraunhofer IZM-ASSID services overview"
+[caswell-al]: https://support.caswellplating.com/portal/en/kb/articles/can-i-use-your-kits-to-plate-aluminum "Caswell: can the kits plate aluminium?"
+[caswell-kit]: https://caswellplating.com/one-plate-1-electroless-nickel-kit/ "Caswell One-Plate 1 electroless nickel kit"
+[caswell-zincate]: https://caswellplating.com/zincate-8-fl-oz.html "Caswell zincate concentrate, 8 fl oz"
+[caswell-tutorial]: https://caswellplating.com/electroless_tutorial.html "Caswell electroless nickel tutorial"
+[en-wiki]: https://en.wikipedia.org/wiki/Electroless_nickel-phosphorus_plating "Wikipedia: electroless nickel-phosphorus plating"
+[sciencemadness-en]: https://www.sciencemadness.org/whisper/viewthread.php?tid=70835 "Sciencemadness thread: home-made electroless nickel"
+[zincate-formulas]: https://www.finishing.com/424/16.shtml "finishing.com thread: zincate formulas"
+[superior-paste]: https://superiorflux.com/papers/DirectALSolderPasteIMAPS2011.pdf "Superior Flux paper: direct aluminium solder paste"
+[superior-guide]: https://superiorflux.com/papers/AluminumSolderingGuide.pdf "Superior Flux: aluminium soldering guide"
+[tollens]: https://en.wikipedia.org/wiki/Tollens%27_reagent "Wikipedia: Tollens' reagent"
+[rsc-mirror]: https://edu.rsc.org/resources/a-giant-silver-mirror-experiment/822.article "Royal Society of Chemistry: a giant silver mirror experiment"
+[brevnov]: https://data.zhenzhi.com/details/1/908811770 "Paper (Brevnov): displacement silver on aluminium-copper films"
+[immersion-ag-patent]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6319543 "US patent 6319543: immersion silver plating"
+[ag-mirror-al-patent]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6695458 "US patent 6695458: silver mirror on aluminium with a barrier layer"
+[ag-dissolution]: https://link.springer.com/doi/10.1007/s11664-019-07316-1 "Paper: dissolution of silver in molten solder"
+[ag-leaching]: https://www.circuitnet.com/experts/87721.html "Circuitnet: silver leaching from thin terminations"
+[ams2420]: https://saemobilus.sae.org/standards/ams2420e-plating-aluminum-solderability-zinc-immersion-pre-treatment-process "SAE AMS2420: plating aluminium for solderability, zinc immersion process"
+[stencil-kit]: https://www.amazon.com/Universal-Reballing-Stencil-Template-0-25-0-76mm/dp/B01HHQIZOC "Universal reballing stencil kit listing, 0.25 to 0.76 mm"
+[kit-27]: https://www.hklrf.com/27pcs-Universal-Stencil-BGA-Balls-Station-kit_1255.html "27-piece universal BGA stencil kit listing"
+[balls-set]: https://www.amazon.com/clp/B07YXRQ4K4 "Solder ball assortment listing"
+[jlc-stencil]: https://jlcpcb.com/capabilities/pcb-stencil-manufacturing "JLCPCB stencil capabilities"
+[reball-guide]: https://pcbsync.com/bga-reballing-process/ "BGA reballing process guide"
+[badcaps]: https://www.badcaps.net/forum/troubleshooting-hardware-devices-and-electronics-theory/equipment-usage-soldering-techniques-and-reviews/76158-noob-reballing-balling-stencil-questions "Badcaps forum thread: reballing stencil questions"
+[mitxela]: https://hackaday.com/2018/06/26/no-caffeine-no-problem-a-hand-soldered-chip-scale-package/ "Hackaday: a hand-soldered chip-scale package"
+[mhp30]: https://www.sparkfun.com/catalog/product/view/id/8333 "Miniware MHP30 mini hot plate listing"
+[bisn]: https://www.krayden.com/products/linq-bi58sn42 "Bi58Sn42 low temperature solder spheres listing"
+[ica-aging]: https://incurelab.com/wp/how-conductive-epoxy-contact-resistance-changes-with-cure-and-aging "Adhesive vendor note: conductive epoxy contact resistance with cure and ageing"
+[meridian-al]: https://meridianadhesives.com/product-information-insights/tech-tip-24-bonding-to-aluminum-with-epoxy-key-challenges-and-best-practices/ "Meridian Adhesives tech tip: bonding to aluminium with epoxy"
+[3m-9703]: https://multimedia.3m.com/mws/media/66235O/3m-electrically-conductive-adhesive-transfer-tape-9703.pdf "3M 9703 electrically conductive adhesive transfer tape datasheet"
+[3m-7303]: https://multimedia.3m.com/mws/media/66294O/3mtm-anisotropic-conductive-film-7303.PDF "3M 7303 anisotropic conductive film datasheet"
+[acf-params]: https://jiutustore.com/blogs/news/acf-bonding-machine-parameters "ACF bonding machine parameters: temperature, pressure, time"
+[jlc-flex]: https://jlcpcb.com/capabilities/flex-pcb-capabilities "JLCPCB flex PCB capabilities"
+[egain]: https://physicsworld.com/a/liquid-metal-disintegrates-implanted-medical-devices-on-demand/ "Physics World: liquid metal disintegrates aluminium"
+[nanosilver-al]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8987911 "US patent 8987911: silver nanoparticle paste on aluminium pads"
+[die-carrier]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6583635 "US patent 6583635: bare die carrier"
+[bare-die-test]: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/7940070 "US patent 7940070: bare die test contact"
+[sra-1260]: https://sra-shops.com/flux-aluminum-solder-1260-5oz "SRA listing: Superior No. 1260 aluminium flux, 5 oz"
+[kapp-flux]: https://kappalloy.com/collections/kapp-liquid-golden-flux "Kapp Golden Flux for aluminium"
+[generic-al-flux]: https://www.walmart.com/ip/Sinyiin-10ml-bottle-Liquid-Flux-for-Pure-Aluminum-Sheet-Soldering-Liquid-Flux-No-Clean/17396371621 "Generic 10 ml aluminium flux listing"
+[us-iron-price]: https://reach.dog/shop/cheersonic/products/ultrasonic-soldering-iron "Ultrasonic soldering iron listing (removed by November 2026)"
+[acf-reel]: https://www.aliexpress.us/item/2255800552723491.html "ACF reel listing for screen repair"
+[acf-amazon]: https://www.amazon.com/AC-7206U-18-Screen-Original-Anisotropic-Conductive/dp/B09BBJ6967 "ACF tape listing for screen repair"
+[acf-machine]: https://www.alibaba.fr/product-detail/Silman-ST-100SW-PLC-Core-Hot_1601428207164.html "Pulse-heat ACF bonding machine listing"
+[klayout-pex]: https://github.com/iic-jku/klayout-pex/pull/229 "klayout-pex pull request with GF180MCU metal sheet resistance"
+[alcu-barrier]: https://patents.google.com/patent/US20040253807 "US patent application 20040253807: AlCu metallisation with barrier layers"
+[ws-run1]: https://wafer.space/ws-run1/ "wafer.space Run 1 page"
+[ws-run2]: https://wafer.space/ws-run2/ "wafer.space Run 2 page"
+[ws-run1-cob]: https://wafer.space/ws-run1-cob/ "wafer.space Run 1 chip-on-board results"
+[fc01]: https://wafer.space/ws-run2/projects/FC01.html "wafer.space Run 2 project page: FC01"
+[fc01-render]: https://wafer.space/ws-run2/renders/FC01_full.webp "wafer.space Run 2 layout render of FC01"
+[cob-pcbs]: https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs "wafer.space chip-on-board wire bonded PCBs repository"
+[cob-wirebonding]: https://github.com/wafer-space/chip-on-board-wire-bonded-pcbs/blob/main/run-1/wirebonding/README.md "wafer.space Run 1 wire bonding rules"
+[cob-results-repo]: https://github.com/wafer-space/ws-run1-cob "wafer.space Run 1 chip-on-board results repository"
+[gfmpw0]: https://wafer.space/google-gf180mcu-mpw0/ "wafer.space page on the Google GF180MCU MPW-0 run"
+[cs-run1]: https://www.crowdsupply.com/wafer-space/gf180mcu-run-1 "Crowd Supply: wafer.space GF180MCU Run 1 campaign"
+[cs-cob-update]: https://www.crowdsupply.com/wafer-space/gf180mcu-run-1/updates/chip-on-board "Crowd Supply campaign update: chip-on-board"
+[sky130-raw]: https://github.com/google/skywater-pdk-sky130-raw-data "SkyWater sky130 raw measurement data repository"
+[sky130-rules]: https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html "SkyWater sky130 PDK documentation: periphery rules"
+[bump-gen]: https://github.com/RTimothyEdwards/open_pdks/tree/main/sky130/custom/scripts/bump_bond_generator "open_pdks bump bond generator for sky130"
+[caravel-bump-sky130]: https://github.com/efabless/caravel/blob/main/scripts/make_bump_bonds.tcl "Caravel bump bond script for sky130"
+[caravel-bump-gf180]: https://github.com/efabless/caravel-gf180mcu/blob/main/scripts/make_bump_bonds.tcl "Caravel bump bond script for GF180MCU"
+[gatearray]: https://wafer.space/gatearray-v1 "GF180MCU gate array plan"
+[reball-video-1]: https://www.youtube.com/watch?v=MG_TanKc0E0 "Video: BGA reballing"
+[reball-video-2]: https://www.youtube.com/watch?v=7kQ6FeKp754 "Video: Spirit Electronics reball process overview"
+[sky130-open-tile]: https://github.com/google/skywater-pdk-sky130-raw-data/tree/main/docs/sky130-testtile-open "Open sky130 test tile documentation"
+[dataifeng]: https://www.dataifeng.com/?products/dfg-944922.html "Dataifeng DTF330 BGA rework station"
