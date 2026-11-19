@@ -63,7 +63,7 @@ and says bumps are used with nitride or polyimide final passivation
 
 ## Target geometry from the planning spreadsheets
 
-Tim's two planning sheets
+Two pin-planning spreadsheets
 ([SKY130 WCSP Packaging Options and Pin Planning](https://docs.google.com/spreadsheets/d/1Z_N7JC3ojdWWKlBMjMNIVLnZtj-f9CPzcEkb3u6oa9o/edit)
 and [IO expander pin planning](https://docs.google.com/spreadsheets/d/1jmzXiSVEg-4fcQAXFHPnMVlpZ_Wju7oL8SX0JeLioJM/edit),
 both access-controlled) lay out full area arrays of balls: 49 to 110 balls

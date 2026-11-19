@@ -10,11 +10,9 @@ high failure rate is acceptable and the parts only need to work between 0 °C
 and 50 °C.
 
 ```{warning}
-This is a literature survey drafted by an AI model (Claude) working for Tim
-Ansell. Nothing here has been tried on real die yet. Claims carry a source
-where there is one, and the model's own inferences are marked "my reasoning".
-See the [docs style guide](style-guide.md) for how pages are written and
-checked.
+This is a literature survey drafted by an AI model. Nothing here has been
+tried on real die yet. Claims carry a source where there is one, and the
+model's own inferences are marked "my reasoning".
 ```
 
 ```{figure} /_static/diagrams/home-nickel-cross-section.svg
@@ -45,7 +43,10 @@ The source for this site is the
 [top-metal-solder-balls repository](https://github.com/mithro/top-metal-solder-balls) on GitHub. Raw research
 notes are in its [`notes/`](https://github.com/mithro/top-metal-solder-balls/tree/main/notes) directory, and problems
 with these pages can be reported as
-[issues](https://github.com/mithro/top-metal-solder-balls/issues).
+[issues](https://github.com/mithro/top-metal-solder-balls/issues). To change a
+page, read
+[CONTRIBUTING.md](https://github.com/mithro/top-metal-solder-balls/blob/main/CONTRIBUTING.md)
+first.
 
 ```{toctree}
 :maxdepth: 2
@@ -80,11 +81,4 @@ sky130
 bumping-notes
 industry/index
 sources
-```
-
-```{toctree}
-:maxdepth: 1
-:caption: About these docs
-
-style-guide
 ```
