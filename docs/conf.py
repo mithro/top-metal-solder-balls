@@ -6,7 +6,7 @@ extensions = ["myst_parser"]
 myst_enable_extensions = ["colon_fence"]
 myst_heading_anchors = 3
 
-exclude_patterns = ["_build", "diagrams", "_links.md"]
+exclude_patterns = ["_build", "diagrams", "_links.md", "README.md"]
 html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
 html_title = project

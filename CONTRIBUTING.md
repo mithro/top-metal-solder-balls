@@ -11,10 +11,13 @@ balls on them at home. They need to know which method to try first, what to
 buy, and how to lay out the pads. Write every page for that person.
 
 - Open each page by saying what the reader gets from it.
-- Leave out how the research was done, who asked for it, and which document a
-  fact was first seen in. Cite the source of a claim and stop there.
-- Write so that someone outside the project understands the page on its own.
-  Do not quote or attribute project discussions.
+- Leave out how the research was done, how a figure was generated, and which
+  document a fact was first seen in. Cite the source of a claim and stop
+  there.
+- Do not name people or use "I" and "we". The people involved change, and the
+  page has to make sense to someone outside the project.
+- Be exact about what a sentence refers to. Name the pad, the diagram or the
+  step.
 
 ## Say what is true now
 
@@ -38,10 +41,25 @@ buy, and how to lay out the pads. Write every page for that person.
 - Describe non-open processes and products as "proprietary", not
   "commercial".
 
+## Plain words, right form
+
+- Use plain English. No invented terms, no hedging, no emphasis words such as
+  "by far" or "the most important", and no em-dashes.
+- A paragraph that lists things is a list. A list of items with the same
+  attributes is a table. An explanation of a structure or a sequence is a
+  diagram.
+- Do not repeat in words what the figure or table beside it shows.
+- Commands go in a code block that can be copied and run.
+
 ## Organise and link
 
 - Every page belongs to one of the sidebar sections in
   [`docs/index.md`](docs/index.md).
+- Keep pages short: one subject per page, and sub-headings once a section
+  holds more than about ten items. Put what most readers need first.
+- Say each thing in one place and link to it from elsewhere. Do not copy an
+  explanation between pages.
+- Every directory has a short `README.md` saying what it holds and why.
 - At the first mention on a page, link a method or term to its page on the
   site, a file to its place on GitHub, and a fact to its source. The reader
   should never have to search for what a sentence is talking about.
@@ -57,9 +75,8 @@ buy, and how to lay out the pads. Write every page for that person.
   and descriptions live in [`docs/_links.md`](docs/_links.md), one per line.
   [`docs/update_links.py`](docs/update_links.py) copies the ones a page cites
   to the end of that page and rebuilds the Sources page.
-- The pages were drafted by an AI model. Its own inferences are marked "my
-  reasoning", and "I" on a page means that model.
-- Mark anything measured on real die as measured. Until then, nothing is.
+- A claim with no source is marked "(unsourced)", and one nobody has tried is
+  marked "(untested)".
 - Mark each price as listed or as a guess.
 
 ## Diagrams
@@ -69,6 +86,8 @@ buy, and how to lay out the pads. Write every page for that person.
   it. Do not edit the SVG files.
 - Backgrounds are transparent. Labels must not overlap the drawing or each
   other.
+- Keep text on a diagram short. If a diagram needs a paragraph to explain it,
+  redraw it.
 - A diagram redrawn from a source says so in its caption, and says which
   numbers are estimates.
 
@@ -90,4 +109,5 @@ sphinx-build -b linkcheck docs docs/_build/linkcheck
 The first three must be clean. Read the link check by hand: some sites answer
 403 to any robot, which is not a broken link. Then open the built pages and
 look at them, because problems such as overlapping labels and cut-off tables
-only show when rendered.
+only show when rendered. Have someone else read a new or rewritten page
+against this file before merging.
