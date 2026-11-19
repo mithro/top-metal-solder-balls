@@ -14,8 +14,7 @@ A full wafer-level package with redistribution. Bump-on-pad without redistributi
 
 **Vendors.** Micross AIT (US) lists WLCSP ball place, bump-on-pad and
 bump-on-polymer, Cu redistribution with polymer repassivation, wafers up to
-200 mm, and explicitly "a single wafer" ([micross]); Tim's sheet already notes
-Micross as a candidate. PacTech (electroless Ni/Au plus ball placement,
+200 mm, and explicitly "a single wafer" ([micross]). PacTech (electroless Ni/Au plus ball placement,
 [pactech-ipc]). Fraunhofer ISIT (200 µm balls at 400 µm pitch, optional
 electroless NiAu, [isit]). Fraunhofer IZM-ASSID (electroplated bumping on
 200/300 mm, [izm]).

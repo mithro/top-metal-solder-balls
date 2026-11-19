@@ -1,13 +1,15 @@
-# Unverified notes on bumping aluminium pads
+# How industry bumps aluminium pads (unverified)
 
-These notes were shared with Tim on Discord on 2026-11-10 and compiled
-by him into a two-language document, English and Chinese. This page carries
-their content into the docs.
+A step by step description of the two industrial ways to make an aluminium
+pad take a solder ball, and of what a zincate dip does chemically. Read it for
+the vocabulary and the reasons behind each step. For something to try at home,
+go to [Home methods](methods/index.md).
 
 ```{warning}
-The person who shared the notes said the process descriptions came from an AI
-model and should be taken "with huge grains of salt". Nothing on this page has
-been checked with a process engineer. Where it overlaps with sourced material
+This page comes from notes passed to the project, not from cited sources. The
+person who shared them said the process descriptions came from an AI model and
+should be taken "with huge grains of salt". Nothing on this page has been
+checked with a process engineer. Where it overlaps with sourced material
 elsewhere on this site, the sourced page is the one to trust.
 ```
 
@@ -147,7 +149,7 @@ route.
 - A [reball process overview][reball-video-2] from Spirit Electronics, which
   appears to pick and place solder balls one at a time.
 
-I have not watched the videos or opened the product page.
+None of these three has been reviewed yet.
 
 ## How this compares with the rest of the site
 

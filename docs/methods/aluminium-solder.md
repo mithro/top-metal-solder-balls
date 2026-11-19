@@ -99,4 +99,4 @@ by far the simplest route: three steps and no wet chemistry beyond a rinse.
 [sra-1260]: https://sra-shops.com/flux-aluminum-solder-1260-5oz "SRA listing: Superior No. 1260 aluminium flux, 5 oz"
 [kapp-flux]: https://kappalloy.com/collections/kapp-liquid-golden-flux "Kapp Golden Flux for aluminium"
 [generic-al-flux]: https://www.walmart.com/ip/Sinyiin-10ml-bottle-Liquid-Flux-for-Pure-Aluminum-Sheet-Soldering-Liquid-Flux-No-Clean/17396371621 "Generic 10 ml aluminium flux listing"
-[us-iron-price]: https://reach.dog/shop/cheersonic/products/ultrasonic-soldering-iron "Ultrasonic soldering iron listing (removed by November 2026)"
+[us-iron-price]: https://reach.dog/shop/cheersonic/products/ultrasonic-soldering-iron "Ultrasonic soldering iron listing (listing has been removed)"

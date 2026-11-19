@@ -87,7 +87,7 @@
 [sra-1260]: https://sra-shops.com/flux-aluminum-solder-1260-5oz "SRA listing: Superior No. 1260 aluminium flux, 5 oz"
 [kapp-flux]: https://kappalloy.com/collections/kapp-liquid-golden-flux "Kapp Golden Flux for aluminium"
 [generic-al-flux]: https://www.walmart.com/ip/Sinyiin-10ml-bottle-Liquid-Flux-for-Pure-Aluminum-Sheet-Soldering-Liquid-Flux-No-Clean/17396371621 "Generic 10 ml aluminium flux listing"
-[us-iron-price]: https://reach.dog/shop/cheersonic/products/ultrasonic-soldering-iron "Ultrasonic soldering iron listing (removed by November 2026)"
+[us-iron-price]: https://reach.dog/shop/cheersonic/products/ultrasonic-soldering-iron "Ultrasonic soldering iron listing (listing has been removed)"
 [acf-reel]: https://www.aliexpress.us/item/2255800552723491.html "ACF reel listing for screen repair"
 [acf-amazon]: https://www.amazon.com/AC-7206U-18-Screen-Original-Anisotropic-Conductive/dp/B09BBJ6967 "ACF tape listing for screen repair"
 [acf-machine]: https://www.alibaba.fr/product-detail/Silman-ST-100SW-PLC-Core-Hot_1601428207164.html "Pulse-heat ACF bonding machine listing"

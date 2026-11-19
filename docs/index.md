@@ -25,6 +25,12 @@ The leading home candidate: zincate and a hobby electroless nickel kit, then a
 0.25 mm solder ball from a reballing stencil.
 ```
 
+## Who this is for
+
+Someone with wafer.space die, or a tapeout coming, who wants to try bumping
+them on a bench at home and needs to know which method to try first, what to
+buy, and how to lay out the pads.
+
 ## Where to start
 
 - [Summary](summary.md) gives the ranking of home methods in one page.
@@ -34,6 +40,12 @@ The leading home candidate: zincate and a hobby electroless nickel kit, then a
   [Comparison](comparison.md) puts them side by side.
 - [Next steps](next-steps.md) lists the experiments to run and the questions
   still open.
+
+The source for this site is the
+[top-metal-solder-balls repository](https://github.com/mithro/top-metal-solder-balls) on GitHub. Raw research
+notes are in its [`notes/`](https://github.com/mithro/top-metal-solder-balls/tree/main/notes) directory, and problems
+with these pages can be reported as
+[issues](https://github.com/mithro/top-metal-solder-balls/issues).
 
 ```{toctree}
 :maxdepth: 2
@@ -65,7 +77,6 @@ research
 
 past-runs
 sky130
-existing-notes
 bumping-notes
 industry/index
 sources

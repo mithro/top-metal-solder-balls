@@ -97,7 +97,7 @@ material, and the Quik-Pak release dates from 2011.
 - [SRA listing: Superior No. 1260 aluminium flux, 5 oz](https://sra-shops.com/flux-aluminum-solder-1260-5oz)
 - [Kapp Golden Flux for aluminium](https://kappalloy.com/collections/kapp-liquid-golden-flux)
 - [Generic 10 ml aluminium flux listing](https://www.walmart.com/ip/Sinyiin-10ml-bottle-Liquid-Flux-for-Pure-Aluminum-Sheet-Soldering-Liquid-Flux-No-Clean/17396371621)
-- [Ultrasonic soldering iron listing (removed by November 2026)](https://reach.dog/shop/cheersonic/products/ultrasonic-soldering-iron)
+- [Ultrasonic soldering iron listing (listing has been removed)](https://reach.dog/shop/cheersonic/products/ultrasonic-soldering-iron)
 - [ACF reel listing for screen repair](https://www.aliexpress.us/item/2255800552723491.html)
 - [ACF tape listing for screen repair](https://www.amazon.com/AC-7206U-18-Screen-Original-Anisotropic-Conductive/dp/B09BBJ6967)
 - [Pulse-heat ACF bonding machine listing](https://www.alibaba.fr/product-detail/Silman-ST-100SW-PLC-Core-Hot_1601428207164.html)

@@ -1,6 +1,6 @@
 # Summary
 
-Status: literature survey, started 2026-11-14. Nothing here has been tried on
+Status: literature survey. Nothing here has been tried on
 real die yet. Where a claim is the drafting model's own reasoning and not
 something a source says, it is marked "my reasoning".
 
