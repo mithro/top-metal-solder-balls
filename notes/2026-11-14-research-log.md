@@ -58,7 +58,7 @@ in `docs/`. Claims are only as good as the linked source; items marked
 
 Written up in `docs/` (Sphinx, one page per method). Extra findings that fed it:
 
-- Target geometry comes from Tim's two planning sheets: full area arrays,
+- Target geometry comes from two pin-planning spreadsheets: full area arrays,
   "250um ball", pitches mostly 0.40 to 0.65 mm, 16 to 110 balls. A note in the
   sheet says "Micross could be a good option".
 - wafer.space: 5 metal layers, slots 3.93 x 5.12 mm down to 1.94 x 2.53 mm,
@@ -83,7 +83,7 @@ Still to do: read more sources in full, get quotes, confirm wafer.space stack.
 
 ## 6. Scope change and third pass (same day)
 
-Tim narrowed the scope: home methods only, high failure rates fine, only needs
+Scope: home methods only, high failure rates fine, only needs
 to work 0 to 50 C, include novel ideas, flex PCBs and Z-axis tape. Docs were
 reorganised: home methods first, industry routes moved to `docs/industry/`.
 
@@ -133,7 +133,7 @@ quantities, hobby ultrasonic irons, whether GF180MCU top metal is AlCu.
 - Not published: wire type, bonder, die thickness, pad metal, passivation.
 - Crowd Supply pages return 403 to automated fetches.
 
-## 9. sky130 comparison and Tim's Drive (same day)
+## 9. sky130 comparison and existing project documents (same day)
 
 - google/skywater-pdk-sky130-raw-data: device measurements (MDM files) and a
   probe pad function spreadsheet for the SkyWater test tile, 12 pads per
@@ -159,5 +159,4 @@ quantities, hobby ultrasonic irons, whether GF180MCU top metal is AlCu.
 Correction to section 9: the open test tile docs in the raw data repo
 (docs/sky130-testtile-open/testinterface.png) do give pad geometry, in an
 image I had not opened: 40 x 40 um probe pads, 60 um pitch along a row, 80 um
-between rows, 6 x 3 per group, over 1400 pads on the tile. Tim pointed this
-out.
+between rows, 6 x 3 per group, over 1400 pads on the tile.
