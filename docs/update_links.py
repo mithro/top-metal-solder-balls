@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Append the link definitions each page uses, and rebuild the source list.
+"""Append the footnotes each page cites, and rebuild the source list.
 
-MyST link reference definitions are per-file. ``_links.md`` is the single
-place where a source is defined, as ``[key]: URL "Description"``. This script
-copies the definitions a page actually cites to the end of that page, and
-writes the full list into ``sources.md``.
+``_links.md`` is the single place where a source is defined, as
+``[key]: URL "Description"``. A page cites a source with the footnote
+reference ``[^key]``. This script writes the matching footnote definitions at
+the end of each page, and writes the full list into ``sources.md``.
 
 Edit ``_links.md``, then run ``python3 docs/update_links.py``.
 """
@@ -21,24 +21,30 @@ for line in (docs / "_links.md").read_text().splitlines():
     m = DEF.match(line)
     if not m:
         sys.exit(f"_links.md: cannot parse line: {line}")
-    links[m.group(1)] = (m.group(2), m.group(3), line)
+    # Footnote labels cannot be relied on to hold dots, so "wafer.space" is
+    # cited as [^wafer-space].
+    links[m.group(1).replace(".", "-")] = (m.group(2), m.group(3))
 
-used_anywhere = set()
+cited_anywhere = set()
 for page in sorted(docs.rglob("*.md")):
-    if page.name == "_links.md" or "_build" in page.parts:
+    if page.name in ("_links.md", "README.md") or "_build" in page.parts:
         continue
     body = page.read_text().split(MARK)[0].rstrip()
     if page.name == "sources.md":
         body = body.split("\n- [")[0].rstrip()
-        items = "\n".join(f"- [{title}]({url})" for url, title, _ in links.values())
+        items = "\n".join(f"- [{title}]({url})" for url, title in links.values())
         page.write_text(body + "\n\n" + items + "\n")
         continue
-    # A citation is "[key]" or "[text][key]" that is not followed by "(".
-    cited = {k for k in re.findall(r"\[([^\]\[]+)\](?!\()", body) if k in links}
-    used_anywhere |= cited
-    defs = "\n".join(links[k][2] for k in links if k in cited)
-    page.write_text(body + ("\n\n" + MARK + "\n" + defs if defs else "") + "\n")
+    cited = []
+    for key in re.findall(r"\[\^([^\]]+)\]", body):
+        if key not in links:
+            sys.exit(f"{page.name}: [^{key}] is not defined in _links.md")
+        if key not in cited:
+            cited.append(key)
+    cited_anywhere.update(cited)
+    notes = "\n".join(f"[^{k}]: [{links[k][1]}]({links[k][0]})" for k in cited)
+    page.write_text(body + ("\n\n" + MARK + "\n" + notes if notes else "") + "\n")
 
-unused = [k for k in links if k not in used_anywhere]
+unused = [k for k in links if k not in cited_anywhere]
 if unused:
     print("defined in _links.md but never cited:", ", ".join(unused))

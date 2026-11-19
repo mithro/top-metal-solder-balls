@@ -157,7 +157,7 @@ def fig_bare():
     s.line(CX + PADHALF, 236, CX + PADHALF, Y_PAD, sw=0.6, extra='stroke-dasharray="3 3"')
     s.label(560, 180, "native Al oxide, a few nm:\nsolder will not wet this", CX + 40, Y_PAD, fill=WARN)
     s.label(225, 180, "Al top metal,\nabout 1.1 µm (11 kÅ)", CX - 108, Y_PAD + 10, anchor="end")
-    s.label(225, 250, "passivation\n(material not published)", 250, Y_PASS + 10, anchor="end")
+    s.label(225, 250, "passivation", 250, Y_PASS + 10, anchor="end")
     s.text(380, 40, "Starting point: a bump pad in top metal", size=16, anchor="middle", weight="bold")
     s.save("pad-bare.svg")
 

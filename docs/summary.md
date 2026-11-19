@@ -1,8 +1,7 @@
 # Summary
 
 The home methods ranked in the order to try them, with the reason for each
-rank. This is a literature survey drafted by an AI model. Nothing here has
-been tried on real die, and claims without a source are marked "unsourced".
+rank.
 
 ## Goal
 
@@ -25,7 +24,7 @@ The home routes covered here. Step 1 is the hard part; step 2 is ordinary reball
 ## Ranking for home use
 
 1. **[Zincate plus a hobby electroless nickel kit](methods/zincate-nickel.md),
-   then reball.** The home version of what industry does. About $150 to $200 of
+   then reball.** The home version of what industry does. About \$150 to \$200 of
    chemicals. Gives a nickel surface that ordinary solder wets. The risk
    is the pad: zincate eats 0.3 to 0.4 µm of a 1.1 µm pad.
 2. **[Aluminium solder paste or flux straight on the pad](methods/aluminium-solder.md).**

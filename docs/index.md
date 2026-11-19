@@ -8,11 +8,6 @@ scale package.
 The scope is methods simple enough to do at home, where a high failure rate is
 acceptable and the parts only need to work between 0 °C and 50 °C.
 
-```{warning}
-This is a literature survey drafted by an AI model. Nothing here has been
-tried on real die. Claims without a source are marked "unsourced".
-```
-
 ```{figure} /_static/diagrams/home-nickel-cross-section.svg
 :alt: Cross-section of a solder ball on an aluminium pad plated with nickel
 :width: 100%
@@ -78,5 +73,6 @@ past-runs
 sky130
 bumping-notes
 industry/index
+glossary
 sources
 ```

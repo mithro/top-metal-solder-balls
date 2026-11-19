@@ -8,8 +8,9 @@ Ways to put solder balls on the aluminium top metal of
 [wafer.space](https://wafer.space) GF180MCU chips at home, so that a bare die
 can be soldered to a board like a chip-scale package.
 
-Status: literature survey, drafted by an AI model. Nothing has been tried on
-real die.
+> [!WARNING]
+> This is a literature survey drafted by an AI model. Nothing has been tried
+> on real die.
 
 ## Build the site
 

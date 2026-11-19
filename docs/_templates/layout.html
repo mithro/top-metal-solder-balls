@@ -1,0 +1,11 @@
+{% extends "!layout.html" %}
+{# Site-wide notice, shown at the top of every page. #}
+{% block document %}
+<div class="admonition warning">
+  <p class="admonition-title">Warning</p>
+  <p>This site is a literature survey drafted by an AI model. Nothing on it
+  has been tried on real die. Claims without a source are marked
+  &ldquo;unsourced&rdquo;.</p>
+</div>
+{{ super() }}
+{% endblock %}
