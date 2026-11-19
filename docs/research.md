@@ -1,8 +1,9 @@
 # Untried ideas
 
-These are approaches I could not find any account of on thin-film IC pads.
-Each is cheap to try. Most are my own reasoning from adjacent sources, so
-treat them as hypotheses. They are ordered by how promising they look.
+Approaches for which no account on thin-film IC pads was found, each with the
+question it raises and, where there is one, a test. Each is cheap to try. Most
+are unsourced inferences from adjacent sources, so treat them as hypotheses.
+They are ordered from most to least promising.
 
 ## 1. Aluminium solder paste on thin film
 
@@ -15,7 +16,8 @@ a short profile give the best odds.
 ## 2. Single short zincate, then solder directly to the zinc
 
 Zinc is solderable and tin-zinc is the classic aluminium solder. Skipping the
-nickel bath removes the hot step and half the chemistry. The standard recipe
+nickel bath of the [zincate and nickel](methods/zincate-nickel.md) method
+removes the hot step and half the chemistry. The standard recipe
 does not do this: it plates copper and tin over the zincate ([ams2420]), which
 suggests the zinc layer alone is too thin to survive. **Question:** is a
 zincate layer enough for one reflow with tin-zinc or aluminium paste?
@@ -24,9 +26,10 @@ zincate layer enough for one reflow with tin-zinc or aluminium paste?
 
 Silver plates by itself onto aluminium-copper films from a silver salt
 solution, only where metal is exposed, with no mask ([brevnov]). That would be
-a one-dip, selective noble surface. **Questions:** is GF180MCU top metal an
-aluminium-copper alloy? Does the deposit stick? Is it good enough under
-[silver epoxy](methods/adhesives.md) or low temperature indium solder?
+a one-dip, selective noble surface ([silver](methods/silver.md)).
+**Questions:** is GF180MCU top metal an aluminium-copper alloy? Does the
+deposit stick? Is it good enough under [silver epoxy](methods/adhesives.md) or
+low temperature indium solder?
 
 ## 4. Sintered silver paste as the bump
 
@@ -39,7 +42,7 @@ does a hot plate at 250 °C do the job?
 
 ## 5. Scrub-in silver epoxy
 
-Break the oxide while it is already covered by wet epoxy, so fresh aluminium
+Break the oxide while it is covered by wet epoxy, so fresh aluminium
 never sees air. **Test:** print dots, place the die, slide it a few microns
 back and forth under light pressure, cure, measure daisy-chain resistance
 against un-scrubbed controls.
@@ -50,7 +53,7 @@ Bare-die test carriers contact aluminium pads through a conductive elastomer
 or Z-axis sheet under a clamp ([die-carrier]). One patent cites about 80 g per
 contact to break the oxide ([bare-die-test]). A clamped die on a
 [flex circuit](methods/flex-ztape.md) with gold bumps or plated-up pads is a
-socket rather than a package, and at 0 to 50 °C that may be all that is needed.
+socket, not a package, and at 0 to 50 °C that may be all that is needed.
 
 ## 7. Flex pads as the bumps for anisotropic film
 
@@ -76,30 +79,28 @@ aluminium?
 
 ## 10. Borrow the gate array metal step
 
-wafer.space has a [gate array plan][gatearray] that adds one extra metal layer
-to finished die, with features of about 2 µm, using small maskless or stepper
-tools.
-
-That gate array is programmed by depositing and patterning one more metal layer
-on finished die. That is the same operation as adding a solderable layer over
-the pads, only finer. Two consequences:
+wafer.space has a [gate array plan][gatearray] in which the array is
+programmed by depositing and patterning one extra metal layer on finished die,
+with features of about 2 µm, using small maskless or stepper tools. Adding a
+solderable layer over the pads is the same operation at a coarser scale. Two
+consequences:
 
 - Whatever tool ends up patterning the gate array layer at 2 µm can pattern
-  200 µm pads with a great deal of margin. If that tool chain exists, a
+  200 µm pads with margin. If that tool chain exists, a
   deposited nickel or copper pad becomes available without any wet plating on
   the aluminium.
 - The gate array layer has to make electrical contact to foundry aluminium
-  through its oxide, which is the central problem here too
-  ([Starting point](background.md)). A contact recipe that works for one works for
-  the other.
+  through its oxide, which is the first problem listed in
+  [Starting point](background.md#what-any-method-has-to-solve). A contact
+  recipe that works for one works for the other.
 
-This needs lab tools, not kitchen ones, so it is not ranked with the home
-methods.
+The gate array step needs lab tools, not kitchen ones, so it is not ranked
+with the home methods.
 
-## Things that look tempting and are not
+## Ideas ruled out
 
 - **Gallium or liquid metal.** Gallium wets aluminium through its oxide
-  instantly, which is exactly the property wanted. It also soaks into the
+  instantly, which is the property wanted. It also soaks into the
   grain boundaries and makes aluminium fall apart within minutes ([egain]).
   A 1 µm pad would not last.
 - **Silver mirror under tin solder.** The film dissolves in the solder before
@@ -109,7 +110,7 @@ methods.
 
 Aluminised first-surface mirrors and aluminised plastic film carry roughly
 0.1 µm of evaporated aluminium, thinner than a pad. Anything that survives on
-those should survive on a die (my reasoning). They cost almost nothing, so
+those should survive on a die (unsourced). They cost almost nothing, so
 chemistry can be screened without spending chips.
 
 <!-- links: generated by update_links.py, edit _links.md instead -->

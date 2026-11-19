@@ -1,6 +1,9 @@
 # ENIG reference: the lab recipe
 
-**How it works.** A maskless wet sequence that plates only on exposed Al:
+Electroless nickel with immersion gold (ENIG) is a maskless wet sequence that
+plates only on exposed Al. This page gives the lab recipe behind the home
+[zincate and nickel](../methods/zincate-nickel.md) method, and its equipment,
+cost, reliability and risks.
 
 ```{figure} /_static/diagrams/enig-cross-section.svg
 :alt: ENIG under bump metal with a solder ball. Nickel grows only on the exposed aluminium, so no mask is needed.
@@ -9,68 +12,16 @@
 ENIG under bump metal with a solder ball. Nickel grows only on the exposed aluminium, so no mask is needed.
 ```
 
+## How it works
+
 1. Clean and lightly etch the pads (alkaline cleaner, then acid).
-2. Zincate: an alkaline zinc bath dissolves the oxide and deposits a thin Zn
-   layer by displacement, which protects the Al from re-oxidising.
+2. Zincate. What the dip does chemically is described in
+   [How industry bumps aluminium pads](../bumping-notes.md#how-it-works).
 3. Strip the zinc in about 50% nitric acid and zincate again. The second
    (double) zincate gives a finer, more uniform seed and better adhesion.
 4. Electroless Ni-P, about 5 µm, in a hot acidic bath.
 5. Immersion Au, 0.05 to 0.1 µm, to keep the Ni solderable. ENEPIG adds an
    electroless Pd layer between Ni and Au.
-
-The Virginia Tech thesis by Jittinorasett is the most useful single reference
-because it is exactly this on loose die. Its recipe: 50% nitric dips of about
-5 s, two 30 s room-temperature dips in a proprietary zincate at pH 12,
-electroless Ni at 88 °C and pH 5 for 15 minutes (about 1 µm per 3 minutes, giving
-5 µm), then immersion Au at 90 °C for 1 minute. Die were held on a carrier with
-thermoplastic adhesive film, which also protects the backside. It reports
-success across die from 0.67 mm to 6.4 × 7.5 mm ([vt-thesis]). Uyemura describes
-the same sequence for wafers and notes the second zincate cycle is used when the
-Al is thicker than about 0.5 µm ([uyemura]). A paper presented at an IPC
-conference describes selective ENIG on individual ICs, with optional thick
-autocatalytic Au ([ipc-single-ic]), and IMAPS work describes Ni/Pd plating on
-single Al-capped die so that wire-bond die can be solder flip chipped
-([imaps-nipd]).
-
-**Equipment and vendors.** Beakers, hotplate with temperature control, DI
-water, fume extraction, a carrier and edge protection. Chemistry from plating
-suppliers (Uyemura, MacDermid Alpha, Atotech/MKS and others sell wafer-grade
-systems; general-purpose zincate and electroless nickel are also sold for
-plating aluminium parts, but I did not find a source showing those hobby
-products working on thin-film pads). As a service, PacTech built its business on
-this process and offers electroless Ni/Au, Ni/Pd and Ni/Pd/Au UBM ([pactech-ipc],
-[pactech-profile]), and Fraunhofer ISIT offers electroless NiAu before ball
-placement ([isit]); whether either takes loose die needs asking.
-
-**Cost.** Low in materials. No public prices found. My rough guess is a few
-hundred dollars of chemistry and labware to start in-house, dominated by gold
-solution and waste handling, and a four-figure lot charge from a service.
-
-**Die versus wafer.** Works on both. On wafers it is the standard low-cost UBM.
-On loose die it is "manual, time consuming and expensive" per one patent
-([us6548327]) and a CERN-hosted seminar deck is blunt about the manual version:
-"passivate chip edges and apply ENIG UBM: time consuming, bad yield"
-([kreidl]). A 2025 detector R&D talk likewise calls ENIG flip chip "expensive
-and complex for single dies, MPW or small quantities" ([lauser]).
-
-**Reliability.** The best understood option. Ni-P is a slow-reacting barrier
-for SAC solder. Known failure modes are black pad (phosphorus-rich brittle
-interface) and stress from thick Ni; one study found thicker and larger Ni(P)
-UBMs lowered shear strength and thermal cycling life ([chen-nip]). Board-level
-data shows ENEPIG slightly ahead of ENIG after ageing ([enepig]).
-
-**Risks specific to these die.**
-- Pad consumption: 0.3 to 0.4 µm lost from 1.1 µm, and over-etching can
-  consume a thin pad completely ([finishing], [us6503343]).
-- Stray plating: bare silicon edges, the backside and any scribe-line test
-  structures can plate. Edges need coating or the plating time kept short.
-- Pads that are electrically different (tied to substrate, to wells, or
-  floating) can plate at different rates because zincation is electrochemical.
-- Ni grows sideways as well as up, about 5 µm over the passivation edge for
-  5 µm of Ni, which is short of the 10 µm overlap the design manual recommends.
-
-**Fit: high.** The only maskless route that gives a true barrier UBM on
-loose die. Needs a test coupon run before risking good die.
 
 ```{figure} /_static/diagrams/enig-flow.svg
 :alt: Process flow on loose die. Blue steps are room-temperature wet steps, orange steps are hot baths.
@@ -78,6 +29,84 @@ loose die. Needs a test coupon run before risking good die.
 
 Process flow on loose die. Blue steps are room-temperature wet steps, orange steps are hot baths.
 ```
+
+The Virginia Tech thesis by Jittinorasett applies this sequence to loose die
+([vt-thesis]). Its recipe:
+
+| Step | Conditions |
+| --- | --- |
+| Nitric acid dips | 50%, about 5 s |
+| Zincate | two dips of 30 s at room temperature in a proprietary zincate at pH 12 |
+| Electroless Ni | 88 °C and pH 5 for 15 minutes (about 1 µm per 3 minutes, giving 5 µm) |
+| Immersion Au | 90 °C for 1 minute |
+
+Die were held on a carrier with thermoplastic adhesive film, which also
+protects the backside. The thesis reports success across die from 0.67 mm to
+6.4 × 7.5 mm ([vt-thesis]).
+
+Other accounts of the same sequence:
+
+- Uyemura describes it for wafers and notes the second zincate cycle is used
+  when the Al is thicker than about 0.5 µm ([uyemura]).
+- A paper presented at an IPC conference describes selective ENIG on
+  individual ICs, with optional thick autocatalytic Au ([ipc-single-ic]).
+- IMAPS work describes Ni/Pd plating on single Al-capped die so that wire-bond
+  die can be solder flip chipped ([imaps-nipd]).
+
+## Equipment and vendors
+
+The equipment is beakers, a hotplate with temperature control, DI water, fume
+extraction, a carrier and edge protection.
+
+Chemistry comes from plating suppliers. Uyemura, MacDermid Alpha, Atotech/MKS
+and others sell wafer-grade systems. General-purpose zincate and electroless
+nickel are also sold for plating aluminium parts, but no source was found
+showing those hobby products working on thin-film pads.
+
+As a service, PacTech built its business on this process and offers
+electroless Ni/Au, Ni/Pd and Ni/Pd/Au UBM ([pactech-ipc], [pactech-profile]),
+and Fraunhofer ISIT offers electroless NiAu before ball placement ([isit]).
+Whether either takes loose die needs asking.
+
+## Cost
+
+Low in materials. No public prices were found. A rough guess is a few
+hundred dollars of chemistry and labware to start in-house, dominated by gold
+solution and waste handling, and a four-figure lot charge from a service.
+
+## Die versus wafer
+
+ENIG works on both. On wafers it is the standard low-cost UBM. On loose die it
+is "manual, time consuming and expensive" per one patent ([us6548327]), and a
+CERN-hosted seminar deck says of the manual version: "passivate chip edges and
+apply ENIG UBM: time consuming, bad yield" ([kreidl]). A 2025 detector R&D
+talk likewise calls ENIG flip chip "expensive and complex for single dies, MPW
+or small quantities" ([lauser]).
+
+## Reliability
+
+ENIG is the best understood option. Ni-P is a slow-reacting barrier
+for SAC solder. Known failure modes are black pad (phosphorus-rich brittle
+interface) and stress from thick Ni; one study found thicker and larger Ni(P)
+UBMs lowered shear strength and thermal cycling life ([chen-nip]). Board-level
+data shows ENEPIG slightly ahead of ENIG after ageing ([enepig]).
+
+## Risks specific to these die
+
+- Pad consumption: 0.3 to 0.4 µm lost from 1.1 µm, and over-etching can
+  consume a thin pad completely ([finishing], [us6503343]).
+- Stray plating: bare silicon edges, the backside and any scribe-line test
+  structures can plate. Edges need coating or the plating time kept short.
+- Pads that are electrically different (tied to substrate, to wells, or
+  floating) can plate at different rates because zincation is electrochemical.
+- Ni grows sideways as well as up, about 5 µm over the passivation edge for
+  5 µm of Ni, which is short of the 10 µm overlap the
+  [design manual recommends](../background.md).
+
+## Fit
+
+**High.** The only maskless route that gives a true barrier UBM on
+loose die. Needs a test coupon run before risking good die.
 
 <!-- links: generated by update_links.py, edit _links.md instead -->
 [isit]: https://web.archive.org/web/20250621082454/https://www.isit.fraunhofer.de/en/technology/micro-manufacturing-processes/processes-on-wafer-level/waferbumping-balling.html "Fraunhofer ISIT: wafer bumping and balling (archived copy)"

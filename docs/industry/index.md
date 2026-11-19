@@ -9,7 +9,7 @@ The "Fit" ratings on these pages judge each route against industrial
 reliability targets. Under this project's 0 to 50 °C requirement some do
 better than their rating: [gold stud bumps](stud-bump.md) fail above about
 200 °C and in thermal cycling, but with low temperature solder they would be
-fine, if a ball bonder is ever within reach.
+fine, if a ball bonder is available.
 
 Laser solder jetting (PacTech SB2, and CIL in the UK) places and reflows
 preformed balls with a laser pulse and suits single die ([sb2-paper], [cil],

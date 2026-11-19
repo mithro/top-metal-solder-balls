@@ -1,18 +1,26 @@
 # Next steps and open questions
 
+The experiments to run, cheapest first, and the facts about the die that are
+not published and affect which method works.
+
 ## Suggested experiments, cheapest first
 
-1. **Find the FC01 die.** Run 2 carries a flip chip pad test die with roughly
-   220 µm pads at 0.4 mm pitch ([past runs](past-runs.md)). If those die are
-   available, they are the test vehicle for everything below.
-2. **Screen chemistry on aluminised mirror or film.** Zincate, aluminium
-   solder paste, displacement silver. An afternoon and no chips spent.
-3. **Aluminium solder paste on scrap die.** Stencil, hot plate, rinse. If the
-   pads survive, most of the other methods are unnecessary.
-4. **Zincate and nickel kit on scrap die**, single and double zincate side by
-   side, then reball and prod the balls.
-5. **Flex test board** with a mirrored pad array and ball pads, tried with
-   anisotropic film, silver epoxy and Z-axis tape.
+1. **Find FC01 die.** [FC01](past-runs.md#fc01-a-flip-chip-pad-test-die-on-run-2)
+   is the flip chip pad test die on Run 2. If those die are available, they
+   are the test vehicle for everything below.
+2. **Screen chemistry on aluminised mirror or film**
+   ([a stand-in for real die](research.md#a-cheap-stand-in-for-real-die)).
+   Zincate, aluminium solder paste, displacement silver. This takes an
+   afternoon and uses no chips.
+3. **[Aluminium solder paste](methods/aluminium-solder.md) on scrap die.**
+   Stencil, hot plate, rinse. If the pads survive, most of the other methods
+   are unnecessary.
+4. **[Zincate and nickel kit](methods/zincate-nickel.md) on scrap die**,
+   single and double zincate side by side, then
+   [reball](methods/reballing.md) and prod the balls.
+5. **[Flex test board](methods/flex-ztape.md)** with a mirrored pad array and
+   ball pads, tried with anisotropic film,
+   [silver epoxy](methods/adhesives.md) and Z-axis tape.
 6. **Design a bump test chip**: round top-metal pads of 200 to 240 µm on a
    0.5 mm grid, daisy chains for continuity and resistance, a few very large
    pads for Z-axis tape, some pads tied to substrate and some floating, plus
@@ -21,21 +29,21 @@
 ## Open questions
 
 - What is the passivation on wafer.space die, and how thick is it? The top
-  metal itself is settled: aluminium, on the 11 kÅ (1.1 µm) gf180mcuD stack
+  metal is aluminium on the 11 kÅ (1.1 µm) gf180mcuD stack
   ([Starting point](background.md)).
-- Is the top metal pure aluminium or an aluminium-copper alloy? This decides
-  whether displacement silver can work. I could not find it stated. The only
-  hint is a tooling note giving Metal5 as 40 milliohm per square on the 11 kÅ
-  stack ([klayout-pex]), which works out to about 4.4 micro-ohm cm (my
-  arithmetic). That is higher than pure aluminium film, which suggests an
-  alloy or barrier layers in the stack, but it proves nothing. Aluminium
-  processes of this generation commonly use AlCu with Ti/TiN layers
-  ([alcu-barrier]). If a TiN cap is left on the pads, every method here
-  changes, so this is worth asking wafer.space directly.
+- Is the top metal pure aluminium or an aluminium-copper alloy? The answer
+  decides whether [displacement silver](methods/silver.md) can work. The alloy
+  is not published. The only hint is a tooling note giving Metal5 as
+  40 milliohm per square on the 11 kÅ stack ([klayout-pex]), which works out
+  to about 4.4 micro-ohm cm (calculated). That is higher than pure aluminium
+  film, which suggests an alloy or barrier layers in the stack, but it proves
+  nothing. Aluminium processes of this generation commonly use AlCu with
+  Ti/TiN layers ([alcu-barrier]). If a TiN cap is left on the pads, every
+  method here changes, so this is a question to put to wafer.space.
 - Does the open DRC deck allow 200 µm passivation openings, and pads over
   the core?
 - Are FC01 die from Run 2, or scrap die from any run, available for trials?
-- Which of the cheap aluminium fluxes actually works, and what is in them?
+- Which of the cheap aluminium fluxes works, and what is in them?
 - What particle size and density do the screen-repair anisotropic films
   have? Sellers do not say.
 
